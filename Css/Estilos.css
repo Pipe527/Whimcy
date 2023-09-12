@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../images/Fondo.gif");
+    background-size: 1920px;
+    background-attachment: fixed;
+}
+.Logo{
+    margin-top: -47px;
+    text-align: center;
+    padding: 30px;
+    height: 170px;
+}
+.superior{
+    background-image: url(../images/Encabezado.gif);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-top: -1.6px;
+    height: 170px;
+}
+.cuadro{
+    float: left;
+    padding-right: 90px;
+}
+.lista1 Li{
+    float: left;
+    
+    list-style: none;
+    margin-top: -60px;
+    height: 80px;
+    width: 300px;
+}
+.lista1 Li a{
+    text-decoration: none;
+    font-family: Georgia;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: white;
+}
+.lista2 Li{
+    float: right;
+    padding-right: 90px;
+    list-style: none; 
+    overflow: hidden;
+    margin-top: -60px;
+    height: 130px;
+    width: 210px;
+}
+.lista2 Li a{
+    text-decoration: none;
+    font-family: Georgia;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: white;
+    margin-right: 50px;
+    margin-left: 100px;
+}
+.iconos{
+   list-style: none;
+   color: tomato;
+   overflow: hidden;
+   margin-top: -70px;
+}
+  
