@@ -7,60 +7,49 @@ body{
     background-size: 1920px;
     background-attachment: fixed;
 }
-.Logo{
-    margin-top: -47px;
+.logo{
+    margin-top: -50px;
     text-align: center;
     padding: 30px;
-    height: 170px;
 }
 .superior{
     background-image: url(../images/Encabezado.gif);
     background-repeat: no-repeat;
-    overflow: hidden;
     margin-top: -1.6px;
-    height: 170px;
 }
-.cuadro{
-    float: left;
-    padding-right: 90px;
-}
-.lista1 Li{
-    float: left;
-    
+.lista1 li{
+    position: relative;
+    left: 100px;
     list-style: none;
-    margin-top: -60px;
-    height: 80px;
-    width: 300px;
+    float: left;
+    width: 250px;
 }
 .lista1 Li a{
     text-decoration: none;
     font-family: Georgia;
     text-transform: uppercase;
     font-size: 25px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
-.lista2 Li{
+.Lista2 li{
+    float: left;
+    list-style: none;
+    position: absolute;
+    right: 1200px;
+    color: rgb(190, 21, 21);
+}
+.lista3 Li{
     float: right;
     padding-right: 90px;
     list-style: none; 
     overflow: hidden;
-    margin-top: -60px;
-    height: 130px;
-    width: 210px;
 }
-.lista2 Li a{
+.lista3 Li a{
     text-decoration: none;
     font-family: Georgia;
     text-transform: uppercase;
     font-size: 25px;
-    color: white;
-    margin-right: 50px;
-    margin-left: 100px;
+    color: rgb(0, 0, 0);
 }
-.iconos{
-   list-style: none;
-   color: tomato;
-   overflow: hidden;
-   margin-top: -70px;
-}
+
   
