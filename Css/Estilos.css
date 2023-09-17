@@ -7,49 +7,70 @@ body{
     background-size: 1920px;
     background-attachment: fixed;
 }
-.logo{
-    margin-top: -50px;
-    text-align: center;
-    padding: 30px;
-}
 .superior{
     background-image: url(../images/Encabezado.gif);
     background-repeat: no-repeat;
-    margin-top: -1.6px;
+    background-size: 1400px;
+    margin-top: -2px;
+}
+.logo{
+    display: flex;
+    position: relative;
+    left: 600px;
+    top: -10px;
+    font-size: -40px;
+    
 }
 .lista1 li{
     position: relative;
     left: 100px;
+    top: -100px;
     list-style: none;
     float: left;
-    width: 250px;
+    width: 200px;
 }
+
 .lista1 Li a{
     text-decoration: none;
     font-family: Georgia;
     text-transform: uppercase;
     font-size: 25px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
+
 .Lista2 li{
     float: left;
     list-style: none;
-    position: absolute;
-    right: 1200px;
-    color: rgb(190, 21, 21);
+    position: relative;
+    top: -95px;
+    right: -150px;
+    color: rgb(255, 255, 255);
 }
-.lista3 Li{
-    float: right;
-    padding-right: 90px;
+
+.lista3 li{
+    float: left;
+    list-style: none;
+    position: relative;
+    top: -95px;
+    right: -340px;
+    color: rgb(255, 255, 255);
+}
+
+.lista4 Li{
+    position: relative;
+    right: 40px;
+    top: -100px;
     list-style: none; 
-    overflow: hidden;
+    float: right;
+    width: 250px;
 }
-.lista3 Li a{
+
+.lista4 Li a{
     text-decoration: none;
     font-family: Georgia;
     text-transform: uppercase;
     font-size: 25px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
   
