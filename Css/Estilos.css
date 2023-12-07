@@ -4,73 +4,43 @@
 }
 body{
     background-image: url("../images/Fondo.gif");
-    background-size: 1920px;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 .superior{
-    background-image: url(../images/Encabezado.gif);
+    background-image: url(../images/Encabezado.jpg);
     background-repeat: no-repeat;
-    background-size: 1400px;
-    margin-top: -2px;
+    background-attachment: fixed;
+    background-position: top;
+    width: 100vw;
 }
-.logo{
-    display: flex;
+.inferior {
+    background-image: url(../images/Pie-de-pagina.gif);
+    background-attachment: fixed;
     position: relative;
-    left: 600px;
-    top: -10px;
-    font-size: -40px;
-    
+    height: 76px;
+    width: 100%;
+    bottom: 0px; 
 }
-.lista1 li{
-    position: relative;
-    left: 100px;
-    top: -100px;
-    list-style: none;
-    float: left;
-    width: 200px;
-}
-
-.lista1 Li a{
+.Letras a{
+    text-align: center;
     text-decoration: none;
     font-family: Georgia;
     text-transform: uppercase;
-    font-size: 25px;
-    color: rgb(255, 255, 255);
+    font-size: 1.6vw;
+    color: white;
 }
+table {
+    border-collapse: collapse;
+    margin-left: 70px;
+    margin-top: -5px;
+    padding: 10px;
+    width: 100%;
+}
+td {
+    height: 150px;
+    vertical-align: middle;
+  }
 
-.Lista2 li{
-    float: left;
-    list-style: none;
-    position: relative;
-    top: -95px;
-    right: -150px;
-    color: rgb(255, 255, 255);
-}
-
-.lista3 li{
-    float: left;
-    list-style: none;
-    position: relative;
-    top: -95px;
-    right: -340px;
-    color: rgb(255, 255, 255);
-}
-
-.lista4 Li{
-    position: relative;
-    right: 40px;
-    top: -100px;
-    list-style: none; 
-    float: right;
-    width: 250px;
-}
-
-.lista4 Li a{
-    text-decoration: none;
-    font-family: Georgia;
-    text-transform: uppercase;
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-}
 
   
