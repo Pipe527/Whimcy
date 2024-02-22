@@ -2,45 +2,63 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     background-image: url("../images/Fondo.gif");
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+
 .superior{
     background-image: url(../images/Encabezado.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top;
-    width: 100vw;
+    background-attachment: scroll;
+    background-size: 100vw 8.9vw;
 }
+
 .inferior {
     background-image: url(../images/Pie-de-pagina.gif);
-    background-attachment: fixed;
-    position: relative;
-    height: 76px;
+    background-attachment: inherit;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 8.26vw;
     width: 100%;
-    bottom: 0px; 
 }
+
 .Letras a{
-    text-align: center;
     text-decoration: none;
     font-family: Georgia;
     text-transform: uppercase;
-    font-size: 1.6vw;
+    font-size: 1.3vw;
     color: white;
 }
+
+i[class="fa-cart-shopping fa-user"] {
+    color: white;
+}
+
+a:hover, i[class="fa-cart-shopping fa-user"]:hover {
+    color: #4cfa63;
+}
+
 table {
     border-collapse: collapse;
-    margin-left: 70px;
-    margin-top: -5px;
-    padding: 10px;
-    width: 100%;
+    text-align: center;
+    table-layout: auto;
+    margin: auto;
+    position: relative;
+    left: 4rem;
+    bottom: 0.5rem;
+    width: 85%;
 }
+
 td {
-    height: 150px;
-    vertical-align: middle;
-  }
+    height: 8vw;
+}
 
+td[class="z"]:hover {
+    background-image: url("../images/bordes.png");
+    background-repeat: no-repeat;
+    background-size: 17vw 9.4vw;
+}
 
-  
