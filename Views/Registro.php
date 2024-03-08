@@ -26,10 +26,12 @@
 
     
     <div class="card-body">
+        <input type="hidden" name="Crear">
         <div class="doble">
             <div class="input-doble">
                 <span class="input-titles">Nombre</span>
                 <div class="input-position">
+                     <Label for="Nombre"></Label>
                      <input type="text" class="form-control" placeholder="Nombre" id="Doble1" name="Nombre">
                 </div>
             </div>
@@ -37,6 +39,7 @@
             <div class="input-doble">
                 <span class="input-titles">Apellido</span>
                 <div>
+                    <Label for="Apellido"></Label>
                     <input type="text" class="form-control" placeholder="Apellido" id="Doble2" name="Apellido">
                 </div>
             </div>
@@ -45,6 +48,7 @@
         <div class="input-alone">
             <span class="input-titles">Nickname</span>
             <div class="input-group-append">
+                <Label for="Nickname"></Label>
                 <input type="text" class="form-control" placeholder="Nickname" id="Doble3" name="Nickname">
             </div>
         </div>
@@ -53,6 +57,7 @@
             <div class="input-doble">
                 <span class="input-titles"><i class="fa-solid fa-phone-volume"></i></span>
                 <div class="input-group-append">
+                    <Label for="Telefono"></Label>
                     <input type="tel" class="form-control" id="phone" name="Phone" placeholder="321-456-78-90" 
                     pattern="[0-9]{10}" required>
                 </div>
@@ -61,6 +66,7 @@
             <div class="input-doble">                
                 <span class="input-titles"><i class="fas fa-envelope"></i></span>
                 <div class="input-position">
+                    <Label for="Correo"></Label>
                     <input type="email" class="form-control" name="Correo" placeholder="Email" id="gmail" required>
                 </div>
             </div>
@@ -70,6 +76,7 @@
             <div class="input-doble">
                 <span class="input-titles"><i class="fa-solid fa-key"></i></span>
                 <div class="input-group-append">
+                    <Label for="Contraseña"></Label>
                     <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña" required>
                 </div>
             </div>
@@ -85,6 +92,7 @@
         <div class="input-alone">
             <span class="input-titles">Fecha de nacimiento</i></span>
             <div class="input-group-append">
+                <Label for="F.Nacimiento"></Label>
                 <input type="date" class="form-control" name="Bday" id="Doble4">
             </div>
         </div>
@@ -92,6 +100,7 @@
         <div class="input-alone">
             <span class="input-titles ubi"><i class="fa-solid fa-location-dot"></i></span>
             <div class="input-group-append">
+                <Label for="Direccion"></Label>
                 <input type="text" class="form-control" name="Direccion" placeholder="Dirección de domicilio" id="Doble5">
             </div>
         </div>
