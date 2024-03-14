@@ -2,7 +2,7 @@
 $server = "Localhost";
 $User = "root";
 $Password = "";
-$Database = "auto";
+$Database = "whimcy";
 
 $Con = new mysqli($server, $User, $Password, $Database);
 if ($Con->connect_errno) {

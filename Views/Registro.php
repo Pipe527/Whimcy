@@ -22,7 +22,7 @@
 </header>
  <!-- Formulario -->
 <div class="card-info">
-    <form class="form-horizontal" method="Post">
+    <form action= "../Controllers/UsersControl.php"class="form-horizontal" method="Post">
 
     
     <div class="card-body">
@@ -57,7 +57,7 @@
             <div class="input-doble">
                 <span class="input-titles"><i class="fa-solid fa-phone-volume"></i></span>
                 <div class="input-group-append">
-                    <Label for="Telefono"></Label>
+                    <Label for="Phone"></Label>
                     <input type="tel" class="form-control" id="phone" name="Phone" placeholder="321-456-78-90" 
                     pattern="[0-9]{10}" required>
                 </div>
@@ -76,7 +76,7 @@
             <div class="input-doble">
                 <span class="input-titles"><i class="fa-solid fa-key"></i></span>
                 <div class="input-group-append">
-                    <Label for="Contraseña"></Label>
+                    <Label for="Contra"></Label>
                     <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña" required>
                 </div>
             </div>
@@ -92,7 +92,7 @@
         <div class="input-alone">
             <span class="input-titles">Fecha de nacimiento</i></span>
             <div class="input-group-append">
-                <Label for="F.Nacimiento"></Label>
+                <Label for="Bday"></Label>
                 <input type="date" class="form-control" name="Bday" id="Doble4">
             </div>
         </div>
@@ -115,7 +115,7 @@
         <!-- Card-footer -->
     <div class="card-footer">
         <button type="submit" class="btn btn-info">¡Registrarme!</button>
-        <button type="submit" class="btn btn-default float-right">Cancelar</button>
+        <button type="button" class="btn btn-default float-right">Cancelar</button>
     </div>
     </form>
 </div>

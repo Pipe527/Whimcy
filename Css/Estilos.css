@@ -59,6 +59,6 @@ td {
 td[class="z"]:hover {
     background-image: url("../images/bordes.png");
     background-repeat: no-repeat;
-    background-size: 17vw 9.4vw;
+    background-size: 100% 9.4vw;
 }
 

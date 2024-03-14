@@ -11,7 +11,7 @@ class Usuarios {
     private $Bday;
     private $Address;
     
-    function __construct(){
+    function __construct($Nombre,$Apellido,$Nickname,$Email,$Pass,$Celular,$Bday,$Address){
         $this->Nombre = $Nombre;
         $this->Apellido = $Apellido;
         $this->Nickname = $Nickname;
@@ -24,6 +24,13 @@ class Usuarios {
 
     function printDU (){
         echo "Nombre: ".$this->Nombre."<br>";
+        echo "Apellido: ".$this->Apellido."<br>";
+        echo "Nickname: ".$this->Nickname."<br>";
+        echo "Email: ".$this->Email."<br>";
+        echo "Password: ".$this->Pass."<br>";
+        echo "Celular: ".$this->Celular."<br>";
+        echo "Fecha de nacimiento: ".$this->Bday."<br>";
+        echo "Dirección: ".$this->Address."<br>";
     }
 
     function getNombre(){
@@ -45,7 +52,7 @@ class Usuarios {
         return $this->Celular;
     }
     function getBday(){
-        return $this->getBday;
+        return $this->Bday;
     }
     function getAddress(){
         return $this->Address;
