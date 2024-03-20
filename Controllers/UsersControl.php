@@ -25,8 +25,8 @@ $h= $User->getAddress();
 
 
 if (isset($_POST["Crear"])){
-    $sql = "INSERT INTO `usuarios` (`idUsuarios`,`Nombre`, `Apellido`, `Nickname`, `Correo`, `Contraseña`, `Celular`, `F. Nacimiento`, `Dirección`, `Medio de pago_idMedio de pago`) 
-            VALUES (NULL, '$a', '$b', '$c', '$d', '$e', '$f', '$g', '$h', NULL)";
+    $sql = "INSERT INTO `usuarios` (`idUsuarios`,`Nombre`, `Apellido`, `Nickname`, `Correo`, `Contraseña`, `Celular`, `F. Nacimiento`, `Dirección`)
+            VALUES (NULL, '$a', '$b', '$c', '$d', '$e', '$f', '$g', '$h')";
             
          if ($Con->query($sql)) {
              echo "Datos guardados correctamente";
