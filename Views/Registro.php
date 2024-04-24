@@ -11,7 +11,7 @@
 
 <header>
     <div>
-        <?php include_once ("Menu.html") ?>
+        <?php   include_once("Menu.html") ?>
         <div class="card-header">
             <div class="backpart">
                 <h3 class="card-title">REGISTRARSE</h3>
@@ -115,12 +115,12 @@
         <!-- Card-footer -->
     <div class="card-footer">
         <button type="submit" class="btn btn-info">¡Registrarme!</button>
-        <button type="button" class="btn btn-default float-right">Cancelar</button>
+        <a href="Index.html"><button type="button" class="btn btn-default float-right">Cancelar</button></a>
     </div>
     </form>
 </div>
 <footer>
-    <?php include_once ("footer.html") ?>
+    <?php   include_once("footer.html") ?>  
 </footer>
 </body>
 </html>

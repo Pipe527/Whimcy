@@ -1,0 +1,21 @@
+.exito{
+    padding: 20px 40px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.boton-regresar{
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    font-size: 20px;
+    color: blue;
+    background-color: aquamarine;
+}
+
+.boton-regresar:hover{
+    padding: 30px;
+    color: aqua;
+    background-color: darkcyan;
+}
