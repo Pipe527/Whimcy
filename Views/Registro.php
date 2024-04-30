@@ -29,18 +29,18 @@
         <input type="hidden" name="Crear">
         <div class="doble">
             <div class="input-doble">
-                <span class="input-titles">Nombre</span>
+                <span class="input-titles">Nombres</span>
                 <div class="input-position">
                      <Label for="Nombre"></Label>
-                     <input type="text" class="form-control" placeholder="Nombre" id="Doble1" name="Nombre">
+                     <input type="text" class="form-control" placeholder="Nombres" id="Doble1" name="Nombre">
                 </div>
             </div>
 
             <div class="input-doble">
-                <span class="input-titles">Apellido</span>
+                <span class="input-titles">Apellidos</span>
                 <div>
                     <Label for="Apellido"></Label>
-                    <input type="text" class="form-control" placeholder="Apellido" id="Doble2" name="Apellido">
+                    <input type="text" class="form-control" placeholder="Apellidos" id="Doble2" name="Apellido">
                 </div>
             </div>
         </div>

@@ -25,10 +25,10 @@
         <input type="hidden" name="Editar">
         <input type="hidden" name="id" Value=<?php echo ($Fila["idUsuarios"]) ?>>
         <Label for="Nombre"></Label>
-        Nombre: <input type="text" name="Nombre" Value=<?php echo ($Fila["Nombre"]) ?>>
+        Nombres: <input type="text" name="Nombre" Value=<?php echo ($Fila["Nombre"]) ?>>
         <br>
         <Label for="Apellido"></Label>
-        Apellido: <input type="text" name="Apellido" value="<?php echo ($Fila['Apellido']) ?>">
+        Apellidos: <input type="text" name="Apellido" value="<?php echo ($Fila['Apellido']) ?>">
         <br>
         <Label for="Nickname"></Label>
         Nickname: <input type="text" name="Nickname" Value=<?php echo ($Fila["Nickname"]) ?>>

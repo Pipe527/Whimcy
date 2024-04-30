@@ -1,4 +1,5 @@
 <?php
+
 require_once ("../Conexion.php");
 
 $sql = "SELECT * FROM usuarios";
@@ -11,10 +12,25 @@ $User = $Con->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listados</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+<script>
+function confirmar(id) {
+    var resultado = confirm("¿Deseas eliminar el usuario?");
+    $.ajax({
+        url: 'UsersList.php',
+        type: 'post',
+        data: { 'resultado': resultado, 'id': id },
+        success: function(response) {
+            alert(response);
+            location.reload();
+        }
+    });
+}
+</script>
 <body>
     <h1>Listado de Usuarios</h1>
-
+    
     <table>
         <thead style="background-color: gray; font-weight: bolder;">
             <tr>
@@ -41,15 +57,20 @@ $User = $Con->query($sql);
                 <td><?php echo ($Fila["F. Nacimiento"])?></td>
                 <td><?php echo ($Fila["Dirección"])?></td>
                 <td><a href="UsersEdit.php?id=<?php echo intval ($Fila["idUsuarios"])?>">Editar</a></td>
-                <td><form action="../Controllers/UsersControl.php" method ="post">
-                    <input type="hidden" name="Eliminar">
-                    <input type="hidden" name="id" value= "<?php echo $Fila["idUsuarios"] ?>">
-                    <button style= "background-color: crimson" >Eliminar</button>
-                </form></td>
+                <td><button style= "background-color: crimson" onclick="confirmar(<?php echo $Fila["idUsuarios"] ?>)">Eliminar</button></td>
             </tr>
             <?php
             }
         } 
+        
+        if(isset($_POST['resultado']) && $_POST['resultado'] == 'true') {
+            $id = $_POST["id"];
+            $sql2 = "DELETE FROM usuarios WHERE `usuarios`.`idUsuarios` = $id";
+            $Users = $Con->query($sql2);
+        }
+        
+        
+        
         ?>
         
 

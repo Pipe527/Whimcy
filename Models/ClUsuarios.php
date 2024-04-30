@@ -16,7 +16,7 @@ class Usuarios {
         $this->Apellido = $Apellido;
         $this->Nickname = $Nickname;
         $this->Email = $Email;
-        $this->Pass = $Pass;
+        $this->Pass = password_hash($Pass,PASSWORD_DEFAULT); //Encriptar contraseña
         $this->Celular = $Celular;
         $this->Bday = $Bday;
         $this->Address = $Address;
@@ -33,17 +33,18 @@ class Usuarios {
         echo "Dirección: ".$this->Address."<br>";
     }
 
+    //Evita las vulnerabilidades del sistema a traves de GETTER y SETTER
     function getNombre(){
-        return $this->Nombre;
+        return ucwords(strtolower($this->Nombre));
     }
     function getApellido(){
-        return $this->Apellido;
+        return ucwords(strtolower($this->Apellido));
     }
     function getNick(){
         return $this->Nickname;
     }
     function getEmail(){
-        return $this->Email;
+        return ucwords(strtolower($this->Email));
     }
     function getPass(){
         return $this->Pass;
@@ -55,7 +56,7 @@ class Usuarios {
         return $this->Bday;
     }
     function getAddress(){
-        return $this->Address;
+        return ucfirst(strtolower($this->Address));
     }
 }
 
