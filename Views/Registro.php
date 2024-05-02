@@ -22,7 +22,7 @@
 </header>
  <!-- Formulario -->
 <div class="card-info">
-    <form action= "../Controllers/UsersControl.php"class="form-horizontal" method="Post">
+    <form action= "../Controllers/UsersControl.php"class="form-horizontal" name="Registro" method="Post">
 
     
     <div class="card-body">
@@ -32,7 +32,7 @@
                 <span class="input-titles">Nombres</span>
                 <div class="input-position">
                      <Label for="Nombre"></Label>
-                     <input type="text" class="form-control" placeholder="Nombres" id="Doble1" name="Nombre">
+                     <input type="text" class="form-control" placeholder="Nombres" id="Doble1" name="Nombre" required>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@
                 <span class="input-titles">Apellidos</span>
                 <div>
                     <Label for="Apellido"></Label>
-                    <input type="text" class="form-control" placeholder="Apellidos" id="Doble2" name="Apellido">
+                    <input type="text" class="form-control" placeholder="Apellidos" id="Doble2" name="Apellido" required>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
             <span class="input-titles">Fecha de nacimiento</i></span>
             <div class="input-group-append">
                 <Label for="Bday"></Label>
-                <input type="date" class="form-control" name="Bday" id="Doble4">
+                <input type="date" class="form-control" name="Bday" id="Doble4" required>
             </div>
         </div>
 
@@ -101,7 +101,7 @@
             <span class="input-titles ubi"><i class="fa-solid fa-location-dot"></i></span>
             <div class="input-group-append">
                 <Label for="Direccion"></Label>
-                <input type="text" class="form-control" name="Direccion" placeholder="Dirección de domicilio" id="Doble5">
+                <input type="text" class="form-control" name="Direccion" placeholder="Dirección de domicilio" id="Doble5" required>
             </div>
         </div>
         
@@ -119,6 +119,21 @@
     </div>
     </form>
 </div>
+<script>
+    with(document.Registro){
+        onsubmit = function (e) {
+            e.preventDefault();
+            var ok = true;
+            var PassProcess = document.getElementById('Confpass').value;
+            if (ok && document.getElementById('pass').value != PassProcess) {
+                ok = false;
+                alert("Las contraseñas no coinciden");
+                document.getElementById('Confpass').focus();
+            }
+            if (ok) {   submit();   }
+        }
+    }
+</script>
 <footer>
     <?php   include_once("footer.html") ?>  
 </footer>
