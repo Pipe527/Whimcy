@@ -3,8 +3,8 @@
 .form-control {
   display: block;
   width: 38%;
-  height: calc(2.25rem + 2px);
-  padding: 0.375rem 0.75rem;
+  padding-left: 1vw;
+  height: calc(2.35rem + 6px);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -76,54 +76,58 @@
 }
 
 .card-body {
+  position: relative;
+  top: 10.86vh;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  height: 68vh;
   padding: 0.75rem 1.25rem;
   background-color: rgba(236, 250, 232, 0.76);
 }
 
 .card-footer {
   position: relative;
-  top: 0.72rem;
-  right: 1.25rem;
-  width: 100%;
+  top: 0.7rem;
+  right: 1.4rem;
+  width: 69.68vw;
+  border-block: 0.5rem solid #00000098;
+  border-block-start-width: 0.3rem;
+  border-left: 0.3rem solid #000000a1;
+  border-right: 0.3rem solid #000000a1;
   padding: 0.75rem 1.25rem;
-  background-color: rgba(17, 41, 9, 0.58);
-  border-top: 0 solid rgba(17, 41, 9, 0.125);
+  background-color: rgba(17, 41, 9, 0.699);
 }
 
 .card-info {
   position: relative;
-  bottom: 1.8rem;
   object-fit: contain;
-  border-block: 0.5rem solid #00000098;
-  border-block-start-width: 0.3rem;
   background-image: url("../images/Restaurante1.jpg");
-  background-size: 100vw 50vw;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .form-horizontal{
   position: relative;
+  border-block: 0.5rem solid #00000098;
+  border-block-start-width: 0.3rem;
   outline-color: rgba(73, 80, 87,0.50);
   outline-style: inset;
+  width: 70%;
+  height: 38vw;
   margin: auto;
-  width: min-content;
 }
 
 #Doble1, #Doble2, #Doble3,
-#Doble4, #Doble5, #phone, #pass, 
+#Doble5, #phone, #pass, 
 #Confpass {
-  width: 20vw;
+  width: 23vw;
+}
+#Doble4{
+  width: 15vw;
 }
 
 #gmail {
   width: 23vw;
-}
-
-#Doble5, .ubi {
-  position: relative;
-  left: 5rem;
 }
 
 .doble, .double, .troble {
@@ -152,24 +156,30 @@
 }
 
 .input-alone {
-  position: relative;
-  left: 15vw;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1.5vh;
 }
 
 .input-doble {
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
   padding-top: 2rem;
   padding-right: 6vw;
-  width: 28rem;
+  padding-left: 2rem;
+}
+
+.input-doble .input-position {
+  width: 100%;
 }
 
 .input-alone, .input-doble{
   display: flex;
   flex-direction: row;
-  margin-bottom: 1.5vw;
-}
-
-.input-position {
-  width: 60vw;
+  margin-bottom: 1.5vh;
 }
 
 .terms, .return {
@@ -178,12 +188,12 @@
   flex-grow: 2rem;
   font-family: Cambria, Cochin, fantasy;
   font-size: 1rem;
-  margin-left: 20vw;
+  margin-left: 24vw;
 }
 
 .return {
   padding: 1rem;
-  margin-left: 21vw;
+  margin-left: 24vw;
 }
 
 p {

@@ -14,9 +14,10 @@ body{
     background-image: url(../images/Encabezado.jpg);
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: 100vw 20.20vh;
+    background-size: 100vw 18vh;
+    align-items: center;
     min-height: 90px;
-    height: 20.20vh;
+    height: 18vh;
 }
 
 .inferior {
@@ -64,7 +65,7 @@ a[class="z"], a[class="bton z"], .m, i{
     background-size: contain;
     position: absolute;
     top: 7vh;
-    right: 2vw;
+    right: 1vw;
     padding: 12px;
     height: 11vw;
     width: 10vw;
@@ -88,7 +89,6 @@ a[class="z"], a[class="bton z"], .m, i{
 .active, .activo {
     display: block;
 }
-
 
 .M1 li, .M2 li{
     margin-bottom: 10px;
@@ -150,6 +150,10 @@ i[class="fa-solid fa-caret-right"]:hover{
 
 .OpenSub:hover{
     display: block;
+
+}
+.exp,.Logo{
+    margin-right: 3.3vw;
 }
 
 .exp:hover {
@@ -161,10 +165,11 @@ i[class="fa-solid fa-caret-right"]:hover{
 .Letras ul div:hover {
     background-image: url("../images/bordes.png");
     background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: cover cover;
+    background-position: center center;
+    background-size: cover;
     align-content: center;
     text-align: center;
-    height: 9.8vw;
+    height: calc(normal+normal*4);
+    width: calc(normal+normal*4);
 }
 
