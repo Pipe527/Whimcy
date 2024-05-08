@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="../Css/FRegistro.css">
-    <link rel="stylesheet" href="../Css/Estilos.css">
 </head>
 <body>
 
 <header>
     <div>
         <?php   include_once("Menu.html") ?>
-        <div class="card-header">
-            <div class="backpart">
-                <h3 class="card-title">REGISTRARSE</h3>
-                <em>¡Con todo lo de tus restaurantes!</em>
-            </div>
-        </div>
     </div>
 </header>
  <!-- Formulario -->
 <div class="card-info">
     <form action= "../Controllers/UsersControl.php"class="form-horizontal" name="Registro" method="Post">
-
+    <div class="backpart">
+        <div class="card-header">
+                <h3 class="card-title">REGISTRARSE</h3>
+                <em>¡Con todo lo de tus restaurantes!</em>
+                </div>
+            </div>
     
     <div class="card-body">
         <input type="hidden" name="Crear">

@@ -10,49 +10,45 @@
 <body>
 <header>
     <div class="superior">
-    <nav class="Letras">
-        <table>
-            <tr>
-                <td class="exp"><a href=""class="bton">Menú</a></div></td>
-                <td class="z"><a href="">Promociones</a></td>
-                <td class="exp">
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                </td>
-                <td><a href="Index.html"><img src="../images/Logotipo.gif" class="Logo", width="53%"></a></td>
-                <td class="exp">
-                    <a href="Registro.php"><i class="fa-solid fa-user"></i></a>
-                </td>
-                <td class="z"><a href="">Restaurantes</a></td>
-                <td class="z"><a href="">Adicional</a></td>
-            </tr>
-        </table>
-    </nav>
-    <div class="Menus">
-    <nav class="M1 active">
-        <ul>
-            <li><a href="#" class="links">Pedir</a></li>   
-            <Li><a href="#" class="links">Top</a></li>
-            <li><a href="">Combos </a><i class="fa-solid fa-caret-right"></i></li>
-            <li><a href="#" class="links">Favoritos</a></li>
-        </ul>
-    </nav>
-    <nav class="M2">
-        <ul>
-            <li><a href="#" class="links">Fechas</a></li>   
-            <Li><a href="#" class="links">Para <br>Año Nuevo</a></li>
-            <li><a href="#">Ocaciones <br>especiales</a></li>
-        </ul>
-    </nav>
-    <nav class="SubMenu">
-        <ul>
-            <li><a href="#" class="links">Categorias</a></li>   
-            <Li><a href="#" class="links">Definidos</a></li>
-            <li><a href="#">Cartas</a></li>
-        </ul>
-    </nav>
-</div>
+        <nav class="Letras">
+            <ul>
+                <li><a href="" class="bton z">Menú</a></li>
+                <li>
+                    <nav class="M1">
+                        <ul class="active">
+                            <li><a href="#" class="links">Pedir</a></li>   
+                            <li><a href="#" class="links">Top</a></li>
+                            <li><a href="" class="OpenSub">Combos<i class="fa-solid fa-caret-right"></i></a></li>
+                            <nav class="SubMenu">
+                                <ul class="">
+                                    <li><a href="#" class="links">Categorias</a></li>   
+                                    <li><a href="#" class="links">Definidos</a></li>
+                                    <li><a href="#">Cartas</a></li>
+                                </ul>
+                            </nav>
+                            <li class="bton-combos"><a href="#" class="links">Favoritos</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li><a href="" class="z m">Promociones</a></li>
+                <li>
+                    <nav class="M2">
+                        <ul class="activo">
+                            <li><a href="#" class="links">Fechas</a></li>   
+                            <li><a href="#" class="links">Para <br>Año Nuevo</a></li>
+                            <li><a href="#">Ocaciones <br>especiales</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li><a href="" class="exp"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="Index.html"><img src="../images/Logotipo.gif" class="Logo"></a></li>
+                <li><a href="Registro.php" class="exp"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="" class="z">Restaurantes</a></li>
+                <div><li><a href="" class="z">Adicional</a></li></div>
+            </ul>
+        </nav>
     </div>
 </header>
-<script>src="SubMenus.js"</script>
+<script src="SubMenus.js"></script>
 </body>
 </html>

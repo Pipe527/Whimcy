@@ -52,14 +52,7 @@
 }
 
 .backpart {
-  background-color: #11290994;
-  outline-color: #11290994;
-  outline-style: solid;
-  outline-width: 1.5rem;
-}
-.card-header {
-  position: relative;
-  bottom: 1.8rem;
+  position: absolute;
   padding: 1.25rem 0rem;
   text-align: center;
   background-image: url("../images/Restaurante1.jpg");
@@ -67,8 +60,14 @@
   color: #fff;
   font-variant: small-caps;
   width: 100%;
-  z-index: -1;
   margin: auto;
+}
+.card-header {
+  background-color: #11290994;
+  outline-color: #11290994;
+  outline-style: solid;
+  outline-width: 0.4%;
+  z-index: 1001;
 }
 
 .card-title {
@@ -100,7 +99,7 @@
   border-block: 0.5rem solid #00000098;
   border-block-start-width: 0.3rem;
   background-image: url("../images/Restaurante1.jpg");
-  background-size: 100vw 44vw;
+  background-size: 100vw 50vw;
   background-repeat: no-repeat;
 }
 
@@ -186,6 +185,7 @@
   padding: 1rem;
   margin-left: 21vw;
 }
+
 p {
   margin-left: 1vw;
 }
