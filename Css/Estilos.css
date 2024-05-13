@@ -34,25 +34,32 @@
     color: #4cfa63;
 }
 
-
 .Letras ul i[class="fa-solid fa-caret-right"]:hover{
     cursor: pointer;
 }
 
-.Letras ul div:hover {
+.Letras > ul > li:not(:nth-last-child(2)) > a.exp > i:hover,
+.Letras > ul > div:hover {
     background-image: url("../images/bordes.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     align-content: center;
     text-align: center;
-    height: calc(normal+normal*4);
-    width: calc(normal+normal*4);
 }
 
 .Letras ul li {
     list-style: none;
     position: relative;
+}
+
+.form-control[type="email"], .form-control[type="password"] {
+    width: 14vw;
+    height: 2.5vh;
+}
+
+.input-dates label{
+    color: #fff;
 }
 
 .Logo{
@@ -111,7 +118,7 @@
     align-content: space-evenly;
 }
 
-.M1 > ul > li:not(.SubMenu) > a {
+.M1 > ul > li:not(.SubMenu):not(.doble) > a {
     line-height: 4vh;
     font-size: 1.3vw;
 }
@@ -128,8 +135,30 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.doble {
-    line-height: 2vh;
+.Login {
+    position: absolute;
+    transform: translateX(-12.4vw);
+    background-image: url("../images/SubMenu_01.gif");
+    background-size: 100% 100%;
+    padding: 2vw;
+    height: 13vw;
+    width: 15vw;
+    top: 7vh;
+    z-index: 1000;
+    display: none;
+}
+
+.Login-center,
+.Login-title, .Login-foot {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+a.doble {
+    line-height: 3vh;
 }
 
 .exp i {
@@ -184,12 +213,8 @@
 }
 
 .exp,.Logo{
-    margin-right: 3.3vw;
+    margin-left: 3.3vw;
 }
 
-.exp:hover {
-    background-image: url("../images/bordes.png");
-    background-repeat: no-repeat;
-    background-size: 100%; 
-}
+
 

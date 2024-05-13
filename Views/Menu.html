@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="../Css/Estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b59d19b6f4.js" crossorigin="anonymous" rel="stylesheet"></script>
 </head>
 <body>
@@ -36,13 +39,49 @@
                         <ul class="activo">
                             <li><a href="#" class="links">Fechas</a></li>   
                             <li><a href="#" class="doble">Para <br>Año Nuevo</a></li>
-                            <li><a href="#" class="doble">Ocaciones <br>especiales</a></li>
+                            <li><a href="#" class="doble">Ocaciones <br>Especiales</a></li>
                         </ul>
                     </span>
                 </li>
                 <li><a href="" class="exp"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li><a href="Index.html"><img src="../images/Logotipo.gif" class="Logo"></a></li>
-                <li><a href="Registro.php" class="exp"><i class="fa-solid fa-user"></i></a></li>
+                <li>
+                    <a href="#" class="exp user"><i class="fa-solid fa-user user"></i></a>
+                    <span class="Login">
+                        <ul class="activo">
+                            <li>
+                            <div class="Login-title">
+                                <h3>Mi Cuenta</h3>
+                            </div>
+                            <form action="" name="Login" method="post">
+                                <div class="input-dates">
+                                    <label for="Email">Correo:</label>
+                                    <input type="email" class="form-control" placeholder="Correo" name="Email" required>
+                                </div>
+                                <div class="input-dates">
+                                    <label for="Pass">Contraseña:</label>
+                                    <input type="password" class="form-control" placeholder="Contraseña" name="Pass" required>
+                                </div>
+                                <div class="Login-center">
+                                    <label for="Remember">
+                                        <input type="checkbox" class="form-control" name="Rem"> Recordarme
+                                    </label>
+                                    <a href="#">Contraseña Olvidada</a>
+                                </div>
+                                <div class="Login-foot">
+                                    <div>
+                                        <a href="#"><button type="submit" class="btn-go">Conexión</button></a>
+                                    </div>
+                                    <div>
+                                        <h4>No tienes cuenta</h4>
+                                        <a href="Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>
+                                    </div>
+                                </div>
+                            </form>
+                            </li>
+                        </ul>
+                    </span>
+                </li>                
                 <div><li><a href="" class="z r">Restaurantes</a></li></div>
                     <li>
                         <span class="M3">

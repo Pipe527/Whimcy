@@ -32,3 +32,12 @@ btnAd.addEventListener('click', (event) => {
     Navvv.classList.toggle('activo');
 });
 
+const btnLog = document.querySelector('.user');
+const NNavvv = document.querySelector('.Login');
+
+btnLog.addEventListener('click', (event) => {
+    event.preventDefault();
+    NNavvv.classList.toggle('activo');
+});
+
+
