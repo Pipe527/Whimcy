@@ -1916,8 +1916,8 @@ var defaults = module.exports = {
     strings: {
         button: 'Check Out with <img src="//cdnjs.cloudflare.com/ajax/libs/sbmincart/3.0.1/paypal_65x18.png" width="65" height="18" alt="PayPal" />',
         subtotal: 'Subtotal:',
-        discount: 'Discount:',
-        empty: 'Your shopping cart is empty'
+        discount: 'Descuento:',
+        empty: 'Tu carrito esta vacio'
     }
 
 };
@@ -2418,7 +2418,7 @@ var currencies = {
 
 
 module.exports = function currency(amount, config) {
-    var code = config && config.currency || 'USD',
+    var code = config && config.currency || 'COP',
         value = currencies[code],
         before = value.before || '',
         after = value.after || '',

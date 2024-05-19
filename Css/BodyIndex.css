@@ -1,0 +1,106 @@
+.sliderA {
+    width: 77.34%;
+    height: 30vh;
+    background-color: #000000e8;
+    margin: 0 auto;
+    padding: 7vh 4vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.sliderA ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.slide1, .slide2, .slide3 {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide1 ul li, .slide2 ul li, .slide3 ul li {
+    min-width: 100%;
+    position: relative;
+    list-style: none;
+}
+
+.slide1 ul img {
+    width: 31.25vw;
+    height: 31.25vh;
+}
+
+.slide2 ul img, .slide3 ul img {
+    width: 15.625vw;
+    height: 31.25vh;
+    margin-left: 6.5vw;
+}
+
+.slide-title {
+    position: relative;
+    bottom: 1.5vh;
+}
+
+.slide-title h2 {
+    color: #fff;
+    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px black, 0 0 20px black;
+}
+
+.slide-arrows a {
+    color: #000000;
+    font-size: 3vw;
+    position: relative;
+}
+
+.slide-arrows a.left {
+    right: 3.5vw;
+    top: 8vh;
+}
+
+.slide-arrows a.right {
+    left: 74vw;
+    top: 8vh;
+}
+
+.slide-controls ul {
+    display: flex;
+}
+
+.slide-controls {
+    position: absolute;
+    top: 32vh;
+    left: 31vw;
+}
+
+.slide-controls ul a {
+    color: #000000;
+    font-size: 1.3vw;
+    padding: 0 1em;
+}
+
+.slide-controls ul li a i.change {
+    display: inline-block;
+}
+.slide-controls ul i.change::before {
+    content: "\f111"; /* Unicode de fa-circle */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+.slide-controls ul i.change:hover::before {
+    content: "\f192"; /* Unicode de fa-circle-dot */
+}
+
+.slide-items {
+    position: absolute;
+}
+
+.fa-circle-left:hover, .fa-circle-right:hover {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+}
+

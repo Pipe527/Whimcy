@@ -188,32 +188,6 @@ ul.cd-dropdown-content li {
 .header-cart h4 a {
     color: #000;
 }
-/*-- cart-box --*/ 
-.cart {
-    margin-right: 2em;
-    padding-right: 2em;
-    border-right: 1px solid #6495ed;
-    float: left;
-} 
-.w3view-cart {
-    background: #0280e1;
-    border: none;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
-	-ms-border-radius: 50%;
-    border-radius: 50%;
-    width: 60px;
-    height: 59px;
-    text-align: center;
-    outline: none;
-}
-.w3view-cart  i.fa {
-    font-size: 2em;
-    color: #ffffff;
-	vertical-align: middle;
-}
-/*-- //cart-box --*/
 .my-account {
     float: right;
     margin: 1.4em 0;
@@ -2794,13 +2768,6 @@ nav.sitemap-tabs.affix div#myNavbar {
 .header-search { 
     margin: 1.6em 2em 1em;
 }
-.w3view-cart i.fa {
-    font-size: 1.5em; 
-}
-.w3view-cart { 
-    width: 50px;
-    height: 50px; 
-}
 .my-account { 
     margin: 1.1em 0;
 }
@@ -2980,10 +2947,6 @@ h3.w3sitemap-title {
 .header-search,.header-two.scroll-to-fixed-fixed .header-search {
     margin: 1.2em 1.5em 0;
     width: 51%;
-}
-.w3view-cart {
-    width: 45px;
-    height: 45px;
 }
 .my-account a {
     font-size: 0.9em; 
@@ -3215,14 +3178,6 @@ h3.w3ls-title.w3ls-title1 {
 .header-search .btn-default, .header-two.scroll-to-fixed-fixed .header-search .btn-default {
     width: 34px;
     height: 34px;
-}
-.w3view-cart i.fa {
-    font-size: 1.2em;
-}
-.w3view-cart {
-    width: 40px;
-    height: 40px;
-    padding: 0;
 }
 .my-account a {
     font-size: 0.85em;

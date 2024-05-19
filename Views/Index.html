@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whimcy</title>
     <link rel="stylesheet" href="../Css/Estilos.css">
+    <link rel="stylesheet" href="../Css/BodyIndex.css">
     <script src="https://kit.fontawesome.com/b59d19b6f4.js" crossorigin="anonymous"></script>
     <style>
         body{
@@ -15,77 +16,175 @@
     </style>
 </head>
 <body>
-    <Div>
-        <header>
-            <div class="superior">
-                <nav class="Letras">
-                    <ul class="Padres">
-                        <div><li><a href="" class="bton z">Menú</a></li></div>
-                        <li>
-                            <span class="M1">
-                                <ul class="active">
-                                    <li><a href="products.html" class="links">Pedir</a></li>   
-                                    <li><a href="#" class="links">Top</a></li>
-                                    <li>
-                                    <a href="" class="combo">Combos<i class="fa-solid fa-caret-right OpenSub"></i></a>
-                                        <ul class="SubMenu">
-                                            <li><a href="#" class="links">Categorias</a></li>   
-                                            <li><a href="#" class="links">Definidos</a></li>
-                                            <li><a href="#">Cartas</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#" class="links">Favoritos</a></li>
-                                </ul>
-                            </span>
-                        </li>
-                        <div><li><a href="" class="z m">Promociones</a></li></div>
-                        <li>
-                            <span class="M2">
-                                <ul class="activo">
-                                    <li><a href="#" class="links">Fechas</a></li>   
-                                    <li><a href="#" class="doble">Para <br>Año Nuevo</a></li>
-                                    <li><a href="#" class="doble">Ocaciones <br>Especiales</a></li>
-                                </ul>
-                            </span>
-                        </li>
-                        <li><a href="" class="exp"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                        <li><a href="Index.html"><img src="../images/Logotipo.gif" class="Logo"></a></li>
-                        <li><a href="Registro.php" class="exp"><i class="fa-solid fa-user"></i></a></li>
-                        <div><li><a href="" class="z r">Restaurantes</a></li></div>
-                            <li>
-                                <span class="M3">
-                                    <ul class="active">
-                                        <li><a href="#" class="links">Mapa</a></li>   
-                                        <li><a href="#" class="links">Mi Zona</a></li>
-                                        <li><a href="#">Ubicación</a></li>
-                                        <li><a href="#">Reservación</a></li>
+    <header>
+        <div class="superior">
+            <nav class="Letras">
+                <ul class="Padres">
+                    <div><li><a href="" class="bton z">Menú</a></li></div>
+                    <li>
+                        <span class="M1">
+                            <ul class="active">
+                                <li><a href="products.html">Pedir</a></li>   
+                                <li><a href="#">Top</a></li>
+                                <li>
+                                <a href="" class="combo">Combos<i class="fa-solid fa-caret-right OpenSub"></i></a>
+                                    <ul class="SubMenu">
+                                        <li><a href="#" >Categorias</a></li>   
+                                        <li><a href="#" >Definidos</a></li>
+                                        <li><a href="#">Cartas</a></li>
                                     </ul>
-                                </span>
-                            </li>
-                        <div><li><a href="" class="z ad">Adicional</a></li></div>
+                                </li>
+                                <li><a href="#" >Favoritos</a></li>
+                            </ul>
+                        </span>
+                    </li>
+                    <div><li><a href="" class="z m">Promociones</a></li></div>
+                    <li>
+                        <span class="M2">
+                            <ul class="activo">
+                                <li><a href="#" >Fechas</a></li>   
+                                <li><a href="#" class="doble">Para <br>Año Nuevo</a></li>
+                                <li><a href="#" class="doble">Ocaciones <br>Especiales</a></li>
+                            </ul>
+                        </span>
+                    </li>
+                    <li>	<div class="header-cart exp"> 
+                        <div class="cart"> 
+                            <form action="#" method="post" class="last"> 
+                                <input type="hidden" name="cmd" value="_cart" />
+                                <input type="hidden" name="display" value="1" />
+                                <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                            </form>  
+                        </div> 
+                    </div>
+                    </li>
+                    <li><a href="Index.html"><img src="../images/Logotipo.gif" class="Logo"></a></li>
+                        <li><a href="" class="z us"><i class="fa-solid fa-user"></i></a></li>
                         <li>
-                            <span class="M4">
-                                <ul class="activo">
-                                    <li><a href="#" class="doble">Facturas<br>Pendientes</a></li>   
-                                    <li><a href="#" class="links">Comunidad</a></li>
-                                    <li><a href="#">Amigos</a></li>
+                            <div class="Lgn">
+                                <span class="active">
+                                    <span class="Login-title">
+                                        <h3>Mi Cuenta</h3>
+                                    </span>
+                                    <form action="" name="Login" method="post">
+                                        <span class="input-dates">
+                                            <label for="Email">Correo:</label>
+                                            <input type="email" class="form-control" placeholder="Correo" name="Email" required>
+                                        </span>
+                                        <span class="input-dates">
+                                            <label for="Pass">Contraseña:</label>
+                                            <input type="password" class="form-control" placeholder="Contraseña" name="Pass" required>
+                                        </span>
+                                        <span class="Login-center">
+                                            <label for="Remember">
+                                                <input type="checkbox" class="form-control" name="Rem"> Recordarme
+                                            </label>
+                                            <a href="#">Contraseña Olvidada</a>
+                                        </span>
+                                        <span class="Login-foot">
+                                            <span>
+                                                <a href="#"><button type="submit" class="btn-go">Conexión</button></a>
+                                            </span>
+                                            <span>
+                                                <h4>No tienes cuenta</h4>
+                                                <a href="Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>
+                                            </span>
+                                        </span>
+                                    </form>
+                                </span>
+                            </div>
+                        </li>
+                    <div><li><a href="" class="z r">Restaurantes</a></li></div>
+                        <li>
+                            <span class="M3">
+                                <ul class="active">
+                                    <li><a href="#" class="links" data-section="Seccion1">Mapa</a></li>   
+                                    <li><a href="#" class="links" data-section="Seccion01">Mi Zona</a></li>
+                                    <li><a href="#" class="links" data-section="Seccion2">Ubicación</a></li>
+                                    <li><a href="#" class="links" data-section="Seccion3">Reservación</a></li>
                                 </ul>
                             </span>
                         </li>
-                    </ul>
-                </nav>
+                    <div><li><a href="" class="z ad">Adicional</a></li></div>
+                    <li>
+                        <span class="M4">
+                            <ul class="activo">
+                                <li><a href="#" class="doble">Facturas<br>Pendientes</a></li>   
+                                <li><a href="#" class="links">Comunidad</a></li>
+                                <li><a href="#">Amigos</a></li>
+                            </ul>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="sliderA">
+        <div class="slide1">
+            <ul>
+                <li><a href="products.html"><img src="../images/M01.jpg" alt="Img 1"></a></li>
+                <li><a href="products.html"><img src="../images/M02.jpeg" alt="Img 2"></a></li>
+                <li><a href="products.html"><img src="../images/M03.jpg" alt="Img 3"></a></li>
+            </ul>
+        </div>
+        <div class="slide2">
+            <ul>
+                <li><a href="products.html"><img src="../images/M02.jpeg" alt="Img 2"></a></li>
+                <li><a href="products.html"><img src="../images/M03.jpg" alt="Img 3"></a></li>
+                <li><a href="products.html"><img src="../images/M01.jpg" alt="Img 1"></a></li>
+            </ul>
+        </div>
+        <div class="slide3">
+            <ul>
+                <li><a href="products.html"><img src="../images/M03.jpg" alt="Img 3"></a></li>
+                <li><a href="products.html"><img src="../images/M01.jpg" alt="Img 1"></a></li>
+                <li><a href="products.html"><img src="../images/M02.jpeg" alt="Img 2"></a></li>
+            </ul>
+        </div>
+        <div class="slide-items">
+            <div class="slide-title">
+                <h2>Menus destacados</h2>
             </div>
-        </header>
-        <div>
-            
-
+            <div class="slide-arrows">
+                <a href="" class="left"><i class="fas fa-circle-left"></i></a>
+                <a href="" class="right"><i class="fas fa-circle-right"></i></a>
+            </div>
+            <div class="slide-controls">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-circle change"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-circle change"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-circle change"></i></a></li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="inferior">
-        <footer>
-            
-        </footer>
-    </div>
-<script src="../js/SubMenus.js"></script>    
+        <!-- cart-js -->
+        <script src="../JS/minicart.js"></script>
+        <script>
+            w3ls.render();
+    
+            w3ls.cart.on('w3sb_checkout', function (evt) {
+                var items, len, i;
+    
+                if (this.subtotal() > 0) {
+                    items = this.items();
+    
+                    for (i = 0, len = items.length; i < len; i++) {
+                        items[i].set('shipping', 0);
+                        items[i].set('shipping2', 0);
+                    }
+                }
+            });
+        </script>  
+        <!-- //cart-js -->  
+        <!-- menu js aim -->
+        <script src="../JS/jquery.menu-aim.js"> </script>
+        <script src="../JS/main.js"></script> <!-- Resource jQuery -->
+        <!-- //menu js aim --> 
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Abrir submenus -->
+        <script src="../JS/SubMenus.js"></script>
+        <script src="../JS/bootstrap.js"></script>   
 </body>
 </html>
