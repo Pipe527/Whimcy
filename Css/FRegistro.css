@@ -49,6 +49,7 @@
   padding: 15px;
   color: #444;
   float: right;
+  cursor: pointer;
 }
 
 .backpart {
@@ -77,50 +78,45 @@
 
 .card-body {
   position: relative;
-  top: 10.86vh;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  height: 68vh;
+  top: 9.5vh;
+  margin-bottom: 9vh;
   padding: 0.75rem 1.25rem;
-  background-color: rgba(236, 250, 232, 0.76);
+  background-color: #aac8a1c2;
 }
 
 .card-footer {
   position: relative;
   top: 0.7rem;
   right: 1.4rem;
-  width: 67.59vw;
+  width: 67.2vw;
   border-block: 0.5rem solid #00000098;
   border-block-start-width: 0.3rem;
   border-left: 0.3rem solid #000000a1;
   border-right: 0.3rem solid #000000a1;
   padding: 0.75rem 1.25rem;
-  background-color: rgba(17, 41, 9, 0.699);
+  background-color: #081803b3;
 }
 
 .card-info {
   position: relative;
   object-fit: contain;
   background-image: url("../images/Restaurante1.jpg");
-  background-size: cover;
+  background-size: 100vw 100%;
   background-repeat: no-repeat;
 }
 
 .form-horizontal{
   position: relative;
-  border-block: 0.5rem solid #00000098;
-  border-block-start-width: 0.3rem;
   outline-color: rgba(73, 80, 87,0.50);
   outline-style: inset;
   width: 70%;
-  height: 38vw;
   margin: auto;
 }
 
 #Doble1, #Doble2, #Doble3,
 #Doble5, #phone, #pass, 
 #Confpass {
-  width: 23vw;
+  width: 21vw;
 }
 #Doble4{
   width: 15vw;
@@ -168,16 +164,11 @@
   flex-direction: column;
   align-items: space-around;
   padding-top: 2rem;
-  padding-right: 6vw;
+  padding-right: 4vw;
   padding-left: 2rem;
 }
 
-.input-doble .input-position {
-  width: 100%;
-}
-
-.input-alone, .input-doble{
-  display: flex;
+.input-alone, .input-doble {
   flex-direction: row;
   margin-bottom: 1.5vh;
 }

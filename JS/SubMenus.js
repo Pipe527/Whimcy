@@ -133,6 +133,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+// Botones del centro
+function redireccionar() {
+    const a = document.getElementById("Boa");
+    const b = document.getElementById("Bob");
 
+    if (a) {
+        a.onclick = function() {
+            window.location.href = 'offers.html';
+        };
+    } 
 
+    if (b) {
+        b.onclick = function() {
+            window.location.href = 'offers.html#Targeta';
+        };
+    }
+}
+
+redireccionar();
 

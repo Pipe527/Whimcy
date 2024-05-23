@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../Css/Estilos.css">
     <link rel="stylesheet" href="../Css/BodyIndex.css">
     <script src="https://kit.fontawesome.com/b59d19b6f4.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
     <style>
         body{
             background-image: url("../images/Fondo.gif");
@@ -158,6 +159,89 @@
             </div>
         </div>
     </div>
+    <div class="centro">
+        <div class="parrafo 1">
+            <h3>Conoce nuestras ofertas</h3>
+            <p>
+                Pensamos en cada ocación y que cada una es muy especial para ti, por eso 
+                te ofrecemos descuentos en tus compras cada vez que celebres algo!. Para 
+                año nuevo, las navidades, halloween o tu cumpleaños!
+                <br>
+                ¡Conoce nuestras ofertas! 
+            </p>
+            <button class="btn-offer a" type="button" id="Boa" onclick="window.location.href='offers.html'">Vamos!</button>
+        </div>
+        <div class="parrafo 2">
+            <h3>Tragetas de regalo</h3>
+            <p>
+                Durante tus ocaciones, cada que compres 4 articulos de tus menus favoritos
+                recibiras una targeta de regalo con bonos de hasta $40.000 para que los 
+                compartas con tu familia y amigos!   
+                <br>
+                ¡Consigue las tuyas! 
+            </p>
+            <button class="btn-offer b" type="button" id="Bob" onclick="window.location.href='offers.html#Targeta'">Vamos!</button>
+        </div>
+    </div>
+    <div class="container marketing">
+        <h1>Restaurantes</h1>
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="../images/3.jpg" alt="Restaurante">
+            <h2 class="fw-normal">Mercado</h2>
+            <p>Puedes comprar comida a traves de los hipermeracdos más conocidos o directamente a restaurantes como Exito-restaurantes.</p>
+            <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img src="../images/R1.jpg" alt="Restaurante">
+            <h2 class="fw-normal">Mc'donals</h2>
+            <p>Pide lo que quieras y nosotros te lo entregamos, desde la reconocida marca Mc'Donals, nosotros te lo facilitamos!</p>
+            <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img src="../images/R2.jpg" alt="Restaurante">
+            <h2 class="fw-normal">Restaurante X</h2>
+            <p>Los mejores menús del restaurante X, pide en uno de los mejores restaurantes a la carta para cenar con tu familia o amigos!</p>
+            <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        </div>
+    <div class="contenedor">
+        <div class="w3agile-ftr-top">
+        <div>
+            <div class="ftr-toprow">
+                <div class="col-md-6 ftr-top-grids">
+                    <div class="ftr-top-left">
+                        <i class="fa fa-truck" ></i>
+                    </div> 
+                    <div class="ftr-top-right">
+                        <h4>DOMICILIO GRATIS</h4>
+                        <p>Ciertos restaurantes te ofreceran domicilios gratis, según donde lo pidas</p>
+                    </div> 
+                </div> 
+                <div class="col-md-6 ftr-top-grids">
+                    <div class="ftr-top-left">
+                        <i class="fa fa-user" ></i>
+                    </div> 
+                    <div class="ftr-top-right">
+                        <h4>CUIDADO DEL CLIENTE</h4>
+                        <p>Restaurantes con calidad y servicios garantizados, y gran variedad alimentaria.</p>
+                    </div> 
+                </div>
+                <div class="col-md-6 ftr-top-grids">
+                    <div class="ftr-top-left">
+                        <i class="fa fa-thumbs-o-up" ></i>
+                    </div> 
+                    <div class="ftr-top-right">
+                        <h4>BUENA CALIDAD</h4>
+                        <p>Los mejoraes servicios de entrega a docmicilio, con los mejores restaurantes!</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        </div>
+	</div>
+    <div class="inferior"></div>
         <!-- cart-js -->
         <script src="../JS/minicart.js"></script>
         <script>
@@ -185,6 +269,12 @@
         ================================================== -->
         <!-- Abrir submenus -->
         <script src="../JS/SubMenus.js"></script>
-        <script src="../JS/bootstrap.js"></script>   
+        <script src="../JS/bootstrap.js"></script> 
+        <!-- Importar el footer -->
+	    <script>
+	    	$(document).ready(function () {
+	    	  $('.inferior').load('Footer.html');
+	    	});
+	    </script>  
 </body>
 </html>

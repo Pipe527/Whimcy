@@ -116,6 +116,9 @@
     </div>
     </form>
 </div>
+<footer>
+    <?php   include_once("footer.html") ?>  
+</footer>
 <script>
     with(document.Registro){
         onsubmit = function (e) {
@@ -131,8 +134,5 @@
         }
     }
 </script>
-<footer>
-    <?php   include_once("footer.html") ?>  
-</footer>
 </body>
 </html>

@@ -48,6 +48,7 @@
 
 .slide-title h2 {
     color: #fff;
+    font-size: 1.3vw;
     text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px black, 0 0 20px black;
 }
 
@@ -104,3 +105,277 @@
     font-weight: 400;
 }
 
+p {
+    font-size: 1em;
+    color: #999;
+    line-height: 1.8em;
+}
+.w3agile-ftr-top {
+    padding: 4em 0;
+    background: url(../images/bg1.jpg)no-repeat center 0px;
+	background-size: cover; 
+    width: 100vw;
+}
+@media (max-width: 991px) {
+    .w3agile-ftr-top {
+        padding: 1em 0;
+        background: url(../images/bg1.jpg)no-repeat center 0px;
+        background-size: cover; 
+        width: 100vw;
+    }
+    .ftr-top-left i.fa {
+        font-size: 1em;
+        width: 40px;
+        height: 40px;
+    }
+}
+@media (max-width: 680px) {
+    .w3agile-ftr-top {
+        padding: 1em 0;
+        background: url(../images/bg1.jpg)no-repeat center 0px;
+        background-size: cover; 
+        width: 100vw;
+    }
+    .ftr-top-left i.fa {
+        font-size: 1em;
+        width: 20px;
+        height: 20px;
+    }
+    .ftr-top-right h4 {
+        font-size: 0.4em;
+    }
+    .col-md-6 {
+        padding-left: 4vw;
+        width: 15.62vw;
+    }
+    p {
+        line-height: 0.7em;
+    }
+}
+.contenedor {
+    display: flex;
+    flex-direction: row;
+}
+.col-md-6 {
+    padding-left: 4vw;
+    width: 15.62vw;
+    float: left;
+}
+.ftr-toprow {
+    padding-left: 16vw;
+}
+.ftr-top-left {
+    float: left; 
+}
+.ftr-top-right{
+    float: right;
+    width: 72%;
+}
+.ftr-top-left i.fa {
+    font-size: 2.5em;
+    border: 1px solid; 
+    color: #176aff;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 2;
+	-webkit-transition:.5s all;
+	-moz-transition:.5s all;
+	-o-transition:.5s all;
+	-ms-transition:.5s all;
+	transition:.5s all;
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+.ftr-top-left i.fa.fa-user{
+	color: #00c57e;
+}
+.ftr-top-left i.fa.fa-thumbs-o-up{
+	color: #fb4602;
+}
+.ftr-top-right h4 {
+    font-size: 1.4em;
+    font-family: 'Offside', cursive;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+.ftr-top-grids:hover i.fa {
+    color: #fff;
+}
+
+.centro {
+    padding: 3.8em;
+    width: 78.9%;
+    columns: 30vw 2;
+    margin-left: 7.3vw;
+    text-align: center;
+    border-top: 3px dashed black;
+    font-family: 'Offside', cursive;
+    background-color: #084e39de;
+}
+.parrafo {
+    padding: 0 3em;
+}
+.parrafo h3 {
+    color: #fff;
+    font-size: 2em;
+    padding-bottom: 2em;
+    text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+}
+.parrafo p {
+    color: #000000;
+    font-size: 1.1rem;
+    text-shadow: 0 0 5px #044f17, 0 0 10px white;
+}
+.btn-offer {
+    position: relative;
+    top: 2.7em;
+    height: 4em;
+    width: 5em;
+    color: #fff;
+    background-color: #00c57e;
+    border-color: darkgreen;
+    border-radius: 1em;
+    font-family: 'Offside', cursive;
+    font-weight: bold;
+}
+.btn-offer:hover {
+    cursor: pointer;
+    border-color: #01af01;
+    color: #0e1829;
+}
+/* Restaurantes */
+.col-lg-4 {
+    margin-left: 0.7em;
+}
+.col-lg-4 h2 {
+    color: #fff;
+    text-shadow: 0 0 3px #000000, 0 0 8px #000000;
+}
+.col-lg-4 img {
+    width: 13.02vw;
+    height: 20.83vh;
+    border-radius: 50%;
+    box-shadow: 0 0 5px black;
+  }
+  .marketing .col-lg-4 {
+    text-align: center;
+  }
+  .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15em;
+    padding-top: 1em;
+  }
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+
+}
+@media (min-width: 680px) {
+    .container.marketing {
+        margin-right: 46vw;
+        width: 26.33333333%;
+    }
+}
+@media (min-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 auto;
+        width: 26.33333333%;
+    }
+}
+.rounded-circle {
+    border-radius: 50% !important;
+  }
+svg {
+  vertical-align: middle;
+}
+@media (min-width: 1200px) {
+    h2.fw-normal {
+      font-size: 2rem;
+    }
+  }
+  .col-lg-4 p {
+    margin: 1em 1em;
+    font-family: 'Offside', cursive;
+    font-size: 1vw;
+    color: #000000;
+    text-shadow: 0 0 5px #044f17, 0 0 10px white;
+  }
+  .btn-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #6c757d;
+    --bs-btn-border-color: #6c757d;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #5c636a;
+    --bs-btn-hover-border-color: #565e64;
+    --bs-btn-focus-shadow-rgb: 130,138,145;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #565e64;
+    --bs-btn-active-border-color: #51585e;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #6c757d;
+    --bs-btn-disabled-border-color: #6c757d;
+  }
+  .btn {
+    --bs-btn-padding-x: 0.75rem;
+    --bs-btn-padding-y: 0.375rem;
+    --bs-btn-font-family: 'Offside', cursive;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1.5;
+    --bs-btn-color: #212529;
+    --bs-btn-bg: #212529;
+    --bs-btn-border-width: var(--bs-border-width);
+    --bs-btn-border-color: #070808;
+    --bs-btn-border-radius: 30%;
+    --bs-btn-hover-border-color: #101820;
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-disabled-opacity: 0.65;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    font-family: var(--bs-btn-font-family);
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+    border-radius: var(--bs-btn-border-radius);
+    background-color: var(--bs-btn-bg);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  .btn.btn-secondary:hover {
+    cursor: pointer;
+    border-color: #054905;
+    color: #00c57e;
+  }
+  .container.marketing {
+    width: 84.5vw;
+    margin-left: 7.29vw;
+    font-family: 'Offside', cursive;
+    background-color: #084e39de;
+    border-top: 3px dashed black;
+    border-bottom: 3px dashed black;
+  }
+  .container.marketing h1 {
+    text-align: center;
+    margin: 1em 0;
+    color: #fff;
+    text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+  }

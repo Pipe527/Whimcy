@@ -14,15 +14,6 @@
     position: relative;
 }
 
-.inferior {
-    background-image: url(../images/Pie-de-pagina.gif);
-    background-attachment: inherit;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    height: 8.26vw;
-    width: 100%;
-}
-
 /*-- //single-page --*/
 /*-- cart-css --*/ 
 #PPsbmincart form {
@@ -263,7 +254,7 @@ p.sbmincart-empty-text {
     position: relative;
 }
 
-.form-control[type="email"], .form-control[type="password"] {
+.Lgn .form-control[type="email"],.Lgn .form-control[type="password"] {
     width: 14vw;
     height: 2.5vh;
 }
