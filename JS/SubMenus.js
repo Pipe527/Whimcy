@@ -1,3 +1,4 @@
+// Botones
 const btn = document.querySelector('.bton'); 
 const navbar = document.querySelector('.M1');
 
@@ -32,13 +33,12 @@ btnAd.addEventListener('click', (event) => {
     Navvv.classList.toggle('activo');
 });
 
-const btnLog = document.querySelector('.us');
+const btnLog = document.querySelector('.z.us');
 const NNavvv = document.querySelector('.Lgn');
 
 btnLog.addEventListener('click', (event) => {
     event.preventDefault();
-    NNavvv.classList.toggle('active');
-    console.log(btnLog);
+    NNavvv.classList.toggle('actived');
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -59,13 +59,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
+// Slider principal
 document.addEventListener('DOMContentLoaded', function() {
     const sliders = [
         { element: document.querySelector('.slide1 ul'), slides: document.querySelectorAll('.slide1 ul li'), currentIndex: 0, intervalId: null },
         { element: document.querySelector('.slide2 ul'), slides: document.querySelectorAll('.slide2 ul li'), currentIndex: 0, intervalId: null },
         { element: document.querySelector('.slide3 ul'), slides: document.querySelectorAll('.slide3 ul li'), currentIndex: 0, intervalId: null },
-    ];
+    ].filter(slider => slider.element !== null && slider.slides.length > 0); // Filtra sliders que no existen
 
     function updateSlide(slider) {
         slider.currentIndex++;
@@ -98,41 +98,50 @@ document.addEventListener('DOMContentLoaded', function() {
         slider.element.addEventListener('mouseout', () => startSlider(slider));
     });
 
-    document.querySelector('.left').addEventListener('click', function(event) {
-        event.preventDefault();
-        sliders.forEach(slider => {
-            stopSlider(slider);
-            slider.currentIndex--;
-            if (slider.currentIndex < 0) {
-                slider.currentIndex = slider.slides.length - 1;
-            }
-            const offset = -slider.currentIndex * 100;
-            slider.element.style.transform = `translateX(${offset}%)`;
-            startSlider(slider);
-        });
-    });
-
-    document.querySelector('.right').addEventListener('click', function(event) {
-        event.preventDefault();
-        sliders.forEach(slider => {
-            stopSlider(slider);
-            updateSlide(slider);
-            startSlider(slider);
-        });
-    });
-
-    const controls = document.querySelectorAll('.slide-controls ul li a');
-    controls.forEach((control, index) => {
-        control.addEventListener('click', function(event) {
+    const leftControl = document.querySelector('.left');
+    if (leftControl) {
+        leftControl.addEventListener('click', function(event) {
             event.preventDefault();
             sliders.forEach(slider => {
                 stopSlider(slider);
-                goToSlide(slider, index);
+                slider.currentIndex--;
+                if (slider.currentIndex < 0) {
+                    slider.currentIndex = slider.slides.length - 1;
+                }
+                const offset = -slider.currentIndex * 100;
+                slider.element.style.transform = `translateX(${offset}%)`;
                 startSlider(slider);
             });
         });
-    });
+    }
+
+    const rightControl = document.querySelector('.right');
+    if (rightControl) {
+        rightControl.addEventListener('click', function(event) {
+            event.preventDefault();
+            sliders.forEach(slider => {
+                stopSlider(slider);
+                updateSlide(slider);
+                startSlider(slider);
+            });
+        });
+    }
+
+    const controls = document.querySelectorAll('.slide-controls ul li a');
+    if (controls.length > 0) {
+        controls.forEach((control, index) => {
+            control.addEventListener('click', function(event) {
+                event.preventDefault();
+                sliders.forEach(slider => {
+                    stopSlider(slider);
+                    goToSlide(slider, index);
+                    startSlider(slider);
+                });
+            });
+        });
+    }
 });
+
 // Botones del centro
 function redireccionar() {
     const a = document.getElementById("Boa");

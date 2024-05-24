@@ -274,11 +274,11 @@ p.sbmincart-empty-text {
 .M1 {
     background-image: url("../images/SubMenu_01.gif");
     background-repeat: no-repeat;
-    background-size: 9.56vw 22.58vh;
+    background-size: 9.56vw 20.83vh;
     position: absolute;
     top: 7vh;
     right: 1vw;
-    height: 11vw;
+    height: 20.83vh;
     width: 9.5vw;
     display: none;
     z-index: 900;
@@ -296,20 +296,20 @@ p.sbmincart-empty-text {
 
 .M2 {
     transform: translateX(-14.4vw);
-    height: 13vw;
+    height: 20.83vh;
     width: 12vw;
 }
 
 .M3 {
     transform: translateX(-14.4vw);
-    height: 10vw;
+    height: 21.83vh;
     width: 12vw;
 }
 
 .M4 {
     transform: translateX(-12.4vw);
     align-items: center;
-    height: 10vw;
+    height: 20.83vh;
     width: 12vw;
 }
 
@@ -317,6 +317,10 @@ p.sbmincart-empty-text {
     display: grid;
     justify-items: center;
     align-content: space-evenly;
+}
+
+.Lgn.actived {
+    display: flex;
 }
 
 .M1 > ul > li:not(.SubMenu):not(.doble) > a {
@@ -342,7 +346,7 @@ p.sbmincart-empty-text {
     background-image: url("../images/SubMenu_01.gif");
     background-size: 100% 100%;
     padding: 2vw;
-    height: 13vw;
+    height: 32.9vh;
     width: 15vw;
     top: 7vh;
     z-index: 2000;
@@ -358,8 +362,65 @@ p.sbmincart-empty-text {
     color: #fff;
 }
 
+.Login-title h3 {
+    padding: 0.3em 0;
+    text-align: center;
+}
+
+.input-dates {
+    margin: 1em 0;
+}
+
 a.doble {
     line-height: 3vh;
+}
+
+.input-dates, .Login-center, .Login-foot {
+    margin: 1em 0;
+}
+
+.Login-center a {
+    display: block;
+    color: #6cff00;
+}
+
+.Login-center {
+    display: flex;
+    height: 1em;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Login-foot {
+    text-align: center;
+}
+
+.Login-foot h3 {
+    font-style: italic;
+}
+
+.Login-foot button, .Login-center button {
+    height: 3.54vh;
+    width: 5.72vw;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    border-color: darkgreen;
+    background-color: #0EBB41;
+    border-radius: 1em;
+}
+.Login-foot button:hover, .Login-center button:hover {
+    color: #050404;
+    border-color: #006453;
+}
+
+.Login-center button {
+    margin-bottom: 0.7em;
+}
+
+.Login-foot button {
+    margin-top: 0.7em;
 }
 
 .exp i {
