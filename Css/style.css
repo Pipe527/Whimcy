@@ -3836,6 +3836,9 @@ h3.w3ls-title.w3ls-title1 {
     font-size: 0.85em;
 }
 }
+.img-responsive.clean {
+    display: unset;
+}
 /*-- //responsive-design --*/
 /* Adicional */
 .columns {

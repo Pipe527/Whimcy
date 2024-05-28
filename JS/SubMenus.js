@@ -33,13 +33,22 @@ btnAd.addEventListener('click', (event) => {
     Navvv.classList.toggle('activo');
 });
 
+// Navs de cuenta
 const btnLog = document.querySelector('.z.us');
-const NNavvv = document.querySelector('.Lgn');
+const NNavvv = document.querySelector('.Lgn'); 
 
 btnLog.addEventListener('click', (event) => {
     event.preventDefault();
     NNavvv.classList.toggle('actived');
 });
+
+//Obtener ruta de imagen - texto y precio
+function cambiarImagen(ruta, texto, precio) {
+    localStorage.setItem('imagen', ruta);
+    localStorage.setItem('h3Valor', texto);
+    localStorage.setItem('precio', precio);
+    window.location.href = 'single.html';
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.links');

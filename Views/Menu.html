@@ -19,7 +19,7 @@
                 <li>
                     <span class="M1">
                         <ul class="active">
-                            <li><a href="products.html">Pedir</a></li>   
+                            <li><a href="products.php">Pedir</a></li>   
                             <li><a href="#" >Top</a></li>
                             <li>
                             <a href="" class="combo">Combos<i class="fa-solid fa-caret-right OpenSub"></i></a>
@@ -62,7 +62,7 @@
                                 <span class="Login-title">
                                     <h3>Mi Cuenta</h3>
                                 </span>
-                                <form action="" name="Login" method="post">
+                                <form action="../Controllers/LogIn.php" name="Login" method="post">
                                     <div class="input-dates">
                                         <label for="Email">Correo:</label>
                                         <input type="email" class="form-control" placeholder="Correo" name="Email" required>
@@ -87,6 +87,11 @@
                                         </span>
                                     </div>
                                 </form>
+                            </span>
+                        </div>
+                        <div class="profile">
+                            <span class="actived">
+
                             </span>
                         </div>
                     </li>
@@ -137,6 +142,24 @@
 	<!-- //cart-js -->  
 	<!-- Bootstrap core JavaScript
     ================================================== -->
+    <!-- Datos de sesion -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            fetch('LogIn.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        let nombreUsuario = data.Nombre;
+                        console.log("Nombre de usuario: " + nombreUsuario);
+                    } else {
+                        console.error("Error: " + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching session data:', error);
+                });
+        });
+    </script>
     <!-- Abrir submenus -->
 	<script src="../JS/SubMenus.js"></script>
 </body>

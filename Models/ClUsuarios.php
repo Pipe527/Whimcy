@@ -44,7 +44,7 @@ class Usuarios {
         return $this->Nickname;
     }
     function getEmail(){
-        return ucwords(strtolower($this->Email));
+        return trim(ucwords(strtolower($this->Email))); // Evitar espacios en blanco sobre Email
     }
     function getPass(){
         return $this->Pass;
