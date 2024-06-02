@@ -14,17 +14,20 @@ if (isset($_POST["Email"]) && isset($_POST["Pass"])) {
     $Clave = validar($_POST["Pass"]);
 
     if (empty($Usuario)) {
-        echo "<script>alert('El usuario es requerido'); </script>";
+        echo "<script>alert('El usuario es requerido'); window.location.href='../views/login.html';</script>";
         exit(); 
     } elseif (empty($Clave)) {
-        echo "<script>alert('La contraseña es requerida'); </script>";
+        echo "<script>alert('La contraseña es requerida'); window.location.href='../views/login.html';</script>";
         exit(); 
     } else {
-        $Sql = "SELECT * FROM usuarios WHERE Correo = '$Usuario' AND Contraseña = '$Clave'";
-        $Result = mysqli_query($Con, $Sql);
+        $Sql = "SELECT * FROM usuarios WHERE Correo = ? AND Contraseña = ?";
+        $stmt = $Con->prepare($Sql);
+        $stmt->bind_param("ss", $Usuario, $Clave);
+        $stmt->execute();
+        $Result = $stmt->get_result();
 
-        if (mysqli_num_rows($Result) > 0) {
-            $row = mysqli_fetch_assoc($Result);
+        if ($Result->num_rows > 0) {
+            $row = $Result->fetch_assoc();
             if ($row['Correo'] === $Usuario && $row['Contraseña'] === $Clave) {
                 $_SESSION['Correo'] = $row['Correo'];
                 $_SESSION['Nombre'] = $row['Nombre'];
@@ -44,5 +47,4 @@ if (isset($_POST["Email"]) && isset($_POST["Pass"])) {
     header("Location: ../views/index.html");
     exit();
 }
-
 ?>

@@ -10,7 +10,7 @@
 
 <header>
     <div>
-        <?php   include_once("Menu.html") ?>
+        <?php   include_once("Menu.php") ?>
     </div>
 </header>
  <!-- Formulario -->

@@ -26,7 +26,7 @@
                         <span class="M1">
                             <ul class="active">
                                 <li><a href="products.php">Pedir</a></li>   
-                                <li><a href="#">Top</a></li>
+                                <li><a href="#" >Top</a></li>
                                 <li>
                                 <a href="" class="combo">Combos<i class="fa-solid fa-caret-right OpenSub"></i></a>
                                     <ul class="SubMenu">
@@ -56,46 +56,24 @@
                                 <input type="hidden" name="display" value="1" />
                                 <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
                             </form>  
-                        </div> 
+                        </div>
+                        <div class="clearfix"> </div> 
                     </div>
                     </li>
                     <li><a href="Index.html"><img src="../images/Logotipo.gif" class="Logo"></a></li>
                         <li><a href="" class="z us"><i class="fa-solid fa-user"></i></a></li>
                         <li>
                             <div class="Lgn">
-                                <span class="active">
-                                    <span class="Login-title">
-                                        <h3>Mi Cuenta</h3>
-                                    </span>
-                                    <form action="../Controllers/LogIn.php" name="Login" method="post">
-                                        <span class="input-dates">
-                                            <label for="Email">Correo:</label>
-                                            <input type="email" class="form-control" placeholder="Correo" name="Email" required>
-                                        </span>
-                                        <span class="input-dates">
-                                            <label for="Pass">Contraseña:</label>
-                                            <input type="password" class="form-control" placeholder="Contraseña" name="Pass" required>
-                                        </span>
-                                        <span class="Login-center">
-                                            <label for="Remember">
-                                                <input type="checkbox" class="form-control" name="Rem"> Recordarme
-                                            </label>
-                                            <a href="#">Contraseña Olvidada</a>
-                                        </span>
-                                        <span class="Login-foot">
-                                            <span>
-                                                <a href="#"><button type="submit" class="btn-go">Conexión</button></a>
-                                            </span>
-                                            <span>
-                                                <h4>No tienes cuenta</h4>
-                                                <a href="Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>
-                                            </span>
-                                        </span>
-                                    </form>
+                                <span class="actived" id="login-section">
+                                   
+                            </div>
+                            <div class="profile">
+                                <span class="actived" id="profile-section">
+    
                                 </span>
                             </div>
                         </li>
-                    <div><li><a href="" class="z r">Restaurantes</a></li></div>
+                    <div><li><a href="#" class="z r">Restaurantes</a></li></div>
                         <li>
                             <span class="M3">
                                 <ul class="active">
@@ -112,7 +90,7 @@
                         <span class="M4">
                             <ul class="activo">
                                 <li><a href="#" class="doble">Facturas<br>Pendientes</a></li>   
-                                <li><a href="#" class="links">Comunidad</a></li>
+                                <li><a href="#" >Comunidad</a></li>
                                 <li><a href="#">Amigos</a></li>
                             </ul>
                         </span>
@@ -277,5 +255,63 @@
 	    	  $('.inferior').load('Footer.html');
 	    	});
 	    </script>  
+        <!-- Ajax verificación de sesion -->
+    <script>
+        $(document).ready(function() {
+            // Realiza una petición AJAX para verificar si el usuario está logueado
+            $.get('../Controllers/CheckSesion.php', function(response) {
+                console.log("Respuesta de la sesión:", response); // Verifica la respuesta en la consola
+    
+                if (response.loggedIn) {
+                    console.log("Usuario logueado: ", response.user); // Debug
+                    localStorage.setItem('loggedIn', true);
+                    $('#login-section').hide();
+                    $('#profile-section').html(
+                        '<ul>' +
+                        '<li><a href="#">' + response.user + '</a></li>' +
+                        '<li><a href="#">Configuración</a></li>' +
+                        '<li><a href="../Controllers/Logout.php">Cerrar sesión</a></li>' +
+                        '</ul>'
+                    );
+                    $('.profile').show();
+                } else {
+                    console.log("Usuario no logueado"); // Debug
+                    $('#login-section').html(
+                        '<span class="Login-title">' +
+                        '<h3>Mi Cuenta</h3>' +
+                        '</span>' +
+                        '<form action="../Controllers/LogIn.php" name="Login" method="post">' +
+                        '<div class="input-dates">' +
+                        '<label for="Email">Correo:</label>' +
+                        '<input type="email" class="form-control" placeholder="Correo" name="Email" required>' +
+                        '</div>' +
+                        '<div class="input-dates">' +
+                        '<label for="Pass">Contraseña:</label>' +
+                        '<input type="password" class="form-control" placeholder="Contraseña" name="Pass" required>' +
+                        '</div>' +
+                        '<div class="Login-center">' +
+                        '<label for="Remember">' +
+                        '<input type="checkbox" class="form-control" name="Rem"> Recordarme' +
+                        '</label>' +
+                        '<a href="#">Contraseña Olvidada</a>' +
+                        '<span>' +
+                        '<a href="#"><button type="submit" class="btn-go">Conexión</button></a>' +
+                        '</span>' +
+                        '</div>' +
+                        '<div class="Login-foot">' +
+                        '<span>' +
+                        '<h3>No tienes cuenta</h3>' +
+                        '<a href="Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>' +
+                        '</span>' +
+                        '</div>' +
+                        '</form>'
+                    );
+                    $('.profile').hide();
+                }
+            }).fail(function(jqXHR, textStatus, errorThrown) {
+                console.error('Error fetching session data:', textStatus, errorThrown); // Debug: Mostrar el error en la consola
+            });
+        });
+    </script>
 </body>
 </html>

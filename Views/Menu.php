@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+$response = array(
+    'loggedIn' => false
+);
+
+if (isset($_SESSION['Nombre'])) {
+    $response['loggedIn'] = true;
+    $response['user'] = $_SESSION['Nombre'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b59d19b6f4.js" crossorigin="anonymous" rel="stylesheet"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <header>
@@ -58,39 +72,11 @@
                     <li><a href="" class="z us"><i class="fa-solid fa-user"></i></a></li>
                     <li>
                         <div class="Lgn">
-                            <span class="actived">
-                                <span class="Login-title">
-                                    <h3>Mi Cuenta</h3>
-                                </span>
-                                <form action="../Controllers/LogIn.php" name="Login" method="post">
-                                    <div class="input-dates">
-                                        <label for="Email">Correo:</label>
-                                        <input type="email" class="form-control" placeholder="Correo" name="Email" required>
-                                    </div>
-                                    <div class="input-dates">
-                                        <label for="Pass">Contraseña:</label>
-                                        <input type="password" class="form-control" placeholder="Contraseña" name="Pass" required>
-                                    </div>
-                                    <div class="Login-center">
-                                        <label for="Remember">
-                                            <input type="checkbox" class="form-control" name="Rem"> Recordarme
-                                        </label>
-                                        <a href="#">Contraseña Olvidada</a>
-                                        <span>
-                                            <a href="#"><button type="submit" class="btn-go">Conexión</button></a>
-                                        </span>
-                                    </div>
-                                    <div class="Login-foot">
-                                        <span>
-                                            <h3>No tienes cuenta</h3>
-                                            <a href="Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>
-                                        </span>
-                                    </div>
-                                </form>
-                            </span>
+                            <span class="actived" id="login-section">
+                               
                         </div>
                         <div class="profile">
-                            <span class="actived">
+                            <span class="actived" id="profile-section">
 
                             </span>
                         </div>
@@ -142,25 +128,59 @@
 	<!-- //cart-js -->  
 	<!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Datos de sesion -->
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            fetch('LogIn.php')
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'success') {
-                        let nombreUsuario = data.Nombre;
-                        console.log("Nombre de usuario: " + nombreUsuario);
-                    } else {
-                        console.error("Error: " + data.message);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching session data:', error);
-                });
-        });
-    </script>
     <!-- Abrir submenus -->
 	<script src="../JS/SubMenus.js"></script>
+    <!-- Sesiones -->
+    <?php if ($response['loggedIn']) { ?>
+    <script>
+        console.log('Usuario logueado: <?php echo $response['user']; ?>');
+        localStorage.setItem('loggedIn', true);
+        document.getElementById('login-section');
+        document.getElementById('profile-section').innerHTML = `
+            <ul>
+                <li><a href="#"> <?php echo $response['user']; ?> </a></li>
+                <li><a href="#">Configuración</a></li>
+                <li><a href="../Controllers/Logout.php">Cerrar sesión</a></li>
+            </ul>
+        `;
+        document.querySelector('.profile');
+    </script>
+<?php } else { ?>
+    <script>
+        console.log('Usuario no logueado');
+        document.getElementById('login-section').innerHTML = `
+            <span class="Login-title">
+                <h3>Mi Cuenta</h3>
+            </span>
+            <form action="../Controllers/LogIn.php" name="Login" method="post">
+                <div class="input-dates">
+                    <label for="Email">Correo:</label>
+                    <input type="email" class="form-control" placeholder="Correo" name="Email" required>
+                </div>
+                <div class="input-dates">
+                    <label for="Pass">Contraseña:</label>
+                    <input type="password" class="form-control" placeholder="Contraseña" name="Pass" required>
+                </div>
+                <!-- Agregar más campos si es necesario -->
+                <div class="Login-center">
+                    <label for="Remember">
+                        <input type="checkbox" class="form-control" name="Rem"> Recordarme
+                    </label>
+                    <a href="#">Contraseña Olvidada</a>
+                    <span>
+                        <a href="#"><button type="submit" class="btn-go">Conexión</button></a>
+                    </span>
+                </div>
+                <div class="Login-foot">
+                    <span>
+                        <h3>No tienes cuenta</h3>
+                        <a href="Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>
+                    </span>
+                </div>
+            </form>
+        `;
+        
+    </script>
+<?php } ?>
 </body>
 </html>

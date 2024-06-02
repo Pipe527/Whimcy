@@ -33,14 +33,23 @@ btnAd.addEventListener('click', (event) => {
     Navvv.classList.toggle('activo');
 });
 
-// Navs de cuenta
 const btnLog = document.querySelector('.z.us');
 const NNavvv = document.querySelector('.Lgn'); 
+const profileNav = document.querySelector('.profile');
 
 btnLog.addEventListener('click', (event) => {
     event.preventDefault();
-    NNavvv.classList.toggle('actived');
+    const loggedIn = localStorage.getItem('loggedIn') === 'true';
+    console.log(loggedIn);
+    if (loggedIn) {
+        profileNav.classList.toggle('actived');
+        NNavvv.classList.remove('actived'); // Asegurarse de que el formulario de inicio de sesión no esté activo
+    } else {
+        NNavvv.classList.toggle('actived');
+        profileNav.classList.remove('actived'); // Asegurarse de que el perfil del usuario no esté activo
+    }
 });
+
 
 //Obtener ruta de imagen - texto y precio
 function cambiarImagen(ruta, texto, precio) {

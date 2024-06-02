@@ -444,7 +444,7 @@ h3.w3ls-title {
     font-size: 1.5em;
     color: #fff;
     background: #3075f1;
-    width: 60px;
+    width: 86px;
     height: 60px;
     line-height: 2.9em;
 	-webkit-border-radius: 62%;
@@ -3868,6 +3868,12 @@ h3.w3ls-title.w3ls-title1 {
 .img-restaurant img {
     margin: 1.4em 0;
 }
+.Filtro1 {
+    filter: sepia(100%); 
+}
+.Filtro2 {
+    transform: rotate(45deg);
+}
 .info-restaurant {
     display: flex;
 }
@@ -3886,3 +3892,14 @@ h3.w3ls-title.w3ls-title1 {
 .img-restaurant, .par-restaurant {
     margin-left: 4em;
 }
+.privacy-w3row p {
+    color: #020202;
+    margin-top: 0.5em;
+    text-align: justify;
+  }
+.privacy-w3row p.end, h5 {
+  margin-bottom: 1em;
+}
+.swal2-input-label {
+    font-size: 2em;
+  }

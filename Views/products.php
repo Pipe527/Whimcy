@@ -1433,7 +1433,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						<ul>
 							<li><a href="#">Contactenos</a></li>
 							<li><a href="login.html">Regresar</a></li> 
-							<li><a href="faq.html">Restaurantes</a></li>
+							<li><a href="Mapa.html">Restaurantes</a></li>
 							<li><a href="Mapa.html">Zonas</a></li>
 							<li><a href="login.html">Estado de orden</a></li>
 						</ul> 
@@ -1485,7 +1485,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<!-- Importar el Menu -->
 	<script>
 		$(document).ready(function () {
-		  $('.header').load('Menu.html');
+		  $('.header').load('Menu.php');
 		});
 	</script>
 </body>
