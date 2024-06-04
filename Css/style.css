@@ -1216,7 +1216,7 @@ input.item_quantity:hover{
 }
 /*-- side-bar --*/
 .sidebar-row {
-    margin-top: 2em;
+    margin-top: 1em;
 }
 .rsidebar h4,.related-row h4 {
     font-size: 1.1em;
@@ -3877,6 +3877,9 @@ h3.w3ls-title.w3ls-title1 {
 .info-restaurant {
     display: flex;
 }
+.dropdown-menu > li > a.filtro-activo {
+    color: #0078C1;
+}
 .par-restaurant {
     padding: 1em;
     font-size: 1vw;
@@ -3896,10 +3899,16 @@ h3.w3ls-title.w3ls-title1 {
     color: #020202;
     margin-top: 0.5em;
     text-align: justify;
-  }
+}
 .privacy-w3row p.end, h5 {
   margin-bottom: 1em;
 }
 .swal2-input-label {
     font-size: 2em;
-  }
+}
+.todo {
+    position: relative;
+    left: 4em;
+    line-height: 4em;
+    color: #535b64;
+}

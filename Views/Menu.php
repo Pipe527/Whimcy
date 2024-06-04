@@ -34,11 +34,11 @@ if (isset($_SESSION['Nombre'])) {
                     <span class="M1">
                         <ul class="active">
                             <li><a href="products.php">Pedir</a></li>   
-                            <li><a href="#" >Top</a></li>
+                            <li><a href="products.php?category=Top" >Top</a></li>
                             <li>
-                            <a href="" class="combo">Combos<i class="fa-solid fa-caret-right OpenSub"></i></a>
+                            <a href="#" class="combo">Combos<i class="fa-solid fa-caret-right OpenSub"></i></a>
                                 <ul class="SubMenu">
-                                    <li><a href="#" >Categorias</a></li>   
+                                    <li><a href="products.php?category=combos" >Categorias</a></li>   
                                     <li><a href="#" >Definidos</a></li>
                                     <li><a href="#">Cartas</a></li>
                                 </ul>
