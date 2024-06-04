@@ -29,7 +29,7 @@
                 <span class="input-titles">Nombres</span>
                 <div class="input-position">
                      <Label for="Nombre"></Label>
-                     <input type="text" class="form-control" placeholder="Nombres" id="Doble1" name="Nombre" required>
+                     <input type="text" class="form-controll" placeholder="Nombres" id="Doble1" name="Nombre" required>
                 </div>
             </div>
 
@@ -37,7 +37,7 @@
                 <span class="input-titles">Apellidos</span>
                 <div>
                     <Label for="Apellido"></Label>
-                    <input type="text" class="form-control" placeholder="Apellidos" id="Doble2" name="Apellido" required>
+                    <input type="text" class="form-controll" placeholder="Apellidos" id="Doble2" name="Apellido" required>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
             <span class="input-titles">Nickname</span>
             <div class="input-group-append">
                 <Label for="Nickname"></Label>
-                <input type="text" class="form-control" placeholder="Nickname" id="Doble3" name="Nickname">
+                <input type="text" class="form-controll" placeholder="Nickname" id="Doble3" name="Nickname">
             </div>
         </div>
 
@@ -55,7 +55,7 @@
                 <span class="input-titles"><i class="fa-solid fa-phone-volume" style="color: #000000;"></i></span>
                 <div class="input-group-append">
                     <Label for="Phone"></Label>
-                    <input type="tel" class="form-control" id="phone" name="Phone" placeholder="321-456-78-90" 
+                    <input type="tel" class="form-controll" id="phone" name="Phone" placeholder="321-456-78-90" 
                     pattern="[0-9]{10}" required>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                 <span class="input-titles"><i class="fas fa-envelope" style="color: #000000;"></i></span>
                 <div class="input-position">
                     <Label for="Correo"></Label>
-                    <input type="email" class="form-control" name="Correo" placeholder="Email" id="gmail" required>
+                    <input type="email" class="form-controll" name="Correo" placeholder="Email" id="gmail" required>
                 </div>
             </div>
         </div>
@@ -74,14 +74,14 @@
                 <span class="input-titles"><i class="fa-solid fa-key" style="color: #000000;"></i></span>
                 <div class="input-group-append">
                     <Label for="Contra"></Label>
-                    <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña" required>
+                    <input type="password" class="form-controll" id="pass" name="pass" placeholder="Contraseña" required>
                 </div>
             </div>
 
             <div class="input-doble">                
                 <span class="input-titles"><i class="fa-solid fa-key" style="color: #000000;"></i></span>
                 <div class="input-position">
-                    <input type="password" class="form-control" id="Confpass" placeholder="Confirmar contraseña" required>
+                    <input type="password" class="form-controll" id="Confpass" placeholder="Confirmar contraseña" required>
                 </div>
             </div>
         </div>
@@ -90,7 +90,7 @@
             <span class="input-titles" style="color: #000000;">Fecha de nacimiento</i></span>
             <div class="input-group-append">
                 <Label for="Bday"></Label>
-                <input type="date" class="form-control" name="Bday" id="Doble4" required>
+                <input type="date" class="form-controll" name="Bday" id="Doble4" required>
             </div>
         </div>
 
@@ -98,16 +98,16 @@
             <span class="input-titles ubi"><i class="fa-solid fa-location-dot" style="color: #000000;"></i></span>
             <div class="input-group-append">
                 <Label for="Direccion"></Label>
-                <input type="text" class="form-control" name="Direccion" placeholder="Dirección de domicilio" id="Doble5" required>
+                <input type="text" class="form-controll" name="Direccion" placeholder="Dirección de domicilio" id="Doble5" required>
             </div>
         </div>
         
         <div class="terms">
             <input type="checkbox" required>
-            <p>Estoy de a cuerdo con los <a href="">terminos y condiciones</a></p>
+            <p>Estoy de a cuerdo con los <a href="privacy.html">terminos y condiciones</a></p>
         </div>
         <div class="return">
-            <p>¿Ya tienes cuenta? <a href="index.html">iniciar sesion</a></p>
+            <p>¿Ya tienes cuenta? <a href="login.html">iniciar sesion</a></p>
         </div>
         <!-- Card-footer -->
     <div class="card-footer">

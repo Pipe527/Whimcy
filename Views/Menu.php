@@ -135,11 +135,12 @@ if (isset($_SESSION['Nombre'])) {
     <script>
         console.log('Usuario logueado: <?php echo $response['user']; ?>');
         localStorage.setItem('loggedIn', true);
+        localStorage.setItem('menuState', 'profile');
         document.getElementById('login-section');
         document.getElementById('profile-section').innerHTML = `
             <ul>
                 <li><a href="#"> <?php echo $response['user']; ?> </a></li>
-                <li><a href="#">Configuración</a></li>
+                <li><a href="UsersEdit.php?id=<?php echo $response['id'];?>">Configuración</a></li>
                 <li><a href="../Controllers/Logout.php">Cerrar sesión</a></li>
             </ul>
         `;
@@ -147,6 +148,7 @@ if (isset($_SESSION['Nombre'])) {
     </script>
 <?php } else { ?>
     <script>
+        localStorage.setItem('menuState', 'login');
         console.log('Usuario no logueado');
         document.getElementById('login-section').innerHTML = `
             <span class="Login-title">
@@ -179,8 +181,8 @@ if (isset($_SESSION['Nombre'])) {
                 </div>
             </form>
         `;
-        
     </script>
+    
 <?php } ?>
 </body>
 </html>

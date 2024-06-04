@@ -1,6 +1,6 @@
 
 
-.form-control {
+.form-controll {
   display: block;
   width: 38%;
   padding-left: 1vw;
@@ -17,7 +17,7 @@
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.form-control::placeholder {
+.form-controll::placeholder {
   color: #939ba2;
   opacity: 1;
 }

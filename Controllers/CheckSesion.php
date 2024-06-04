@@ -8,6 +8,7 @@ $response = array(
 if (isset($_SESSION['Nombre'])) {
     $response['loggedIn'] = true;
     $response['user'] = $_SESSION['Nombre'];
+    $response['id'] = $_SESSION['idUsuarios'];
 }
 
 header('Content-Type: application/json');

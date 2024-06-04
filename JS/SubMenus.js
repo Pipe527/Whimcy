@@ -40,6 +40,7 @@
         });
     }
 
+    //Login botones
     const btnLog = document.querySelector('.z.us');
     const NNavvv = document.querySelector('.Lgn'); 
     const profileNav = document.querySelector('.profile');
