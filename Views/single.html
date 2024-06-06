@@ -963,12 +963,15 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<input type="hidden" name="add" value="1" />
 								<input type="hidden" id="w3text" name="w3ls_item" value="" />
 								<input type="hidden" id="amount" name="amount" value="" />
-								<button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus"
+								<button type="submit" class="w3ls-cart">
+									<i class="fa fa-cart-plus"
 										aria-hidden="true"></i> Agregar carrito</button>
 							</form>
-							<button class="w3ls-cart w3ls-cart-like"><i class="fa fa-heart-o" aria-hidden="true"></i>
+							<button class="w3ls-cart w3ls-cart-like" onclick="favoritos(this)" data-product-id="1">
+								<i class="fa fa-heart-o" aria-hidden="true"></i>
 								Agragar a mi lista</button>
 						</div>
+						<script src="../JS/Favoritos.js"></script>
 						<div class="clearfix"> </div>
 					</div>
 					<div class="single-page-icons social-icons">
