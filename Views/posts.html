@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foros</title>
+    <link rel="stylesheet" href="../Css/Foros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="header"></div>
+    <header>
+        <!--NavBar Section-->
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <span class="close-icon" id="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="forums.html">Foros</a></li>
+                    <li class="nav-item"><a href="posts.html">Posts</a></li>
+                    <li class="nav-item"><a href="detail.html">Temas</a></li>
+                </ul>
+            </nav>
+            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+            <div class="brand">Mis Foros</div>
+        </div>
+        <!--SearchBox Section-->
+        <div class="search-box">
+            <div>
+                <select name="" id="">
+                    <option value="Everything">Todo</option>
+                    <option value="Titles">Populares</option>
+                    <option value="Descriptions">Descripciones</option>
+                </select>
+                <input type="text" name="q" placeholder="search ...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <!--Navigation-->
+        <div class="navigate">
+            <span><a href="forums.html">Mis Foros - Foros</a> >> <a href="">Subforo aleatorio</a></span>
+        </div>
+        <!--Display posts table-->
+        <div class="posts-table">
+            <div class="table-head">
+                <div class="status">Estado</div>
+                <div class="subjects">Temas</div>
+                <div class="replies">Reseñas/Vistas</div>
+                <div class="last-reply">Ultima respuesta</div>
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">¿Como hacer una mazorcada?</a>
+                    <br>
+                    <span>Comensado por <b><a href="">GVaz05</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 respuestas <br> 125 vistas
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>Por <b><a href="">Ssoto24</a></b>
+                </div>
+            </div>
+            <!--starts here-->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">¿Cuales son los mejores restaurantes en Bogotá?</a>
+                    <br>
+                    <span>Comensado por <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 respuestas <br> 125 vistas
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>Por <b><a href="">User</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">¿Cuales son los mejores restaurantes en Medellin?</a>
+                    <br>
+                    <span>Comensado por <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 respuestas <br> 125 vistas
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>Por <b><a href="">User</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-book"></i></div>
+                <div class="subjects">
+                    <a href="">¿Como funcionan las targetas de reagalo?</a>
+                    <br>
+                    <span>Comensado por <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 respuestas <br> 125 vistas
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>Por <b><a href="">User</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-rocket"></i></div>
+                <div class="subjects">
+                    <a href="">¿Donde estan los mejores restaurantes en cundinamarca?</a>
+                    <br>
+                    <span>Comensado por <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 respuestas <br> 125 vistas
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>Por <b><a href="">User</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-frown-o"></i></div>
+                <div class="subjects">
+                    <a href="">¿Cuales ingredientes son mejores para una Botana?</a>
+                    <br>
+                    <span>Comensado por <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 respuestas <br> 125 vistas
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>Por <b><a href="">User</a></b>
+                </div>
+            </div>
+
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">¿Que prefieren comprar en Mc'Donalds?</a>
+                    <br>
+                    <span>Comensado por <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 respuestas <br> 125 vistas
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>Por <b><a href="">User</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Sugerencia: Compren en Bar Continental esta super!</a>
+                    <br>
+                    <span>Comensado por <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 respuestas <br> 125 vistas
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>Por <b><a href="">User</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-lock"></i></div>
+                <div class="subjects">
+                    <a href="">¿Como puedo comprar en 2 restaurantes?</a>
+                    <br>
+                    <span>Comensado por <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 respuestas <br> 125 vistas
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>Por <b><a href="">User</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Esta receta es increible!!..</a>
+                    <br>
+                    <span>Comensado por <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 respuestas <br> 125 vistas
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>Por <b><a href="">User</a></b>
+                </div>
+            </div>
+            <!--ends here-->
+        </div>
+        <!--Pagination starts-->
+            <div class="pagination">
+                pages: <a href="">1</a><a href="">2</a><a href="">3</a>
+            </div>
+        <!--pagination ends-->
+    </div>
+
+    <div class="note">
+        <span><i class="fa fa-frown-o"></i>&nbsp; Menús por mejorar</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+        <span><i class="fa fa-book"></i>&nbsp; Temas estandar</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+        <span><i class="fa fa-fire"></i>&nbsp; Temas popolares</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+        <span><i class="fa fa-rocket"></i>&nbsp; Medús diarios</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+        <span><i class="fa fa-lock"></i>&nbsp; Temas cerrados</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+    </div>
+
+    <footer>
+        <span>&copy;  Selmi Abderrahim | All Rights Reserved</span>
+    </footer>
+    <!-- Menus del Foro -->
+    <script src="../JS/Second.js"></script>
+    <!-- Importar el Menu -->
+	<script>
+		$(document).ready(function () {
+		  $('.header').load('Menu.php');
+		});
+	</script>
+	<!-- Abrir submenus -->
+	<script src="../JS/SubMenus.js"></script>
+</body>
+</html>

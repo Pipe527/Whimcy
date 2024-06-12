@@ -36,9 +36,6 @@
         <Label for="Correo"></Label>
         Correo: <input type="text" name="Correo" Value=<?php echo ($Fila["Correo"]) ?>>
         <br>
-        <Label for="pass"></Label>
-        Contraseña: <input type="text" name="pass" Value=<?php echo ($Fila["Contraseña"]) ?>>
-        <br>
         <Label for="Phone"></Label>
         Celular: <input type="text" name="Phone" Value=<?php echo ($Fila["Celular"]) ?>>
         <br>

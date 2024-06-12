@@ -98,7 +98,7 @@ if (isset($_SESSION['Nombre'])) {
                     <span class="M4">
                         <ul class="activo">
                             <li><a href="#" class="doble">Facturas<br>Pendientes</a></li>   
-                            <li><a href="#" >Comunidad</a></li>
+                            <li><a href="forums.html" >Comunidad</a></li>
                             <li><a href="#">Amigos</a></li>
                         </ul>
                     </span>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="../Css/Foros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="header"></div>
+    <header>
+        <!--NavBar Section-->
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <span class="close-icon" id="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="forums.html">Foros</a></li>
+                    <li class="nav-item"><a href="posts.html">Posts</a></li>
+                    <li class="nav-item"><a href="detail.html">Temas</a></li>
+                </ul>
+            </nav>
+            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+            <div class="brand">Mis Foros</div>
+        </div>
+        <!--SearchBox Section-->
+        <div class="search-box">
+            <div>
+                <select name="" id="">
+                    <option value="Everything">Todo</option>
+                    <option value="Titles">Popular</option>
+                    <option value="Descriptions">Descripciones</option>
+                </select>
+                <input type="text" name="q" placeholder="search ...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    <div class="container">
+        <!--Navigation-->
+        <div class="navigate">
+            <span><a href="forums.html">Mis Foros - Foros</a> >> <a href="posts.html">Subforo aleatorio</a> >> <a href="">Tema aleatorio</a></span>
+        </div>
+
+        <!--Topic Section-->
+        <div class="topic-container">
+            <!--Original thread-->
+            <div class="head">
+                <div class="authors">Autor</div>
+                <div class="content">Tema: Tema aleatorio (leer 1325 veces)</div>
+            </div>
+
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="">GVaz05</a></div>
+                    <div>Rol</div>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+                    <div>Posts: <u>45</u></div>
+                    <div>Puntos: <u>4586</u></div>
+                </div>
+                <div class="content">
+                    ¿Como hacer una mazorcada?
+                    <br>Alguien sabe como hacer una mazorcada.
+                    <br><br>
+                    Se que es una salchipapa con mucho queso.
+                    <br>
+                    <hr>
+                    Vamos a comer!
+                    <br>
+                    <div class="comment">
+                        <button onclick="showComment()">Comentar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Comment Area-->
+        <div class="comment-area hide" id="comment-area">
+            <textarea name="comment" id="" placeholder="Comenta aqui ... "></textarea>
+            <input type="submit" value="Subir">
+        </div>
+
+        <!--Comments Section-->
+        <div class="comments-container">
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="">FPR22</a></div>
+                    <div>Rol</div>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+                    <div>Posts: <u>455</u></div>
+                    <div>Puntos: <u>4586</u></div>
+                </div>
+                <div class="content">
+                    Just a comment of the above random topic.
+                    <br>To see how it looks like.
+                    <br><br>
+                    Nothing more and nothing less.
+                    <br>
+                    <br>
+                    <div class="comment">
+                        <button onclick="showReply()">Responder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Reply Area-->
+        <div class="comment-area hide" id="reply-area">
+            <textarea name="reply" id="" placeholder="Responde aqui ... "></textarea>
+            <input type="submit" value="Subir">
+        </div>
+
+
+        <!--Another Comment With replies-->
+        <div class="comments-container">
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="">PDuarte45</a></div>
+                    <div>Rol</div>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+                    <div>Posts: <u>455</u></div>
+                    <div>Puntos: <u>4586</u></div>
+                </div>
+                <div class="content">
+                    Just a comment of the above random topic.
+                    <br>To see how it looks like.
+                    <br><br>
+                    Nothing more and nothing less.
+                    <br>
+                    <br>
+                    <div class="comment">
+                        <button onclick="showReply()">Responder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Reply Area-->
+        <div class="comment-area hide" id="reply-area">
+            <textarea name="reply" id="" placeholder="Responde aqui ... "></textarea>
+            <input type="submit" value="Subir">
+        </div>
+
+        
+
+    </div>
+    <footer>
+        <span>&copy;  Selmi Abderrahim | All Rights Reserved</span>
+    </footer>
+    <!-- Menus del Foro -->
+    <script src="../JS/Second.js"></script>
+    <!-- Importar el Menu -->
+	<script>
+		$(document).ready(function () {
+		  $('.header').load('Menu.php');
+		});
+	</script>
+	<!-- Abrir submenus -->
+	<script src="../JS/SubMenus.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foros</title>
+    <link rel="stylesheet" href="../Css/Foros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="header"></div>
+    <header>
+        <!--NavBar Section-->
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <span class="close-icon" id="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="forums.html">Foros</a></li>
+                    <li class="nav-item"><a href="posts.html">Posts</a></li>
+                    <li class="nav-item"><a href="detail.html">Temas</a></li>
+                </ul>
+            </nav>
+            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+            <div class="brand">Mis Foros</div>
+        </div>
+        <!--SearchBox Section-->
+        <div class="search-box">
+            <div>
+                <select name="" id="">
+                    <option value="Everything">Todo</option>
+                    <option value="Titles">Populares</option>
+                    <option value="Descriptions">Descripciones</option>
+                </select>
+                <input type="text" name="q" placeholder="Buscar ...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="subforum">
+            <div class="subforum-title">
+                <h1>Información General</h1>
+            </div>
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-car center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="#">Patacones con mazorca</a></h4>
+                    <p>Descripción : Patacon con mazorca, queso, carne desmechada, aguacate. deliciosa!</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Temas</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Ultimo post</a></b> por <a href="">GVaz05</a> 
+                    <br>El <small>12 Dic 2020</small>
+                </div>
+            </div>
+        </div>
+        <!--More-->
+        
+        <div class="subforum">
+            <div class="subforum-title">
+                <h1>Menús populares</h1>
+            </div>
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-car center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="#">Mazorcada</a></h4>
+                    <p>Descripción: La clasica salchipapa con mazorca y mucho queso!</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Temas</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Ultima post</a></b> por <a href="">Ssoto24</a> 
+                    <br>El <small>12 Dic 2020</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-car center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="#">Judías pintas con arroz</a></h4>
+                    <p>Descripción: Rico plato con Alubias pintas, Arroz bomba, Cebolla, Pimiento rojo, Diente de ajo y Aceite de oliva.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Temas</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Ultimo post</a></b> por <a href="">FPR22</a> 
+                    <br>El <small>12 Dic 2020</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-car center"></i>
+                </div>
+                <div class="subforum-Descripción subforum-column">
+                    <h4><a href="#">Albóndigas a la jardinera</a></h4>
+                    <p>Descripción: En un bol ponemos los huevos, el vino de Jerez, la leche, el pan rallado, el perejil picado, la sal y la pimienta.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Temas</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Ultimo post</a></b> por <a href="">Juansito</a> 
+                    <br>El <small>12 Dic 2020</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-car center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="#">Arroz caldoso de pollo</a></h4>
+                    <p>Descripción: Vamos a preparar todo en una única cazuela, así que necesitaremos que sea amplia para que nos quepan todos los ingredientes.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Temas</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Ultimo post</a></b> por <a href="">JDavid221</a> 
+                    <br>El <small>12 Dic 2020</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-car center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="#">Lentejas guisadas</a></h4>
+                    <p>Descripción: Picamos en trozos menudos el ajo, la cebolla, la zanahoria, el pimiento verde y el puerro.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Temas</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Ultimo post</a></b> por <a href="">PDuarte45</a> 
+                    <br>El <small>12 Dic 2020</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subforum">
+            <div class="subforum-title">
+                <h1>Mis foros</h1>
+            </div>
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-car center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="#">Mazorcada</a></h4>
+                    <p>Descripción: La clasica salchipapa con mazorca y mucho queso!</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Temas</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Ultimo post</a></b> por <a href="">Mi</a> 
+                    <br>El <small>12 Dic 2020</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-car center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="#">Patacones con mazorca</a></h4>
+                    <p>Descripción : Patacon con mazorca, queso, carne desmechada, aguacate. deliciosa!</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Temas</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Ultimo post</a></b> por <a href="">Mi</a> 
+                    <br>El <small>12 Dic 2020</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-car center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="#">Borrador</a></h4>
+                    <p>Descripción: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Temas</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Ultimo post</a></b> por <a href="">Mi</a> 
+                    <br>El <small>12 Dic 2020</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-car center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="#">Borrador</a></h4>
+                    <p>Descripción: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Temas</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Ultimo post</a></b> por <a href="">Mi</a> 
+                    <br>El <small>12 Dic 2020</small>
+                </div>
+            </div>
+
+           
+        </div>
+        <!---->
+    </div>
+
+    <!-- Forum Info -->
+    <div class="forum-info">
+        <div class="chart">
+            Mis foros - Estadisticas &nbsp;<i class="fa fa-bar-chart"></i>
+        </div>
+        <span><u>5,369</u> Posts en <u>48</u> Temas por <u>8,124</u> Miembros.</span><br>
+        <span>ultimos post: <b><a href="">Random post</a></b> el Dic 15 2021 por <a href="">RandomUser</a></span>.<br>
+        <span>Mira <a href="posts.html">los ultimos post</a> .</span><br>
+    </div>
+
+    <footer>
+        <span>&copy;  Selmi Abderrahim | All Rights Reserved</span>
+    </footer>
+    <!-- Menus del Foro -->
+    <script src="../JS/Second.js"></script>
+    <!-- Importar el Menu -->
+	<script>
+		$(document).ready(function () {
+		  $('.header').load('Menu.php');
+		});
+	</script>
+	<!-- Abrir submenus -->
+	<script src="../JS/SubMenus.js"></script>
+</body>
+</html>
