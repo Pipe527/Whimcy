@@ -523,3 +523,35 @@ a.doble {
     margin-left: 3.3vw;
 }
 
+/* Diseño responsivo*/
+/* Body */
+@media (max-width: 400px) {
+    .parrafo {
+        padding: 0em;
+    }
+    .marketing .row {
+        padding-top: 0em; 
+        margin-left: 0em;
+    }
+    .col-lg-4 img {
+        width: 9em !important;
+    }
+    .col-lg-4 p {
+        font-size: 4vw !important;
+        line-height: 1em;
+    }
+    .parrafo > h3{
+        font-size: 3em;
+    }
+    /* Menu */
+    .Logo {
+        width: 28.6vw;
+    }
+    .fa.fa-cart-arrow-down {
+        font-size: 1.2em;
+    }
+    .us i {
+        font-size: 3.2em;
+    }
+}
+

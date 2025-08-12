@@ -148,9 +148,6 @@ p {
         padding-left: 4vw;
         width: 15.62vw;
     }
-    p {
-        line-height: 0.7em;
-    }
 }
 .contenedor {
     display: flex;
@@ -278,6 +275,48 @@ p {
   margin-bottom: 1.5rem;
   text-align: center;
 
+}
+@media (max-width: 400px) { 
+    .centro {
+        padding: 0.78em;
+    }
+    .parrafo {
+        padding: 0em 1em 1em 0;
+    }
+    .b h3 {
+        padding-bottom: 2.2em;
+    }
+    .ftr-top-right p {
+        line-height: 1em;
+    }
+    .parrafo > h3 {
+        font-size: 1.4em;
+        padding-bottom: 1em;
+    }
+    .parrafo p {
+        line-height: 1em;
+    }
+    .parrafo #Boa {
+        top: 1em; 
+    }
+    .slide-controls ul a {
+        font-size: 2.3vw;
+        padding: 0 3em;
+        position: relative;
+        right: 4em;
+    }
+    .slide-title h2 {
+        font-size: 5vw;
+    }
+    .slide1 ul img {
+        width: 76.3vw;
+    }
+    .slide2 ul img {
+        width: 1vw;
+    }
+    .slide2 ul img, .slide3 ul img {
+        margin-left: -15.5vw;
+    }
 }
 @media (min-width: 680px) {
     .container.marketing {

@@ -88,3 +88,108 @@
 .h h3 {
     font-size: 1.1em;
 }
+
+/* Diseño responsivo*/
+/* Footer */
+
+@media (max-width: 400px) {
+    .address-left {
+        float: none;
+        width: 100%;
+    }
+    .address-right {
+        float: none;
+        width: 100%;
+        padding: 0;
+        position: absolute;
+        top: 16em;
+    }
+    .address-right:before {
+        bottom: -127px;
+        height: 120px;
+        left: 37%;
+        width: 389px;
+    }
+    .col-md-4{
+        float: right;
+        padding-left: 10vw;
+    }
+    .col-md-6 {
+        padding-left: 11vw;
+    }
+    .col-md-8{
+        background-color: #161717;
+    }
+    .footer {
+        padding: 3em 0 4em;
+        background-size: cover;
+    }
+    .footer h3 {
+        font-size: 1em;
+    }
+    .footer-grids {
+        padding: 2em;
+      }
+    .footer-grids ul li { 
+        font-size: 0.9em; 
+    }
+    .footer-grids ul li a{ 
+        color:#e4e70c;
+    }
+    .ftr-top-left i.fa.fa-user {
+        color: #098221;
+    }
+    .ftr-top-left i.fa {
+        width: 2em;
+        height: 2em;
+        font-size: 2em; 
+    }
+    .ftr-top-right h4 {
+        font-size: 0.5em;
+        margin-bottom: 1.5em;
+    }
+    .ftr-toprow {
+        padding-left: 0vw;
+    }
+    .ftr-toprow p{
+        font-size: 1em;
+    }
+    .h h3 {
+        font-size: 0.7em;
+    }
+    .header-two.scroll-to-fixed-fixed .header-logo h1 {
+        font-size: 1.8em;
+    }
+    #PPsbmincart {
+        left: 27%;
+        top: 29%;
+        width: 315px;
+    }
+    #PPsbmincart .sbmincart-closer { 
+        margin: -15px -8px 0;
+        padding: 0 10px; 
+        font-size: 20px; 
+    }
+    #PPsbmincart ul { 
+        padding: 0.5em;  
+        margin: 5px 0 15px;
+    }
+    #PPsbmincart form { 
+        padding: 1em 1em .3em;
+    }
+    #PPsbmincart form ul { 
+        max-height: 250px;
+    }
+    #PPsbmincart .sbmincart-item { 
+        font-size: 0.9em;
+    }
+    #PPsbmincart .sbmincart-remove { 
+        height: 18px; 
+        font-size: 13px; 
+    }
+    #PPsbmincart .sbmincart-subtotal { 
+        font-size: 15px; 
+    } 
+}
+@media(max-width:384px){
+}
