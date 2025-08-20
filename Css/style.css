@@ -221,6 +221,7 @@ ul.cd-dropdown-content li {
 .menu {
     float: left;
     width: 21%;
+    display: none;
 }
 .move-text {
     float: right;
@@ -2394,7 +2395,7 @@ h3.w3ls-title {
     height: 145px; 
 }
 .agile-products {
-    padding: 1em; 
+    padding: 0.2em; 
 }
 .product-grids {
     margin-top: 2em;
@@ -2884,8 +2885,9 @@ h4.clrchg {
 .address-right {
     float: none;
     width: 100%;
-    margin-top: 2em;
+    margin-top: -2em;
 	padding: 0;
+    background-color: #012f0ac4;
 }
 .footer {
     padding: 3em 0 9em;
@@ -3196,6 +3198,7 @@ h3.w3ls-title.w3ls-title1 {
 .menu {
     width: 100%;
     text-align: center;
+    display: block;
 }
 .marquee a { 
     letter-spacing: 1px; 
@@ -3565,7 +3568,24 @@ ul.dropdown-menu {
     margin: 1em 0 .5em;
 } 
 }
-@media(max-width:384px){
+@media(max-width:400px){
+    .agile-product-text h5 a {
+        color: #4ed756;
+    }
+    .Fondo-body {
+        background-color: #286553d9;
+    }
+    .new-tag::before {
+        border-top: 60px solid #4ed756;
+        border-right: 60px solid transparent;
+    }
+    .agile-product-text h6 {
+        color: #fff;
+    }
+    .product-top li.dropdown {
+        font-size: 0.8em;
+        margin-top: 1em;
+    }
 }
 @media(max-width:375px){
 .header-cart { 

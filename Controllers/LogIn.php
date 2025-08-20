@@ -12,6 +12,7 @@ if (isset($_POST["Email"]) && isset($_POST["Pass"])) {
 
     $Usuario = validar($_POST["Email"]);
     $Clave = validar($_POST["Pass"]);
+    $mobile = validar($_POST['mobile']);
 
     if (empty($Usuario)) {
         echo "<script>alert('El usuario es requerido'); window.location.href='../views/login.html';</script>";
@@ -32,15 +33,30 @@ if (isset($_POST["Email"]) && isset($_POST["Pass"])) {
                 $_SESSION['Correo'] = $row['Correo'];
                 $_SESSION['Nombre'] = $row['Nombre'];
                 $_SESSION['idUsuarios'] = $row['idUsuarios'];
-                header("Location: ../views/Index.html");
-                exit();
+                if ($mobile == '1') {
+                    header("Location: ../views/products.php");
+                    exit();
+                }else {
+                   header("Location: ../views/Index.html");
+                    exit();
+                }
             } else {
-                echo "<script>alert('El usuario o la contraseña son incorrectos'); window.location.href='../views/login.html';</script>";
-                exit();
+                if ($mobile == '1') {
+                    echo "<script>alert('El usuario o la contraseña son incorrectos'); window.location.href='../views/Mobile/Inicio.php';</script>";
+                    exit();
+                }else {
+                    echo "<script>alert('El usuario o la contraseña son incorrectos'); window.location.href='../views/login.html';</script>";
+                    exit();
+                } 
             }
         } else {
-            echo "<script>alert('El usuario o la contraseña son incorrectos'); window.location.href='../views/login.html';</script>";
-            exit();
+            if ($mobile == '1') {
+                    echo "<script>alert('El usuario o la contraseña son incorrectos'); window.location.href='../views/Mobile/Inicio.php';</script>";
+                    exit();
+                }else {
+                    echo "<script>alert('El usuario o la contraseña son incorrectos'); window.location.href='../views/login.html';</script>";
+                    exit();
+            }
         }
     }
 } else {

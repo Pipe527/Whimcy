@@ -68,7 +68,7 @@ if (isset($_SESSION['Nombre'])) {
                     <div class="clearfix"> </div> 
                 </div>
                 </li>
-                <li><a href="Index.html"><img src="../images/Logotipo.gif" class="Logo"></a></li>
+                <li><a href="Index.html"><img src="../images/Logotipo.png" class="Logo"></a></li>
                     <li><a href="" class="z us"><i class="fa-solid fa-user"></i></a></li>
                     <li>
                         <div class="Lgn">

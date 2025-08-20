@@ -1,9 +1,3 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,17 +7,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="keywords" content="Smart Bazaar Responsive web template, Pedir a domicilio, Flat Web Templates, Android Compatible web template, 
 SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } 
-</script>
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
-<link href="../Css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="../Css/style.css" rel="stylesheet" type="text/css" media="all" /> 
-<link href="../Css/menu.css" rel="stylesheet" type="text/css" media="all" /> <!-- menu style -->  
-<link href="../Css/animate.min.css" rel="stylesheet" type="text/css" media="all" /> 
-<link rel="stylesheet" href="../Css/Estilos.css">    
+<link href="../../Css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../Css/style.css" rel="stylesheet" type="text/css" media="all" /> 
+<link href="../../Css/menu.css" rel="stylesheet" type="text/css" media="all" /> <!-- menu style -->  
+<link href="../../Css/animate.min.css" rel="stylesheet" type="text/css" media="all" />     
 <!-- //Custom Theme files -->
 <!-- font-awesome icons -->
-<link href="../Css/font-awesome.css" rel="stylesheet"> 
+<link href="../../Css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 <!-- web-fonts -->
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -33,7 +25,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <!-- web-fonts -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
 <!-- scroll to fixed--> 
-<script src="../JS/jquery-scrolltofixed-min.js" type="text/javascript"></script>
+<script src="../../JS/jquery-scrolltofixed-min.js" type="text/javascript"></script>
 <script>
     $(document).ready(function() {
 
@@ -56,9 +48,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 </script>
 <!-- //scroll to fixed--> 
 <!-- start-smooth-scrolling -->
-<script type="text/javascript" src="../JS/move-top.js"></script>
-<script type="text/javascript" src="../JS/easing.js"></script>
-<script src="../JS/Filtros.js"></script> <!-- Filtrar -->	
+<script type="text/javascript" src="../../JS/move-top.js"></script>
+<script type="text/javascript" src="../../JS/easing.js"></script>
+<script src="../../JS/Filtros.js"></script> <!-- Filtrar -->	
 <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -85,7 +77,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 </script>
 <!-- //smooth-scrolling-of-move-up -->  
 <!-- the jScrollPane script -->
-<script type="text/javascript" src="../JS/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="../../JS/jquery.jscrollpane.min.js"></script>
 <script type="text/javascript" id="sourcecode">
 	$(function()
 	{
@@ -93,83 +85,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	});
 </script>
 <!-- //the jScrollPane script -->
-<script type="text/javascript" src="../JS/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="../../JS/jquery.mousewheel.js"></script>
 <!-- the mousewheel plugin --> 
 </head>
 <body>
-	<!-- header -->
-	<div class="header">	</div>
-		<div class="header-three"><!-- header-three -->
-			<div class="container">
-				<div class="menu">
-					<div class="cd-dropdown-wrapper">
-						<a class="cd-dropdown-trigger" href="#0">Tienda</a>
-						<nav class="cd-dropdown"> 
-							<a href="#0" class="cd-close">Cerrar</a>
-							<ul class="cd-dropdown-content">
-								<li class="has-children">
-									<a href="#">Menús</a> 
-									<ul class="cd-secondary-dropdown is-hidden">
-										<li class="go-back"><a href="#">Menús</a></li>
-										<li class="see-all"><a href="products.php">Productos</a></li>
-										<li class="main"><a href="products.php">Pedir</a></li>
-										<li><a href="products.php?category=Top">Top</a></li>
-										<li class="has-children">
-											<a href="#">Combos</a>  
-											<ul class="is-hidden"> 
-												<li class="go-back"><a href="#">Productos </a></li>
-												<li><a href="products.php?category=combos">Categorias</a></li>
-												<li><a href="#">Definidos</a></li>
-												<li><a href="#">Cartas</a></li>
-											</ul>
-										<li><a href="offers.html">Favoritos</a></li>
-										</li> 
-									</ul> <!-- .cd-secondary-dropdown -->
-								<li class="has-children">
-									<a href="#">Promociones</a> 
-									<ul class="is-hidden"> 
-										<li class="go-back"><a href="#">Promociones </a></li>
-										<li><a href="#">Fechas</a></li> 
-										<li><a href="#">Para Año Nuevo</a></li>
-										<li><a href="#">Ocaciones especiales</a></li>
-									</ul>
-								</li> 
-								<li class="has-children">
-									<a href="#">Restaurantes</a> 
-									<ul class="is-hidden"> 
-										<li class="go-back"><a href="#">Restaurantes </a></li>
-										<li><a href="#" class="links" data-section="Seccion1">Mapa</a></li>
-										<li><a href="#" class="links" data-section="Restaurante">Todos</a></li>
-										<li><a href="#" class="links" data-section="Seccion01">Mi Zona</a></li>
-										<li><a href="#" class="links" data-section="Seccion2">Ubicación</a></li>
-										<li><a href="#" class="links" data-section="Seccion3">Reservación</a></li>
-									</ul>
-								</li> 
-								<li class="has-children">
-									<a href="#">Adicional</a> 
-									<ul class="is-hidden">
-										<li class="go-back"><a href="#0">Adicional </a></li>
-										<li><a href="#">Facturas pendientes</a></li>
-										<li><a href="forums.html">Comunidad</a></li>
-										<li><a href="#">Amigos</a></li>
-									</ul>
-								</li> 
-							</ul> <!-- .cd-dropdown-content -->
-						</nav> <!-- .cd-dropdown -->
-					</div> <!-- .cd-dropdown-wrapper -->	 
-				</div>
-				<div class="move-text">
-					<div class="marquee"><a href="offers.html"> Nuevos menús para fechas especiales...... <span>Obten un 10% de descuento | sin tarifas extra </span> <span> Disfruta de tus menus favoritos para cada ocación</span></a></div>
-					<script type="text/javascript" src="../JS/jquery.marquee.min.js"></script>
-					<script>
-					  $('.marquee').marquee({ pauseOnHover: true });
-					  //@ sourceURL=pen.js
-					</script>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //header --> 	
+	 	
 	<!-- products -->
 	<div class="Fondo-body">
 	<div class="products">	 
@@ -210,9 +130,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids"> 
 						<div class="agile-products" data-price="100-10000" category="market1 Off bebida cold" data-ref="10-0">
 							<div class="new-tag"><h6>10%<br>Off</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g1.png','Coca Cola','2250')"><img src="../images/g1.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g1.png','Coca Cola','2250')"><img src="../../images/g1.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g1.png','Coca Cola','2250')">Coca Cola</a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g1.png','Coca Cola','2250')">Coca Cola</a></h5> 
 								<h6><del>$2500</del> $2250</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
@@ -227,9 +147,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids">
 						<div class="agile-products" data-price="0-100" category="market3 combos new" data-ref="0-0">
 							<div class="new-tag"><h6>New</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g2.png','Gourmet','100')" ><img src="../images/g2.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g2.png','Gourmet','100')" ><img src="../../images/g2.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g2.png','Gourmet','100')">Gourmet </a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g2.png','Gourmet','100')">Gourmet </a></h5> 
 								<h6><del>$150</del> $100</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
@@ -244,9 +164,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids"> 
 						<div class="agile-products" data-price="100-10000" category="market1 Off combos" data-ref="30-20">
 							<div class="new-tag"><h6>20%<br>Off</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g3.png','Refrigerios','4800')"><img src="../images/g3.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g3.png','Refrigerios','4800')"><img src="../../images/g3.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g3.png','Refrigerios','4800')">Refrigerios</a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g3.png','Refrigerios','4800')">Refrigerios</a></h5> 
 								<h6><del>$6000</del> $4800</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
@@ -261,9 +181,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids">
 						<div class="agile-products" data-price="0-100" category="market3" data-ref="0-0">
 							<div class="new-tag"><h6>Venta</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g4.png','Raisin Bran','40')"><img src="../images/g4.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g4.png','Raisin Bran','40')"><img src="../../images/g4.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g4.png','Raisin Bran','40')">Raisin Bran</a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g4.png','Raisin Bran','40')">Raisin Bran</a></h5> 
 								<h6><del>$42</del> $40</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
@@ -278,9 +198,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids">
 						<div class="agile-products" data-price="100-10000" category="market1 combos" data-ref="0-0">
 							<div class="new-tag"><h6>Venta</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g5.png','Frutos secos','3500')"><img src="../images/g5.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g5.png','Frutos secos','3500')"><img src="../../images/g5.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g5.png','Frutos secos','3500')">Frutos secos</a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g5.png','Frutos secos','3500')">Frutos secos</a></h5> 
 								<h6><del>$3700</del> $3500</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
@@ -295,9 +215,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids">
 						<div class="agile-products" data-price="0-100" category="market1 prep bebida" data-ref="0-0">
 							<div class="new-tag"><h6>Venta</h6></div>
-							<a href="single.html"  onclick="cambiarImagen('../images/g6.png','Nescafe Café','10')"><img src="../images/g6.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html"  onclick="cambiarImagen('../../images/g6.png','Nescafe Café','10')"><img src="../../images/g6.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g6.png','Nescafe Café','10')">Nescafe Café</a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g6.png','Nescafe Café','10')">Nescafe Café</a></h5> 
 								<h6><del>$12</del> $10</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
@@ -312,9 +232,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids"> 
 						<div class="agile-products" data-price="15000-30000" category="food Off Top" data-ref="10-0">
 							<div class="new-tag"><h6>10%<br>Off</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g7.png','Botana','22500')"><img src="../images/g7.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g7.png','Botana','22500')"><img src="../../images/g7.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g7.png','Botana','22500')">Botana</a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g7.png','Botana','22500')">Botana</a></h5> 
 								<h6><del>$25000</del> $22500</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
@@ -329,9 +249,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids">
 						<div class="agile-products" data-price="mas" category="Bar licor Esp Off bebida cold new" data-ref="0-0">
 							<div class="new-tag"><h6>New</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g8.png','Coctel de jabalí','46000')"><img src="../images/g8.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g8.png','Coctel de jabalí','46000')"><img src="../../images/g8.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g8.png','Coctel de jabalí','46000')">Coctel de jabalí </a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g8.png','Coctel de jabalí','46000')">Coctel de jabalí </a></h5> 
 								<h6><del>$47500</del> $46000</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
@@ -346,9 +266,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids"> 
 						<div class="agile-products" data-price="15000-30000" category="Bar licor Off bebida cold" data-ref="10-0">
 							<div class="new-tag"><h6>10%<br>Off</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g9.png','Coctel Margarita','27000')"><img src="../images/g9.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g9.png','Coctel Margarita','27000')"><img src="../../images/g9.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g9.png','Coctel Margarita','27000')">Coctel Margarita</a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g9.png','Coctel Margarita','27000')">Coctel Margarita</a></h5> 
 								<h6><del>$30000</del> $27000</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
@@ -363,9 +283,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids">
 						<div class="agile-products" data-price="10000-15000" category="Bar food Off" data-ref="10-0">
 							<div class="new-tag"><h6>10% <br>Off</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g10.png','Halloumi Fries','14130')"><img src="../images/g10.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g10.png','Halloumi Fries','14130')"><img src="../../images/g10.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g10.png','Halloumi Fries','14130')">Halloumi Fries </a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g10.png','Halloumi Fries','14130')">Halloumi Fries </a></h5> 
 								<h6><del>$15700</del> $14130</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
@@ -380,9 +300,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids">
 						<div class="agile-products" data-price="15000-30000" category="food" data-ref="0-0">
 							<div class="new-tag"><h6>Venta</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g11.png','Picada','26000')"><img src="../images/g11.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g11.png','Picada','26000')"><img src="../../images/g11.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g11.png','Picada','26000')">Picada</a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g11.png','Picada','26000')">Picada</a></h5> 
 								<h6><del>$27000</del> $26000</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
@@ -397,9 +317,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids">
 						<div class="agile-products" data-price="10000-15000" category="market2 dessert Top" data-ref="0-0">
 							<div class="new-tag"><h6>Venta</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g12.png','McFlurry Oreo','11500')"><img src="../images/g12.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g12.png','McFlurry Oreo','11500')"><img src="../../images/g12.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g12.png','McFlurry Oreo','11500')">McFlurry Oreo</a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g12.png','McFlurry Oreo','11500')">McFlurry Oreo</a></h5> 
 								<h6><del>$12000</del> $11500</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
@@ -414,9 +334,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids"> 
 						<div class="agile-products" data-price="100-10000" category="market2 Off dessert" data-ref="10-0">
 							<div class="new-tag"><h6>10%<br>Off</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g13.png','Helado','8100')"><img src="../images/g13.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g13.png','Helado','8100')"><img src="../../images/g13.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g13.png','Helado','8100')">Helado</a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g13.png','Helado','8100')">Helado</a></h5> 
 								<h6><del>$9000</del> $8100</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
@@ -431,9 +351,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids">
 						<div class="agile-products" data-price="100-10000" category="market2 food combos prep new" data-ref="0-0">
 							<div class="new-tag"><h6>New</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g14.png','Frijoles MC','10000')"><img src="../images/g14.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g14.png','Frijoles MC','10000')"><img src="../../images/g14.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g14.png','Frijoles MC','10000')">Frijoles MC </a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g14.png','Frijoles MC','10000')">Frijoles MC </a></h5> 
 								<h6><del>$10500</del> $10000</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
@@ -448,9 +368,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids"> 
 						<div class="agile-products" data-price="15000-30000" category="food Top Off" data-ref="30-20">
 							<div class="new-tag"><h6>20%<br>Off</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g16.png','Chorote Paisa','22320')"><img src="../images/g16.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g16.png','Chorote Paisa','22320')"><img src="../../images/g16.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g16.png','Chorote Paisa','22320')">Chorote Paisa</a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g16.png','Chorote Paisa','22320')">Chorote Paisa</a></h5> 
 								<h6><del>$27.900</del> $22320</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
@@ -465,9 +385,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids">
 						<div class="agile-products" data-price="100-10000" category="market2 food Off" data-ref="30-20">
 							<div class="new-tag"><h6>20%<br>Off</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g15.png','Hamburguesa','4800')"><img src="../images/g15.png" class="img-responsive" alt="img"></a>
+							<a href="../single.html" onclick="cambiarImagen('../../images/g15.png','Hamburguesa','4800')"><img src="../../images/g15.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g15.png','Hamburguesa','4800')">Hamburguesa</a></h5> 
+								<h5 class="Rtext"><a href="../single.html" onclick="cambiarImagen('../../images/g15.png','Hamburguesa','4800')">Hamburguesa</a></h5> 
 								<h6><del>$6000</del> $4800</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
@@ -584,23 +504,23 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="related-row">
 					<h4>Busquedas relacionadas</h4>
 					<ul>
-						<li><a href="products.html">Postres </a></li>
-						<li><a href="products.html">Helados</a></li>
-						<li><a href="products.html">Comidas</a></li>
-						<li><a href="products.html">Bebidas </a></li>
-						<li><a href="products.html">Comida rapida</a></li>
-						<li><a href="products.html">McDonalds</a></li>
-						<li><a href="products.html">Bandejas</a></li>
-						<li><a href="products.html">Sopas</a></li>
-						<li><a href="products.html">Pollo</a></li>
-						<li><a href="products.html">KFC</a></li>
+						<li><a href="productos.php">Postres </a></li>
+						<li><a href="productos.php">Helados</a></li>
+						<li><a href="productos.php">Comidas</a></li>
+						<li><a href="productos.php">Bebidas </a></li>
+						<li><a href="productos.php">Comida rapida</a></li>
+						<li><a href="productos.php">McDonalds</a></li>
+						<li><a href="productos.php">Bandejas</a></li>
+						<li><a href="productos.php">Sopas</a></li>
+						<li><a href="productos.php">Pollo</a></li>
+						<li><a href="productos.php">KFC</a></li>
 					</ul>
 				</div>
 				<div class="related-row">
 					<h4>MENUS DESTACADOS</h4>
 					<div class="galry-like">  
-						<a href="single.html" onclick="cambiarImagen('../images/g16.png','Chorote Paisa','22320')"><img src="../images/g16.png" class="img-responsive" alt="img"></a>             
-						<h4><a href="products.html" onclick="cambiarImagen('../images/g16.png','Chorote Paisa','22320')">Chorote Paisa</a></h4> 
+						<a href="../single.html" onclick="cambiarImagen('../../images/g16.png','Chorote Paisa','22320')"><img src="../../images/g16.png" class="img-responsive" alt="img"></a>             
+						<h4><a href="productos.php" onclick="cambiarImagen('../../images/g16.png','Chorote Paisa','22320')">Chorote Paisa</a></h4> 
 						<h5>$22320</h5>       
 					</div>
 				</div>
@@ -740,7 +660,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 		<!-- cart-js -->
-		<script src="../JS/minicart.js"></script>
+		<script src="../../JS/minicart.js"></script>
 		<script>
 			w3ls.render();
 	
@@ -758,16 +678,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			});
 		</script>  
 	<!-- //cart-js -->
-	<script src="../JS/jquery.menu-aim.js"> </script>
-	<script src="../JS/main.js"></script> <!-- Resource jQuery --> 
-	<script src="../JS/bootstrap.js"></script>
-	<!-- Importar el Menu -->
-	<script>
-		$(document).ready(function () {
-		  $('.header').load('Menu.php');
-		});
-	</script>
+	<script src="../../JS/jquery.menu-aim.js"> </script>
+	<script src="../../JS/main.js"></script> <!-- Resource jQuery --> 
+	<script src="../../JS/bootstrap.js"></script>
 	<!-- Abrir submenus -->
-	<script src="../JS/SubMenus.js"></script>
+	<script src="../../JS/SubMenus.js"></script>
 </body>
 </html>

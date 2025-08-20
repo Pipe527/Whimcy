@@ -1,96 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whimcy</title>
+    <title>Tastely</title>
     <link rel="stylesheet" href="../Css/Estilos.css">
     <link rel="stylesheet" href="../Css/BodyIndex.css">
     <script src="https://kit.fontawesome.com/b59d19b6f4.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <style>
-        body{
+        body {
             background-image: url("../images/Fondo.gif");
             background-attachment: fixed;
             background-repeat: no-repeat;
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="superior">
             <nav class="Letras">
-                <ul class="Padres">
-                    <div><li><a href="" class="bton z">Menú</a></li></div>
+                <ul class="Padres" id="primary-nav">
+                    <li class="nav-toggle-li">
+                        <button id="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </li>
+
+                    <div>
+                        <li><a href="" class="bton z">Menú</a></li>
+                    </div>
                     <li>
                         <span class="M1">
                             <ul class="active">
-                                <li><a href="products.php">Pedir</a></li>   
-                                <li><a href="products.php?category=Top" >Top</a></li>
+                                <li><a href="products.php">Pedir</a></li>
+                                <li><a href="products.php?category=Top">Top</a></li>
                                 <li>
-                                <a href="#" class="combo">Combos<i class="fa-solid fa-caret-right OpenSub"></i></a>
+                                    <a href="#" class="combo">Combos<i class="fa-solid fa-caret-right OpenSub"></i></a>
                                     <ul class="SubMenu">
-                                        <li><a href="products.php?category=combos" >Categorias</a></li>   
-                                        <li><a href="#" >Definidos</a></li>
+                                        <li><a href="products.php?category=combos">Categorias</a></li>
+                                        <li><a href="#">Definidos</a></li>
                                         <li><a href="#">Cartas</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#" >Favoritos</a></li>
+                                <li><a href="#">Favoritos</a></li>
                             </ul>
                         </span>
                     </li>
-                    <div><li><a href="" class="z m">Promociones</a></li></div>
+                    <div>
+                        <li><a href="" class="z m">Promociones</a></li>
+                    </div>
                     <li>
                         <span class="M2">
                             <ul class="activo">
-                                <li><a href="#" >Fechas</a></li>   
+                                <li><a href="#">Fechas</a></li>
                                 <li><a href="#" class="doble">Para <br>Año Nuevo</a></li>
                                 <li><a href="#" class="doble">Ocaciones <br>Especiales</a></li>
                             </ul>
                         </span>
                     </li>
-                    <li>	<div class="header-cart exp"> 
-                        <div class="cart"> 
-                            <form action="#" method="post" class="last"> 
-                                <input type="hidden" name="cmd" value="_cart" />
-                                <input type="hidden" name="display" value="1" />
-                                <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-                            </form>  
+                    <li>
+                        <div class="header-cart exp">
+                            <div class="cart">
+                                <form action="#" method="post" class="last">
+                                    <input type="hidden" name="cmd" value="_cart" />
+                                    <input type="hidden" name="display" value="1" />
+                                    <button class="w3view-cart" type="submit" name="submit" value=""><i
+                                            class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+                            <div class="clearfix"> </div>
                         </div>
-                        <div class="clearfix"> </div> 
-                    </div>
                     </li>
-                    <li><a href="Index.html"><img src="../images/Logotipo.gif" class="Logo"></a></li>
-                        <li><a href="" class="z us"><i class="fa-solid fa-user"></i></a></li>
-                        <li>
-                            <div class="Lgn">
-                                <span class="actived" id="login-section">
-                                   
-                            </div>
-                            <div class="profile">
-                                <span class="actived" id="profile-section">
-    
-                                </span>
-                            </div>
-                        </li>
-                    <div><li><a href="#" class="z r">Restaurantes</a></li></div>
-                        <li>
-                            <span class="M3">
-                                <ul class="active">
-                                    <li><a href="#" class="links" data-section="Seccion1">Mapa</a></li>
-                                    <li><a href="#" class="links" data-section="Restaurante">Todos</a></li>   
-                                    <li><a href="#" class="links" data-section="Seccion01">Mi Zona</a></li>
-                                    <li><a href="#" class="links" data-section="Seccion2">Ubicación</a></li>
-                                    <li><a href="#" class="links" data-section="Seccion3">Reservación</a></li>
-                                </ul>
+                    <li><a href="Index.html"><img src="../images/Logotipo.png" class="Logo"></a></li>
+                    <li><a href="" class="z us"><i class="fa-solid fa-user"></i></a></li>
+                    <li>
+                        <div class="Lgn">
+                            <span class="actived" id="login-section">
+
+                        </div>
+                        <div class="profile">
+                            <span class="actived" id="profile-section">
+
                             </span>
-                        </li>
-                    <div><li><a href="" class="z ad">Adicional</a></li></div>
+                        </div>
+                    </li>
+                    <div>
+                        <li><a href="#" class="z r">Restaurantes</a></li>
+                    </div>
+                    <li>
+                        <span class="M3">
+                            <ul class="active">
+                                <li><a href="#" class="links" data-section="Seccion1">Mapa</a></li>
+                                <li><a href="#" class="links" data-section="Restaurante">Todos</a></li>
+                                <li><a href="#" class="links" data-section="Seccion01">Mi Zona</a></li>
+                                <li><a href="#" class="links" data-section="Seccion2">Ubicación</a></li>
+                                <li><a href="#" class="links" data-section="Seccion3">Reservación</a></li>
+                            </ul>
+                        </span>
+                    </li>
+                    <div>
+                        <li><a href="" class="z ad">Adicional</a></li>
+                    </div>
                     <li>
                         <span class="M4">
                             <ul class="activo">
-                                <li><a href="#" class="doble">Facturas<br>Pendientes</a></li>   
-                                <li><a href="forums.html" >Comunidad</a></li>
+                                <li><a href="#" class="doble">Facturas<br>Pendientes</a></li>
+                                <li><a href="forums.html">Comunidad</a></li>
                                 <li><a href="#">Amigos</a></li>
                             </ul>
                         </span>
@@ -142,190 +160,227 @@
         <div class="parrafo 1">
             <h3>Conoce nuestras ofertas</h3>
             <p>
-                Pensamos en cada ocación y que cada una es muy especial para ti, por eso 
-                te ofrecemos descuentos en tus compras cada vez que celebres algo!. Para 
+                Pensamos en cada ocación y que cada una es muy especial para ti, por eso
+                te ofrecemos descuentos en tus compras cada vez que celebres algo!. Para
                 año nuevo, las navidades, halloween o tu cumpleaños!
                 <br>
-                ¡Conoce nuestras ofertas! 
+                ¡Conoce nuestras ofertas!
             </p>
-            <button class="btn-offer a" type="button" id="Boa" onclick="window.location.href='offers.html'">Vamos!</button>
+            <button class="btn-offer a" type="button" id="Boa"
+                onclick="window.location.href='offers.html'">Vamos!</button>
         </div>
         <div class="parrafo b">
             <h3>Tragetas de regalo</h3>
             <p>
                 Durante tus ocaciones, cada que compres 4 articulos de tus menus favoritos
-                recibiras una targeta de regalo con bonos de hasta $40.000 para que los 
-                compartas con tu familia y amigos!   
+                recibiras una targeta de regalo con bonos de hasta $40.000 para que los
+                compartas con tu familia y amigos!
                 <br>
-                ¡Consigue las tuyas! 
+                ¡Consigue las tuyas!
             </p>
-            <button class="btn-offer b" type="button" id="Bob" onclick="window.location.href='offers.html#Targeta'">Vamos!</button>
+            <button class="btn-offer b" type="button" id="Bob"
+                onclick="window.location.href='offers.html#Targeta'">Vamos!</button>
         </div>
     </div>
     <div class="container marketing">
         <h1>Restaurantes</h1>
         <div class="row">
-          <div class="col-lg-4">
-            <img src="../images/3.jpg" alt="Restaurante">
-            <h2 class="fw-normal">Mercado</h2>
-            <p>Puedes comprar comida a traves de los hipermeracdos más conocidos o directamente a restaurantes como Exito-restaurantes.</p>
-            <p><a class="btn btn-secondary" href="Mapa.html#Restaurante">Ver detalles &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img src="../images/R1.jpg" alt="Restaurante">
-            <h2 class="fw-normal">Mc'donals</h2>
-            <p>Pide lo que quieras y nosotros te lo entregamos, desde la reconocida marca Mc'Donals, nosotros te lo facilitamos!</p>
-            <p><a class="btn btn-secondary" href="Mapa.html#Mc">Ver detalles &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img src="../images/R2.jpg" alt="Restaurante">
-            <h2 class="fw-normal">Restaurante X</h2>
-            <p>Los mejores menús del restaurante X, pide en uno de los mejores restaurantes a la carta para cenar con tu familia o amigos!</p>
-            <p><a class="btn btn-secondary" href="Mapa.html#Restaurante">Ver detalles &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="../images/3.jpg" alt="Restaurante">
+                <h2 class="fw-normal">Mercado</h2>
+                <p>Puedes comprar comida a traves de los hipermeracdos más conocidos o directamente a restaurantes como
+                    Exito-restaurantes.</p>
+                <p><a class="btn btn-secondary" href="Mapa.html#Restaurante">Ver detalles &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="../images/R1.jpg" alt="Restaurante">
+                <h2 class="fw-normal">Mc'donals</h2>
+                <p>Pide lo que quieras y nosotros te lo entregamos, desde la reconocida marca Mc'Donals, nosotros te lo
+                    facilitamos!</p>
+                <p><a class="btn btn-secondary" href="Mapa.html#Mc">Ver detalles &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="../images/R2.jpg" alt="Restaurante">
+                <h2 class="fw-normal">Restaurante X</h2>
+                <p>Los mejores menús del restaurante X, pide en uno de los mejores restaurantes a la carta para cenar
+                    con tu familia o amigos!</p>
+                <p><a class="btn btn-secondary" href="Mapa.html#Restaurante">Ver detalles &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
-        </div>
+    </div>
     <div class="contenedor">
         <div class="w3agile-ftr-top">
-        <div>
-            <div class="ftr-toprow">
-                <div class="col-md-6 ftr-top-grids">
-                    <div class="ftr-top-left">
-                        <i class="fa fa-truck" ></i>
-                    </div> 
-                    <div class="ftr-top-right">
-                        <h4>DOMICILIO GRATIS</h4>
-                        <p>Ciertos restaurantes te ofreceran domicilios gratis, según donde lo pidas</p>
-                    </div> 
-                </div> 
-                <div class="col-md-6 ftr-top-grids">
-                    <div class="ftr-top-left">
-                        <i class="fa fa-user" ></i>
-                    </div> 
-                    <div class="ftr-top-right">
-                        <h4>CUIDADO DEL CLIENTE</h4>
-                        <p>Restaurantes con calidad y servicios garantizados, y gran variedad alimentaria.</p>
-                    </div> 
-                </div>
-                <div class="col-md-6 ftr-top-grids">
-                    <div class="ftr-top-left">
-                        <i class="fa fa-thumbs-o-up" ></i>
-                    </div> 
-                    <div class="ftr-top-right">
-                        <h4>BUENA CALIDAD</h4>
-                        <p>Los mejoraes servicios de entrega a docmicilio, con los mejores restaurantes!</p>
+            <div>
+                <div class="ftr-toprow">
+                    <div class="col-md-6 ftr-top-grids">
+                        <div class="ftr-top-left">
+                            <i class="fa fa-truck"></i>
+                        </div>
+                        <div class="ftr-top-right">
+                            <h4>DOMICILIO GRATIS</h4>
+                            <p>Ciertos restaurantes te ofreceran domicilios gratis, según donde lo pidas</p>
+                        </div>
                     </div>
-                </div> 
+                    <div class="col-md-6 ftr-top-grids">
+                        <div class="ftr-top-left">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="ftr-top-right">
+                            <h4>CUIDADO DEL CLIENTE</h4>
+                            <p>Restaurantes con calidad y servicios garantizados, y gran variedad alimentaria.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ftr-top-grids">
+                        <div class="ftr-top-left">
+                            <i class="fa fa-thumbs-o-up"></i>
+                        </div>
+                        <div class="ftr-top-right">
+                            <h4>BUENA CALIDAD</h4>
+                            <p>Los mejoraes servicios de entrega a docmicilio, con los mejores restaurantes!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
-	</div>
+    </div>
     <div class="inferior"></div>
-        <!-- cart-js -->
-        <script src="../JS/minicart.js"></script>
-        <script>
-            w3ls.render();
-    
-            w3ls.cart.on('w3sb_checkout', function (evt) {
-                var items, len, i;
-    
-                if (this.subtotal() > 0) {
-                    items = this.items();
-    
-                    for (i = 0, len = items.length; i < len; i++) {
-                        items[i].set('shipping', 0);
-                        items[i].set('shipping2', 0);
-                    }
+    <!-- cart-js -->
+    <script src="../JS/minicart.js"></script>
+    <script>
+        w3ls.render();
+
+        w3ls.cart.on('w3sb_checkout', function (evt) {
+            var items, len, i;
+
+            if (this.subtotal() > 0) {
+                items = this.items();
+
+                for (i = 0, len = items.length; i < len; i++) {
+                    items[i].set('shipping', 0);
+                    items[i].set('shipping2', 0);
+                }
+            }
+        });
+    </script>
+    <!-- //cart-js -->
+    <!-- menu js aim -->
+    <script src="../JS/jquery.menu-aim.js"> </script>
+    <script src="../JS/main.js"></script> <!-- Resource jQuery -->
+    <!-- //menu js aim -->
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Abrir submenus -->
+    <script src="../JS/SubMenus.js"></script>
+    <script src="../JS/bootstrap.js"></script>
+    <!-- Importar el footer -->
+    <script>
+        $(document).ready(function () {
+            $('.inferior').load('Footer.html');
+        });
+    </script>
+    <!-- Ajax verificación de sesion -->
+    <script>
+        $(document).ready(function () {
+            // Verificar si el usuario está logueado (basado en localStorage)
+            var loggedIn = localStorage.getItem('loggedIn');
+            if (loggedIn === "true") {
+                // Usuario logueado, ocultar formulario de inicio de sesión y mostrar perfil
+                $('#login-section').hide();
+                $('#profile-section').show();
+            } else {
+                // Usuario no logueado, mostrar formulario de inicio de sesión y ocultar perfil
+                $('#login-section').show();
+                $('#profile-section').hide();
+            }
+
+            // Realizar una petición AJAX para verificar el estado de la sesión
+            $.get('../Controllers/CheckSesion.php', function (response) {
+                console.log("Respuesta de la sesión:", response); // Verificar la respuesta en la consola
+
+                if (response.loggedIn) {
+                    console.log("Usuario logueado: ", response.user); // Debug
+                    localStorage.setItem('loggedIn', true);
+                    $('#login-section').hide();
+                    $('#profile-section').html(
+                        '<ul>' +
+                        '<li><a href="#">' + response.user + '</a></li>' +
+                        '<li><a href="UsersEdit.php?id=' + response.id + '">Configuración</a></li>' +
+                        '<li><a href="../Controllers/Logout.php">Cerrar sesión</a></li>' +
+                        '</ul>'
+                    );
+                    $('#profile-section').show();
+                } else {
+                    console.log("Usuario no logueado"); // Debug
+                    localStorage.setItem('loggedIn', false);
+                    $('#login-section').html(
+                        '<span class="Login-title">' +
+                        '<h3>Mi Cuenta</h3>' +
+                        '</span>' +
+                        '<form action="../Controllers/LogIn.php" name="Login" method="post">' +
+                        '<div class="input-dates">' +
+                        '<label for="Email">Correo:</label>' +
+                        '<input type="email" class="form-control" placeholder="Correo" name="Email" required>' +
+                        '</div>' +
+                        '<div class="input-dates">' +
+                        '<label for="Pass">Contraseña:</label>' +
+                        '<input type="password" class="form-control" placeholder="Contraseña" name="Pass" required>' +
+                        '</div>' +
+                        '<div class="Login-center">' +
+                        '<label for="Remember">' +
+                        '<input type="checkbox" class="form-control" name="Rem"> Recordarme' +
+                        '</label>' +
+                        '<a href="#">Contraseña Olvidada</a>' +
+                        '<span>' +
+                        '<a href="#"><button type="submit" class="btn-go">Conexión</button></a>' +
+                        '</span>' +
+                        '</div>' +
+                        '<div class="Login-foot">' +
+                        '<span>' +
+                        '<h3>No tienes cuenta</h3>' +
+                        '<a href="Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>' +
+                        '</span>' +
+                        '</div>' +
+                        '</form>');
+                    $('#login-section').show();
+                    $('#profile-section').hide();
+                }
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                console.error('Error fetching session data:', textStatus, errorThrown); // Debug: Mostrar el error en la consola
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            var $ul = $(".Padres");
+            // Marcar como "fijos" los li que contienen Logo, Carrito o Usuario
+            $ul.find("li").each(function () {
+                var $li = $(this);
+                if ($li.find(".Logo, .w3view-cart, .us").length) {
+                    $li.addClass("nav-fixed");
+                }
+                // Marcar como "del grupo navegable" los que disparan SubMenus.js
+                if ($li.find("> a.bton, > a.m, > a.r, > a.ad").length) {
+                    $li.addClass("nav-group");
                 }
             });
-        </script>  
-        <!-- //cart-js -->  
-        <!-- menu js aim -->
-        <script src="../JS/jquery.menu-aim.js"> </script>
-        <script src="../JS/main.js"></script> <!-- Resource jQuery -->
-        <!-- //menu js aim --> 
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Abrir submenus -->
-        <script src="../JS/SubMenus.js"></script>
-        <script src="../JS/bootstrap.js"></script> 
-        <!-- Importar el footer -->
-	    <script>
-	    	$(document).ready(function () {
-	    	  $('.inferior').load('Footer.html');
-	    	});
-	    </script>  
-        <!-- Ajax verificación de sesion -->
-    <script>
-        $(document).ready(function() {
-    // Verificar si el usuario está logueado (basado en localStorage)
-    var loggedIn = localStorage.getItem('loggedIn');
-    if (loggedIn === "true") {
-        // Usuario logueado, ocultar formulario de inicio de sesión y mostrar perfil
-        $('#login-section').hide();
-        $('#profile-section').show();
-    } else {
-        // Usuario no logueado, mostrar formulario de inicio de sesión y ocultar perfil
-        $('#login-section').show();
-        $('#profile-section').hide();
-    }
 
-    // Realizar una petición AJAX para verificar el estado de la sesión
-    $.get('../Controllers/CheckSesion.php', function(response) {
-        console.log("Respuesta de la sesión:", response); // Verificar la respuesta en la consola
+            // Toggle del menú (solo afecta a .nav-group)
+            $("#menu-toggle").on("click", function () {
+                var isOpen = $ul.toggleClass("open").hasClass("open");
+                $(this).attr("aria-expanded", isOpen);
+            });
 
-        if (response.loggedIn) {
-            console.log("Usuario logueado: ", response.user); // Debug
-            localStorage.setItem('loggedIn', true);
-            $('#login-section').hide();
-            $('#profile-section').html(
-                '<ul>' +
-                '<li><a href="#">' + response.user + '</a></li>' +
-                '<li><a href="UsersEdit.php?id=' + response.id + '">Configuración</a></li>' +
-                '<li><a href="../Controllers/Logout.php">Cerrar sesión</a></li>' +
-                '</ul>'
-            );
-            $('#profile-section').show();
-        } else {
-            console.log("Usuario no logueado"); // Debug
-            localStorage.setItem('loggedIn', false);
-            $('#login-section').html(
-                '<span class="Login-title">' +
-                '<h3>Mi Cuenta</h3>' +
-                '</span>' +
-                '<form action="../Controllers/LogIn.php" name="Login" method="post">' +
-                '<div class="input-dates">' +
-                '<label for="Email">Correo:</label>' +
-                '<input type="email" class="form-control" placeholder="Correo" name="Email" required>' +
-                '</div>' +
-                '<div class="input-dates">' +
-                '<label for="Pass">Contraseña:</label>' +
-                '<input type="password" class="form-control" placeholder="Contraseña" name="Pass" required>' +
-                '</div>' +
-                '<div class="Login-center">' +
-                '<label for="Remember">' +
-                '<input type="checkbox" class="form-control" name="Rem"> Recordarme' +
-                '</label>' +
-                '<a href="#">Contraseña Olvidada</a>' +
-                '<span>' +
-                '<a href="#"><button type="submit" class="btn-go">Conexión</button></a>' +
-                '</span>' +
-                '</div>' +
-                '<div class="Login-foot">' +
-                '<span>' +
-                '<h3>No tienes cuenta</h3>' +
-                '<a href="Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>' +
-                '</span>' +
-                '</div>' +
-                '</form>');
-            $('#login-section').show();
-            $('#profile-section').hide();
-        }
-    }).fail(function(jqXHR, textStatus, errorThrown) {
-        console.error('Error fetching session data:', textStatus, errorThrown); // Debug: Mostrar el error en la consola
-    });
-});
-
+            // Cerrar al tocar fuera (opcional)
+            $(document).on("click", function (e) {
+                if (!$(e.target).closest(".Padres, #menu-toggle").length) {
+                    $ul.removeClass("open");
+                    $("#menu-toggle").attr("aria-expanded", "false");
+                }
+            });
+        });
     </script>
+
+
 </body>
+
 </html>

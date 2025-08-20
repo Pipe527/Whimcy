@@ -391,7 +391,12 @@
 
 .cd-dropdown-content .see-all a {
   /* different style for the See all links */
-  color: #3f8654;
+  color: #453f86;
+}
+.cd-dropdown-content .main a {
+  /* Boton pincipal de pedido */
+  color: green;
+  font-weight: bolder;
 }
 .cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item, .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item {
   /* items with picture (or icon) and title */
