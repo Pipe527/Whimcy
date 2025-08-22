@@ -16,6 +16,7 @@ $(document).ready(function(){
         $('.categorias').removeClass('filtro-activo');
         $('[data-range]').prop('checked', false);
         $('.agile-products').parent().show();
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
     });
 
     // Si el parámetro "category" es especifico, aplicar el filtro

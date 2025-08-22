@@ -28,8 +28,7 @@
                             <i class="fa fa-bars"></i>
                         </button>
                     </li>
-
-                    <div>
+                    <div class="Topline">
                         <li><a href="" class="bton z">Menú</a></li>
                     </div>
                     <li>
@@ -297,7 +296,7 @@
             $.get('../Controllers/CheckSesion.php', function (response) {
                 console.log("Respuesta de la sesión:", response); // Verificar la respuesta en la consola
 
-                if (response.loggedIn) {
+            if (response.loggedIn) {
                     console.log("Usuario logueado: ", response.user); // Debug
                     localStorage.setItem('loggedIn', true);
                     $('#login-section').hide();
@@ -311,7 +310,13 @@
                     $('#profile-section').show();
                 } else {
                     console.log("Usuario no logueado"); // Debug
-                    localStorage.setItem('loggedIn', false);
+                localStorage.setItem('loggedIn', false);
+                    // Mostrar el login normal en Movíl
+                if (window.matchMedia("(max-width: 400px)").matches) {
+                    alert("⚠️ Sesión no iniciada ⚠️");
+                    window.location.href = "Mobile/Inicio.php";
+                } else {
+                    // Mostrar el login normal en escritorio
                     $('#login-section').html(
                         '<span class="Login-title">' +
                         '<h3>Mi Cuenta</h3>' +
@@ -330,19 +335,19 @@
                         '<input type="checkbox" class="form-control" name="Rem"> Recordarme' +
                         '</label>' +
                         '<a href="#">Contraseña Olvidada</a>' +
-                        '<span>' +
-                        '<a href="#"><button type="submit" class="btn-go">Conexión</button></a>' +
-                        '</span>' +
                         '</div>' +
                         '<div class="Login-foot">' +
                         '<span>' +
+                        '<button type="submit" class="btn-go">Conexión</button>' +
                         '<h3>No tienes cuenta</h3>' +
-                        '<a href="Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>' +
+                        '<button><a href="Registro.php" class="btn-sing">Registrarse</a></button>' +
                         '</span>' +
                         '</div>' +
-                        '</form>');
+                        '</form>'
+                    );
                     $('#login-section').show();
                     $('#profile-section').hide();
+                    }
                 }
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 console.error('Error fetching session data:', textStatus, errorThrown); // Debug: Mostrar el error en la consola
@@ -370,7 +375,7 @@
                 $(this).attr("aria-expanded", isOpen);
             });
 
-            // Cerrar al tocar fuera (opcional)
+            // Cerrar al tocar fuera
             $(document).on("click", function (e) {
                 if (!$(e.target).closest(".Padres, #menu-toggle").length) {
                     $ul.removeClass("open");

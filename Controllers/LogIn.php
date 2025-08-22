@@ -13,6 +13,7 @@ if (isset($_POST["Email"]) && isset($_POST["Pass"])) {
     $Usuario = validar($_POST["Email"]);
     $Clave = validar($_POST["Pass"]);
     $mobile = validar($_POST['mobile']);
+    $_SESSION['mobile'] = $mobile; //Variable para Movíl
 
     if (empty($Usuario)) {
         echo "<script>alert('El usuario es requerido'); window.location.href='../views/login.html';</script>";

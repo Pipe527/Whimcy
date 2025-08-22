@@ -1,32 +1,77 @@
 (function($) {
     // Botones
+    const M1T1 = document.querySelector('.m');
     const btn = document.querySelector('.bton'); 
     const navbar = document.querySelector('.M1');
+    const combos = document.querySelectorAll('.combo');
+    const mobileQuery = window.matchMedia("(max-width: 400px)");
 
     if (btn && navbar) {
         btn.addEventListener('click', (event) => {
             event.preventDefault(); // Previene la acción por defecto del enlace
             navbar.classList.toggle('active');
+
+            if (mobileQuery.matches) { // solo en móviles
+                M1T1.classList.toggle('cambio', navbar.classList.contains('active'));
+            }            
+        });
+    } 
+
+    // --- Submenús en móvil ---
+    function initMobileCombos() {
+        combos.forEach(combo => {
+            combo.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation(); // evita que cierre por el listener global
+
+                // buscar el hermano inmediato que es <ul.SubMenu>
+                const submenu = combo.nextElementSibling;
+                if (submenu && submenu.classList.contains('SubMenu')) {
+                    submenu.classList.toggle('open');
+                }
+            });
         });
     }
 
-    const btnprom = document.querySelector('.m'); // Selecciona el enlace "prom"
+    // Al cargar, si ya estamos en móvil, inicializamos
+    if (mobileQuery.matches) {
+        initMobileCombos();
+    }
+
+    // Cambia el viewport (resize, rotación, etc)
+    mobileQuery.addEventListener("change", (e) => {
+        if (e.matches) {
+            initMobileCombos();
+        }
+    });
+
+    const btnprom = document.querySelector('.m');
     const Nav = document.querySelector('.M2');
+    const M1T2 = document.querySelector('.r');
 
     if (btnprom && Nav) {
         btnprom.addEventListener('click', (event) => {
             event.preventDefault();
             Nav.classList.toggle('activo');
+
+            if (mobileQuery.matches) { 
+                M1T2.classList.toggle('cambio', Nav.classList.contains('activo'));
+            }
         });
     }
 
     const btnRes = document.querySelector('.r'); 
     const navv = document.querySelector('.M3');
+    const M1T3 = document.querySelector('.ad');
 
     if (btnRes && navv) {
         btnRes.addEventListener('click', (event) => {
             event.preventDefault(); 
             navv.classList.toggle('active');
+
+            if (mobileQuery.matches) { 
+                M1T3.classList.toggle('cambio', navv.classList.contains('active'));
+            }
         });
     }
 
@@ -40,9 +85,24 @@
         });
     }
 
+    const cerrar = document.querySelector('.fa-bars');
+    
+    if (cerrar) {
+        cerrar.addEventListener('click', () => {
+            Nav.classList.remove('activo');
+            Navvv.classList.remove('activo');
+            navbar.classList.remove('active');
+            navv.classList.remove('active');
+            M1T1.classList.remove('cambio');
+            M1T2.classList.remove('cambio');
+            M1T3.classList.remove('cambio');
+        });
+    }
+
     //Login botones
     const btnLog = document.querySelector('.z.us');
     const NNavvv = document.querySelector('.Lgn'); 
+    const header  = document.querySelector('header');
     const profileNav = document.querySelector('.profile');
 
     if (btnLog && NNavvv && profileNav) {
@@ -58,6 +118,19 @@
                 profileNav.classList.remove('actived'); // Asegurarse de que el perfil del usuario no esté activo
             }
         });
+    }
+
+    document.addEventListener('click', (e) => {
+        if (mobileQuery.matches) return;               // solo desktop
+        if (header && !header.contains(e.target)) {    // click fuera del header
+            closeAll();
+        }
+    });
+
+    // --- Utilidad: cerrar todo ---
+    function closeAll() {
+        document.querySelectorAll('.M1, .M2, .M3, .M4, .Lgn','.profile')
+            .forEach(n => n.classList.remove('active', 'activo', 'actived'));
     }
 
     //Obtener ruta de imagen - texto y precio

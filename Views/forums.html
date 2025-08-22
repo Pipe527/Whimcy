@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../JS/Perfil.js"></script>
 </head>
 
 <body>
@@ -271,9 +272,13 @@
     <script src="../JS/Second.js"></script>
     <!-- Importar el Menu -->
 	<script>
-		$(document).ready(function () {
-		  $('.header').load('Menu.php');
+	$(document).ready(function () {
+		$('.header').load('Menu.php', function () {
+		if (typeof inicializarLogin === "function") {
+			inicializarLogin();
+		}
 		});
+	});
 	</script>
 	<!-- Abrir submenus -->
 	<script src="../JS/SubMenus.js"></script>

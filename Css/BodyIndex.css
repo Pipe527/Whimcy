@@ -116,6 +116,11 @@ p {
 	background-size: cover; 
     width: 100vw;
 }
+@media (max-width: 1400px) {
+    .centro {
+        width: 76% !important;
+    }
+}
 @media (max-width: 991px) {
     .w3agile-ftr-top {
         padding: 1em 0;

@@ -3572,6 +3572,16 @@ ul.dropdown-menu {
     .agile-product-text h5 a {
         color: #4ed756;
     }
+    .checkbox, .agile-product-text h6
+    .sidebar-row a.todo {
+        color: #FFF !important;
+    }
+    .galry-like a {
+        color: #b70000;
+    }
+    .rsidebar h4, .related-row h4 {
+        color: #400;
+    }
     .Fondo-body {
         background-color: #286553d9;
     }
@@ -3579,12 +3589,15 @@ ul.dropdown-menu {
         border-top: 60px solid #4ed756;
         border-right: 60px solid transparent;
     }
-    .agile-product-text h6 {
-        color: #fff;
-    }
     .product-top li.dropdown {
         font-size: 0.8em;
         margin-top: 1em;
+    }
+    .sidebar-row .faq li a {
+        color: #06000B;
+    }
+    #toTop {
+        right: 12%;
     }
 }
 @media(max-width:375px){

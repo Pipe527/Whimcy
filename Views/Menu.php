@@ -8,6 +8,7 @@ $response = array(
 if (isset($_SESSION['Nombre'])) {
     $response['loggedIn'] = true;
     $response['user'] = $_SESSION['Nombre'];
+    $response['id'] = $_SESSION['idUsuarios'];
 }
 ?>
 
@@ -131,30 +132,31 @@ if (isset($_SESSION['Nombre'])) {
     <!-- Abrir submenus -->
 	<script src="../JS/SubMenus.js"></script>
     <!-- Sesiones -->
-    <?php if ($response['loggedIn']) { ?>
     <script>
-        console.log('Usuario logueado: <?php echo $response['user']; ?>');
-        localStorage.setItem('loggedIn', true);
-        localStorage.setItem('menuState', 'profile');
-        document.getElementById('login-section');
-        document.getElementById('profile-section').innerHTML = `
-            <ul>
-                <li><a href="#"> <?php echo $response['user']; ?> </a></li>
-                <li><a href="UsersEdit.php?id=<?php echo $response['id'];?>">Configuración</a></li>
+        var response = <?php echo json_encode($response); ?>;
+        function inicializarLogin() {
+            if (response.loggedIn) {
+            console.log("Usuario logueado:", response.user);
+            localStorage.setItem('loggedIn', true);
+            localStorage.setItem('menuState', 'profile');
+
+            document.getElementById('profile-section').innerHTML = `
+                <ul>
+                <li><a href="#">${response.user}</a></li>
+                <li><a href="UsersEdit.php?id=${response.id}">Configuración</a></li>
                 <li><a href="../Controllers/Logout.php">Cerrar sesión</a></li>
-            </ul>
-        `;
-        document.querySelector('.profile');
-    </script>
-<?php } else { ?>
-    <script>
-        localStorage.setItem('menuState', 'login');
-        console.log('Usuario no logueado');
-        document.getElementById('login-section').innerHTML = `
-            <span class="Login-title">
+                </ul>
+            `;
+            } else {
+            console.log("Usuario no logueado");
+            localStorage.setItem('loggedIn', false);
+            localStorage.setItem('menuState', 'login');
+
+            document.getElementById('login-section').innerHTML = `
+                <span class="Login-title">
                 <h3>Mi Cuenta</h3>
-            </span>
-            <form action="../Controllers/LogIn.php" name="Login" method="post">
+                </span>
+                <form action="../Controllers/LogIn.php" name="Login" method="post">
                 <div class="input-dates">
                     <label for="Email">Correo:</label>
                     <input type="email" class="form-control" placeholder="Correo" name="Email" required>
@@ -163,26 +165,23 @@ if (isset($_SESSION['Nombre'])) {
                     <label for="Pass">Contraseña:</label>
                     <input type="password" class="form-control" placeholder="Contraseña" name="Pass" required>
                 </div>
-                <!-- Agregar más campos si es necesario -->
                 <div class="Login-center">
                     <label for="Remember">
-                        <input type="checkbox" class="form-control" name="Rem"> Recordarme
+                    <input type="checkbox" class="form" name="Rem"> Recordarme
                     </label>
                     <a href="#">Contraseña Olvidada</a>
-                    <span>
-                        <a href="#"><button type="submit" class="btn-go">Conexión</button></a>
-                    </span>
                 </div>
                 <div class="Login-foot">
                     <span>
-                        <h3>No tienes cuenta</h3>
-                        <a href="Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>
+                    <button type="submit" class="btn-go">Conexión</button>
+                    <h3>No tienes cuenta</h3>
+                    <a href="Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>
                     </span>
                 </div>
-            </form>
-        `;
+                </form>
+            `;
+            }
+        }
     </script>
-    
-<?php } ?>
 </body>
 </html>

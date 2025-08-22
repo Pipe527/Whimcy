@@ -31,7 +31,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
 <!-- web-fonts -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Perfil -->
+ <script src="../JS/Perfil.js"></script> 
 <!-- scroll to fixed--> 
 <script src="../JS/jquery-scrolltofixed-min.js" type="text/javascript"></script>
 <script>
@@ -572,7 +574,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="sidebar-row">
 						<h4>Etiqueta</h4>
 						<div class="row row1 scroll-pane">
-							<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Favortiros</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Favortiros</label>
 							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Venta</label>
 							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Nuevos</label>
 							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Descuentos</label>
@@ -693,7 +695,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						<li><i class="fa fa-map-marker"></i> 123 San Sebastian, Bogotá Colombia.</li>
 						<li><i class="fa fa-mobile"></i> 333 222 3333 </li>
 						<li><i class="fa fa-phone"></i> +222 11 4444 </li>
-						<li><i class="fa fa-envelope-o"></i> <a href="mailto:example@mail.com"> mail@whimcy.com</a></li>
+						<li><i class="fa fa-envelope-o"></i> <a href="mailto:example@mail.com"> mail@tastely.com</a></li>
 					</ul>
 					</div> 
 				</div>
@@ -763,9 +765,13 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<script src="../JS/bootstrap.js"></script>
 	<!-- Importar el Menu -->
 	<script>
-		$(document).ready(function () {
-		  $('.header').load('Menu.php');
+	$(document).ready(function () {
+		$('.header').load('Menu.php', function () {
+		if (typeof inicializarLogin === "function") {
+			inicializarLogin();
+		}
 		});
+	});
 	</script>
 	<!-- Abrir submenus -->
 	<script src="../JS/SubMenus.js"></script>

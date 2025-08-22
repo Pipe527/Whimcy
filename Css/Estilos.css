@@ -362,7 +362,7 @@ p.sbmincart-empty-text {
 .Padres>ul:not(.SubMenu):not(.SubMenu.active) {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0% 6%;
 }
@@ -393,14 +393,14 @@ p.sbmincart-empty-text {
     position: relative;
 }
 
-.form-control {
+/* .form-control {
     display: unset;
     width: unset;
     height: unset;
     padding: unset;
     font-size: unset;
     line-height: unset;
-}
+} */
 
 .Lgn .form-control[type="email"],
 .Lgn .form-control[type="password"] {
@@ -420,13 +420,20 @@ p.sbmincart-empty-text {
     z-index: 2001;
 }
 
-.nav-toggle-li button {
+.nav-toggle-li button,
+.nav-close-li button {
+    display: none;
     background: none;
     border: none;
     font-size: 1.8rem;
     line-height: 1;
     cursor: pointer;
-    color: inherit;
+    color: white;
+    width: 2.5rem;
+}
+.nav-toggle-li,
+.nav-close-li {
+  display: none;
 }
 
 .M1 {
@@ -480,6 +487,11 @@ p.sbmincart-empty-text {
     align-content: space-evenly;
 }
 
+.btn-sing {
+  text-decoration: none;
+  color: white;
+}
+
 .profile {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.3vw;
@@ -531,7 +543,6 @@ p.sbmincart-empty-text {
     background-image: url("../images/SubMenu_01.gif");
     background-size: 100% 100%;
     padding: 2vw;
-    height: 32.9vh;
     width: 15vw;
     top: 7vh;
     z-index: 2000;
@@ -564,17 +575,18 @@ a.doble {
 .input-dates,
 .Login-center,
 .Login-foot {
-    margin: 1em 0;
+    margin: 0.3em 0;
 }
 
 .Login-center a {
     display: block;
     color: #6cff00;
+    text-align: center;
 }
 
 .Login-center {
     display: flex;
-    height: 4em;
+    height: 3em;
     flex-direction: column;
     justify-content: space-between;
     line-height: 1.5em
@@ -591,7 +603,7 @@ a.doble {
 .Login-foot button,
 .Login-center button {
     height: 3.54vh;
-    width: 5.72vw;
+    width: 7.72vw;
     cursor: pointer;
     color: #fff;
     font-size: 1em;
@@ -615,14 +627,11 @@ a.doble {
     margin-top: 0.7em;
 }
 
-.btn-go {
-    margin-left: 5.5em;
-}
-
-
 #profile-section a {
     color: #fff;
     text-decoration: none;
+    position: relative;
+    bottom: 0.8em;
 }
 
 #profile-section a:hover {
@@ -711,14 +720,13 @@ a.doble {
     .parrafo>h3 {
         font-size: 3em;
     }
-
+    
     /* Menu */
     .Logo {
         width: 28.6vw;
         margin-left: 5vw;
         margin-right: 5vw;
     }
-
     .fa.fa-cart-arrow-down {
         font-size: 2.8em;
     }
@@ -727,29 +735,127 @@ a.doble {
         font-size: 7em;
     }
 
+    .Padres {
+        justify-content: flex-start;
+    }
     .Padres .nav-fixed,
     .Padres .nav-toggle-li {
         display: flex !important;
         align-items: center;
-        margin-left: auto;
+    }
+
+    .Topline {
+        margin-top: 5em;
+    }
+
+    /* Estilos de submenus - Movíl */
+    .cambio {
+        margin-top: 7em;
+    }
+    .M1 {
+        position: absolute;
+        top: 0;
+        left: -19vw;
+    }
+    .M1 > ul > li:not(.SubMenu):not(.doble) > a, .M2 a, .M3 a, .M4 a {
+      line-height: 4vh;
+      font-size: 4.3vw;
+    }
+    .M2 {
+      position: absolute;
+      top: 0;
+      left: -3vw;
+    }
+    .M2.activo li {
+        list-style: disc !important;
+    }
+    .M3 {
+        position: absolute;
+        top: 0;
+        left: -3vw;
+    }
+    .M4 {
+        position: absolute;
+        top: 0;
+        left: -5vw;
+    }
+    .M1, .M2, .M3, .M4, .SubMenu {
+        background-image: none;
+        background-color: white;
+        height: 20.83vh;
+        width: 35.5vw;
+        z-index: 900;
+    }
+    .M1 a, .M2 a, .M3 a, .M4 a {
+        color: black;
+    }
+    .SubMenu {
+      display: none;         
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: all 0.3s ease;
+    }
+    .SubMenu.open {
+      display: grid !important;
+      opacity: 1;
+      transform: translateX(30vw) translatey(-5vh);
+      height: 12.83vh;
+      width: 25.5vw;
+    }
+    .SubMenu.open a {
+      font-size: 1em;
     }
 
     /* Oculta por defecto SOLO los items navegables (Menú/Promos/Rest/Adicional) */
     .Padres .nav-group {
         display: none;
     }
+    .Padres.open {
+      position: fixed;
+      inset: 0;
+      width: 92%;
+      height: 93%;
+      background: rgba(20,20,20,0.97);
+      flex-direction: column;
+      padding: 2rem 1rem;
+      overflow-y: auto;
+      z-index: 5000;
+    }
+    .z:not(.us) {
+      display: none;
+    }
+    /* Al abrir el menú */
+    .Padres.open .nav-group,
+    .Padres.open .nav-close-li {
+      display: block;
+      text-align: center;
+      margin: 1rem 0;
+    } 
+    .Padres.open .nav-fixed {
+      display: none !important;
+    }
+    .Padres.open .nav-group > a {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+    .Padres.open .nav-group span ul {
+      margin-top: 0.5rem;
+      list-style: none;
+      padding-left: 0;
+    }
 
-    /* Al abrir el hamburguesa, muestra los navegables */
+    .Padres.open .nav-group span ul li a {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    /* Muestra los navegables */
     .Padres.open .nav-group {
         display: block;
     }
-
-    /* Si tienes alguna regla previa que oculte .z en móvil, la anulamos al abrir */
     .Padres.open .nav-group>a.z {
         display: inline-flex !important;
     }
-    .nav-toggle-li {
-        display: none;
-        margin-left: auto;
+    .nav-toggle-li button {
+        display: flex !important;
     }
 }
