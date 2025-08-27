@@ -54,7 +54,7 @@
                     <li>
                         <span class="M2">
                             <ul class="activo">
-                                <li><a href="#">Fechas</a></li>
+                                <li><a href="offers.html">Fechas</a></li>
                                 <li><a href="#" class="doble">Para <br>Año Nuevo</a></li>
                                 <li><a href="#" class="doble">Ocaciones <br>Especiales</a></li>
                             </ul>
@@ -273,10 +273,30 @@
     <script src="../JS/bootstrap.js"></script>
     <!-- Importar el footer -->
     <script>
-        $(document).ready(function () {
-            $('.inferior').load('Footer.html');
+    $('.inferior').load('Footer.html', function() {
+    fetch('../Controllers/CheckSesion.php')
+        .then(res => res.json())
+        .then(response => {
+            if (response.loggedIn) { // Redirigir los Login.html si hay sesión
+                document.querySelectorAll('a[href="login.html"]').forEach(link => {
+                    link.addEventListener("click", e => {
+                        e.preventDefault();
+                        window.location.href = "/whimcy/Views/Mobile/profile.php";
+                    });
+                });
+            }
         });
+    });
+
     </script>
+    <script>
+    $(function() {
+        if (typeof inicializarHeaderNav === "function") {
+            inicializarHeaderNav();
+        }
+    });
+    </script>
+
     <!-- Ajax verificación de sesion -->
     <script>
         $(document).ready(function () {
@@ -354,37 +374,6 @@
             });
         });
     </script>
-    <script>
-        $(function () {
-            var $ul = $(".Padres");
-            // Marcar como "fijos" los li que contienen Logo, Carrito o Usuario
-            $ul.find("li").each(function () {
-                var $li = $(this);
-                if ($li.find(".Logo, .w3view-cart, .us").length) {
-                    $li.addClass("nav-fixed");
-                }
-                // Marcar como "del grupo navegable" los que disparan SubMenus.js
-                if ($li.find("> a.bton, > a.m, > a.r, > a.ad").length) {
-                    $li.addClass("nav-group");
-                }
-            });
-
-            // Toggle del menú (solo afecta a .nav-group)
-            $("#menu-toggle").on("click", function () {
-                var isOpen = $ul.toggleClass("open").hasClass("open");
-                $(this).attr("aria-expanded", isOpen);
-            });
-
-            // Cerrar al tocar fuera
-            $(document).on("click", function (e) {
-                if (!$(e.target).closest(".Padres, #menu-toggle").length) {
-                    $ul.removeClass("open");
-                    $("#menu-toggle").attr("aria-expanded", "false");
-                }
-            });
-        });
-    </script>
-
 
 </body>
 

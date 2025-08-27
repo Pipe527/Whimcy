@@ -1,3 +1,6 @@
+ <!-- Traer ruta -->
+<!--  require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php'); ?> -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,11 +11,7 @@
 </head>
 <body>
 
-<header>
-    <div>
-        <?php   include_once("Menu.php") ?>
-    </div>
-</header>
+<header class="header"><?php include_once("Menu.php") ?></header>
  <!-- Formulario -->
 <div class="card-info">
     <form action= "../Controllers/UsersControl.php"class="form-horizontal" name="Registro" method="Post">
@@ -52,7 +51,7 @@
 
         <div class="double">
             <div class="input-doble">
-                <span class="input-titles"><i class="fa-solid fa-phone-volume" style="color: #000000;"></i></span>
+                <span class="input-titles-icon"><i class="fa-solid fa-phone-volume" style="color: #000000;"></i></span>
                 <div class="input-group-append">
                     <Label for="Phone"></Label>
                     <input type="tel" class="form-controll" id="phone" name="Phone" placeholder="321-456-78-90" 
@@ -61,7 +60,7 @@
             </div>
 
             <div class="input-doble">                
-                <span class="input-titles"><i class="fas fa-envelope" style="color: #000000;"></i></span>
+                <span class="input-titles-icon"><i class="fas fa-envelope" style="color: #000000;"></i></span>
                 <div class="input-position">
                     <Label for="Correo"></Label>
                     <input type="email" class="form-controll" name="Correo" placeholder="Email" id="gmail" required>
@@ -71,7 +70,7 @@
 
         <div class="troble">
             <div class="input-doble">
-                <span class="input-titles"><i class="fa-solid fa-key" style="color: #000000;"></i></span>
+                <span class="input-titles-icon"><i class="fa-solid fa-key" style="color: #000000;"></i></span>
                 <div class="input-group-append">
                     <Label for="Contra"></Label>
                     <input type="password" class="form-controll" id="pass" name="pass" placeholder="Contraseña" required>
@@ -79,7 +78,7 @@
             </div>
 
             <div class="input-doble">                
-                <span class="input-titles"><i class="fa-solid fa-key" style="color: #000000;"></i></span>
+                <span class="input-titles-icon"><i class="fa-solid fa-key" style="color: #000000;"></i></span>
                 <div class="input-position">
                     <input type="password" class="form-controll" id="Confpass" placeholder="Confirmar contraseña" required>
                 </div>
@@ -95,7 +94,7 @@
         </div>
 
         <div class="input-alone">
-            <span class="input-titles ubi"><i class="fa-solid fa-location-dot" style="color: #000000;"></i></span>
+            <span class="input-titles-icon ubi"><i class="fa-solid fa-location-dot" style="color: #000000;"></i></span>
             <div class="input-group-append">
                 <Label for="Direccion"></Label>
                 <input type="text" class="form-controll" name="Direccion" placeholder="Dirección de domicilio" id="Doble5" required>
@@ -107,7 +106,7 @@
             <p>Estoy de a cuerdo con los <a href="privacy.html">terminos y condiciones</a></p>
         </div>
         <div class="return">
-            <p>¿Ya tienes cuenta? <a href="login.html">iniciar sesion</a></p>
+            <p>¿Ya tienes cuenta? <a href="login.html" onclick="redirigirLogin(event)">iniciar sesion</a></p>
         </div>
         <!-- Card-footer -->
     <div class="card-footer">
@@ -119,6 +118,16 @@
 <footer>
     <?php   include_once("footer.html") ?>  
 </footer>
+<!-- Abrir Submenus -->
+ <script src="/whimcy/JS/SubMenus.js"></script>
+ <script src="/whimcy/JS/minicart.js"></script>
+ <script>
+$(function() {
+    if (typeof inicializarHeaderNav === "function") inicializarHeaderNav();
+    if (typeof inicializarLogin === "function") inicializarLogin();
+});
+</script>
+<!-- Contraseñas deben coincidir -->
 <script>
     with(document.Registro){
         onsubmit = function (e) {
@@ -131,6 +140,18 @@
                 document.getElementById('Confpass').focus();
             }
             if (ok) {   submit();   }
+        }
+    }
+</script>
+<!-- redireccion -->
+<script>
+    function redirigirLogin(e) {
+    e.preventDefault(); 
+
+        if (window.matchMedia("(max-width: 400px)").matches) {
+            window.location.href = "Mobile/Inicio.php";
+        } else {
+            window.location.href = "login.html";
         }
     }
 </script>

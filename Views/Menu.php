@@ -10,6 +10,8 @@ if (isset($_SESSION['Nombre'])) {
     $response['user'] = $_SESSION['Nombre'];
     $response['id'] = $_SESSION['idUsuarios'];
 }
+// Traer ruta 
+ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php'); 
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +20,7 @@ if (isset($_SESSION['Nombre'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="../Css/Estilos.css">
+    <link rel="stylesheet" href="/whimcy/Css/Estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -30,16 +32,21 @@ if (isset($_SESSION['Nombre'])) {
     <div class="superior">
         <nav class="Letras">
             <ul class="Padres">
+                <li class="nav-toggle-li">
+                        <button id="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </li>
                 <div><li><a href="" class="bton z">Menú</a></li></div>
                 <li>
                     <span class="M1">
                         <ul class="active">
-                            <li><a href="products.php">Pedir</a></li>   
-                            <li><a href="products.php?category=Top" >Top</a></li>
+                            <li><a href="/whimcy/Views/products.php">Pedir</a></li>   
+                            <li><a href="/whimcy/Views/products.php?category=Top" >Top</a></li>
                             <li>
                             <a href="#" class="combo">Combos<i class="fa-solid fa-caret-right OpenSub"></i></a>
                                 <ul class="SubMenu">
-                                    <li><a href="products.php?category=combos" >Categorias</a></li>   
+                                    <li><a href="/whimcy/Views/products.php?category=combos" >Categorias</a></li>   
                                     <li><a href="#" >Definidos</a></li>
                                     <li><a href="#">Cartas</a></li>
                                 </ul>
@@ -52,7 +59,7 @@ if (isset($_SESSION['Nombre'])) {
                 <li>
                     <span class="M2">
                         <ul class="activo">
-                            <li><a href="#" >Fechas</a></li>   
+                            <li><a href="/whimcy/Views/offers.html" >Fechas</a></li>   
                             <li><a href="#" class="doble">Para <br>Año Nuevo</a></li>
                             <li><a href="#" class="doble">Ocaciones <br>Especiales</a></li>
                         </ul>
@@ -69,7 +76,7 @@ if (isset($_SESSION['Nombre'])) {
                     <div class="clearfix"> </div> 
                 </div>
                 </li>
-                <li><a href="Index.html"><img src="../images/Logotipo.png" class="Logo"></a></li>
+                <li><a href="/whimcy/Views/Index.html"><img src="/whimcy/images/Logotipo.png" class="Logo"></a></li>
                     <li><a href="" class="z us"><i class="fa-solid fa-user"></i></a></li>
                     <li>
                         <div class="Lgn">
@@ -99,7 +106,7 @@ if (isset($_SESSION['Nombre'])) {
                     <span class="M4">
                         <ul class="activo">
                             <li><a href="#" class="doble">Facturas<br>Pendientes</a></li>   
-                            <li><a href="forums.html" >Comunidad</a></li>
+                            <li><a href="/whimcy/Views/forums.html" >Comunidad</a></li>
                             <li><a href="#">Amigos</a></li>
                         </ul>
                     </span>
@@ -109,7 +116,7 @@ if (isset($_SESSION['Nombre'])) {
     </div>
 </header>
 	<!-- cart-js -->
-	<script src="../JS/minicart.js"></script>
+	<script src="/whimcy/JS/minicart.js"></script>
 	<script>
         w3ls.render();
 
@@ -130,7 +137,7 @@ if (isset($_SESSION['Nombre'])) {
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Abrir submenus -->
-	<script src="../JS/SubMenus.js"></script>
+	<script src="/whimcy/JS/SubMenus.js"></script>
     <!-- Sesiones -->
     <script>
         var response = <?php echo json_encode($response); ?>;
@@ -142,9 +149,9 @@ if (isset($_SESSION['Nombre'])) {
 
             document.getElementById('profile-section').innerHTML = `
                 <ul>
-                <li><a href="#">${response.user}</a></li>
-                <li><a href="UsersEdit.php?id=${response.id}">Configuración</a></li>
-                <li><a href="../Controllers/Logout.php">Cerrar sesión</a></li>
+                <li><a href="/whimcy/Views/Mobile/profile.php">${response.user}</a></li>
+                <li><a href="/whimcy/Views/UsersEdit.php?id=${response.id}">Configuración</a></li>
+                <li><a href="/whimcy/Controllers/Logout.php">Cerrar sesión</a></li>
                 </ul>
             `;
             } else {
@@ -156,7 +163,7 @@ if (isset($_SESSION['Nombre'])) {
                 <span class="Login-title">
                 <h3>Mi Cuenta</h3>
                 </span>
-                <form action="../Controllers/LogIn.php" name="Login" method="post">
+                <form action="/whimcy/Controllers/LogIn.php" name="Login" method="post">
                 <div class="input-dates">
                     <label for="Email">Correo:</label>
                     <input type="email" class="form-control" placeholder="Correo" name="Email" required>
@@ -175,7 +182,7 @@ if (isset($_SESSION['Nombre'])) {
                     <span>
                     <button type="submit" class="btn-go">Conexión</button>
                     <h3>No tienes cuenta</h3>
-                    <a href="Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>
+                    <a href="/whimcy/Views/Registro.php"><button type="button" class="btn-sing">Registrarse</button></a>
                     </span>
                 </div>
                 </form>

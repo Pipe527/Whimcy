@@ -5,18 +5,21 @@
 }
 .footer {
     background-image: url(../images/Pie-de-pagina.gif);
-    background-size: 100vw 26.04vh;
+    background-size: 100vw 27vh;
     background-repeat: no-repeat;
-    height: 26.04vh;
+    height: 27.0vh;
     width: 100%;
 }
 .footer-info {
-    position: relative;
-    top: 1em;
-    bottom: 0em;
+    position: initial;
+    background-image: url(../images/Pie-de-pagina.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 27vh;
 }
 .address-right{
-	position:relative;	
+	position:relative;
+    top: 1em;	
 }
 .address-left ul li {
     display: block;
@@ -120,10 +123,6 @@
     .col-md-8{
         background-color: #161717;
     }
-    .footer {
-        padding: 3em 0 4em;
-        background-size: cover;
-    }
     .footer h3 {
         font-size: 1em;
     }
@@ -161,7 +160,7 @@
         font-size: 1.8em;
     }
     #PPsbmincart {
-        left: 27%;
+        left: 9%;
         top: 29%;
         width: 315px;
     }

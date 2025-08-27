@@ -89,6 +89,8 @@
   top: 0.7rem;
   right: 1.4rem;
   width: 67.2vw;
+  min-width: 66.3vw;
+  max-width: 67.2vw;
   border-block: 0.5rem solid #00000098;
   border-block-start-width: 0.3rem;
   border-left: 0.3rem solid #000000a1;
@@ -131,7 +133,7 @@
   flex-direction: row;
 }
 
-.input-titles {
+.input-titles, .input-titles-icon {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -189,4 +191,68 @@
 
 p {
   margin-left: 1vw;
+}
+
+/* Ajustes Movil */
+
+@media(max-width:400px){
+  #pass, #Confpass, #Doble3 {
+    width: 32vw;
+  }
+  #Doble1, #Doble2 {
+    width: 24vw;
+  }
+  #Doble4 {
+    width: 26vw;
+  }
+  #Doble5 {
+    width: 44vw;
+  }
+  #phone, #gmail {
+    width: 32vw;
+  }
+  .backpart {
+    width: 123%;
+    right: -30px;
+  }
+  .card-body {
+    top:7.8vh;
+    right: 2em;
+    padding: 0rem 0.25rem;
+    width: 84vw;
+  }
+  .card-info {
+    background-size: 100vw 75%;
+  }
+  .card-footer {
+    right: 0.2rem;
+    width: 74.2vw;
+    max-width: 75.2vw;
+  }
+  .input-alone {
+    width: unset;
+  }
+  .input-doble {
+    padding-right: unset;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+  }
+  .input-titles {
+    font-size: 0.8rem !important;
+  }
+  .input-titles, .input-titles-icon {
+    font-size: 1rem;
+    padding: 2px 3px;
+  }
+  .form-controll{
+    height: 2rem;
+    font-size: 0.7rem;
+  }
+  .return {
+    margin-left: 11vw;
+  }
+  .terms {
+    font-size: 12px;
+    margin-left: 8vw;
+  }
 }

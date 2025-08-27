@@ -4,6 +4,8 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php'); ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,6 +24,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <link href="../Css/animate.min.css" rel="stylesheet" type="text/css" media="all" /> 
 <link rel="stylesheet" href="../Css/Estilos.css">    
 <!-- //Custom Theme files -->
+ <!-- Ocultar menú movil -->
+  <style>
+	#menu-toggle {
+		display: none !important;
+	}
+  </style>
 <!-- font-awesome icons -->
 <link href="../Css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
@@ -131,7 +139,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 									<a href="#">Promociones</a> 
 									<ul class="is-hidden"> 
 										<li class="go-back"><a href="#">Promociones </a></li>
-										<li><a href="#">Fechas</a></li> 
+										<li><a href="offers.html">Fechas</a></li> 
 										<li><a href="#">Para Año Nuevo</a></li>
 										<li><a href="#">Ocaciones especiales</a></li>
 									</ul>
@@ -713,10 +721,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						<h3>Servicios</h3>
 						<ul>
 							<li><a href="#">Contactenos</a></li>
-							<li><a href="login.html">Regresar</a></li> 
+							<li><a href="login.html" onclick="redirigirLogin(event)">Regresar</a></li> 
 							<li><a href="Mapa.html">Restaurantes</a></li>
 							<li><a href="Mapa.html">Zonas</a></li>
-							<li><a href="login.html">Estado de orden</a></li>
+							<li><a href="#">Estado de orden</a></li>
 						</ul> 
 					</div>
 					<div class="col-md-4 footer-grids">
@@ -765,15 +773,47 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<script src="../JS/bootstrap.js"></script>
 	<!-- Importar el Menu -->
 	<script>
-	$(document).ready(function () {
-		$('.header').load('Menu.php', function () {
-		if (typeof inicializarLogin === "function") {
-			inicializarLogin();
-		}
-		});
-	});
-	</script>
-	<!-- Abrir submenus -->
-	<script src="../JS/SubMenus.js"></script>
+        const base = "<?= $base ?>"; // siempre disponible desde PHP
+
+        $(document).ready(function () {
+            $('.header').load(base + '/Views/Menu.php', function (response, status, xhr) {
+                // Ejecutar los <script> que vinieron en Menu.php
+                $(this).find("script").each(function(){
+                    $.globalEval(this.text || this.textContent || this.innerHTML || "");
+                });
+
+                if (typeof inicializarLogin === "function") inicializarLogin();
+                $.getScript(base + "/JS/SubMenus.js", function () {
+                    if (typeof inicializarHeaderNav === "function") inicializarHeaderNav();
+                });
+                $.getScript(base + "/JS/minicart.js", function () {
+                    if (typeof w3ls !== "undefined") {
+                        w3ls.render();
+                        w3ls.cart.on('w3sb_checkout', function (evt) {
+                            if (this.subtotal() > 0) {
+                                const items = this.items();
+                                for (let i = 0; i < items.length; i++) {
+                                    items[i].set('shipping', 0);
+                                    items[i].set('shipping2', 0);
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+	<!-- Enlaces dinamicos -->
+	<script>
+		function redirigirLogin(e) {
+    	e.preventDefault(); 
+
+        if (window.matchMedia("(max-width: 400px)").matches) {
+            window.location.href = "Mobile/Inicio.php";
+        } else {
+            window.location.href = "login.html";
+        }
+    }
+    </script>
 </body>
 </html>

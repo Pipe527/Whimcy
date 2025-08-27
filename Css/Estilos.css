@@ -270,12 +270,12 @@ p.sbmincart-empty-text {
     -o-border-radius: 10px;
     -ms-border-radius: 10px;
     border-radius: 10px;
-    background: #f44336;
+    background: #99969f;
     -moz-box-shadow: inset 0 0 6px #f44336;
     -o-box-shadow: inset 0 0 6px #f44336;
     -ms-box-shadow: inset 0 0 6px #f44336;
     -webkit-box-shadow: inset 0 0 6px #f44336;
-    box-shadow: inset 0 0 6px #f44336;
+    box-shadow: inset 0 0 6px #2c2c2c;
 }
 
 /*-- //cart-css --*/
@@ -857,5 +857,6 @@ a.doble {
     }
     .nav-toggle-li button {
         display: flex !important;
+        font-size: 2.5rem;
     }
 }
