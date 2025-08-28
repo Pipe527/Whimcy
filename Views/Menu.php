@@ -74,8 +74,7 @@ if (isset($_SESSION['Nombre'])) {
                         </form>  
                     </div>
                     <div class="clearfix"> </div> 
-                </div>
-                </li>
+                </div>   </li>
                 <li><a href="/whimcy/Views/Index.html"><img src="/whimcy/images/Logotipo.png" class="Logo"></a></li>
                     <li><a href="" class="z us"><i class="fa-solid fa-user"></i></a></li>
                     <li>
@@ -114,26 +113,7 @@ if (isset($_SESSION['Nombre'])) {
             </ul>
         </nav>
     </div>
-</header>
-	<!-- cart-js -->
-	<script src="/whimcy/JS/minicart.js"></script>
-	<script>
-        w3ls.render();
-
-        w3ls.cart.on('w3sb_checkout', function (evt) {
-        	var items, len, i;
-
-        	if (this.subtotal() > 0) {
-        		items = this.items();
-
-        		for (i = 0, len = items.length; i < len; i++) {
-        			items[i].set('shipping', 0);
-        			items[i].set('shipping2', 0);
-        		}
-        	}
-        });
-    </script>  
-	<!-- //cart-js -->  
+</header> 
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Abrir submenus -->

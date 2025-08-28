@@ -803,12 +803,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
-	<!-- Enlaces dinamicos -->
+	<!-- Enlaces dinamicos /Movil -->
 	<script>
 		function redirigirLogin(e) {
-    	e.preventDefault(); 
 
         if (window.matchMedia("(max-width: 400px)").matches) {
+			e.preventDefault();
             window.location.href = "Mobile/Inicio.php";
         } else {
             window.location.href = "login.html";

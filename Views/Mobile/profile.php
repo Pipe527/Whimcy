@@ -33,7 +33,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
     <footer class="inferior">  </footer>
     
     <!-- ================================================== --> 
-    <!-- Importar el Menu -->
+    <!-- Importar el Menu / PHP -->
     <script>
         const base = "<?= $base ?>"; // siempre disponible desde PHP
 

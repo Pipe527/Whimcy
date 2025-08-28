@@ -3576,6 +3576,15 @@ ul.dropdown-menu {
     .sidebar-row a.todo {
         color: #FFF !important;
     }
+    .contact h4 {
+        color: wheat !important;
+    }
+    .contact input[type="text"]::placeholder {
+        color: #fff !important;
+    }
+    .contact-w3text p {
+        color: #e5fff9 !important;
+    }
     .galry-like a {
         color: #b70000;
     }
@@ -3585,9 +3594,41 @@ ul.dropdown-menu {
     .Fondo-body {
         background-color: #286553d9;
     }
+     h3.w3ls-title.w3ls-title1 {
+        margin: 0 0 .1em !important;
+        color: white !important;
+    }
+    .img-restaurant, .par-restaurant {
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+    }
+    .img-restaurant img {
+        width: 210px;
+    }
+    .info-restaurant {
+        flex-direction: column;
+    }
+    .lightbox {
+        top: 16em !important;
+    }
+    .lb-outerContainer img {
+        height: 300px !important;
+    }
     .new-tag::before {
         border-top: 60px solid #4ed756;
         border-right: 60px solid transparent;
+    }
+    .par-restaurant {
+        font-size: 1em !important;
+    }
+    .par-restaurant p {
+        color: #bef7d4 !important;
+    }
+    .par-restaurant a {
+        color: #38d250;
+    }
+    .par-restaurant ul li {
+        color: #e5fff9 !important;
     }
     .product-top li.dropdown {
         font-size: 0.8em;
@@ -3595,6 +3636,9 @@ ul.dropdown-menu {
     }
     .sidebar-row .faq li a {
         color: #06000B;
+    }
+    .contact textarea::placeholder {
+        color: #fff !important;
     }
     #toTop {
         right: 12%;

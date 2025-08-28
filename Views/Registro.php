@@ -1,6 +1,3 @@
- <!-- Traer ruta -->
-<!--  require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php'); ?> -->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -121,10 +118,12 @@
 <!-- Abrir Submenus -->
  <script src="/whimcy/JS/SubMenus.js"></script>
  <script src="/whimcy/JS/minicart.js"></script>
+ <script src="/whimcy/JS/StartCart.js"></script>
  <script>
 $(function() {
     if (typeof inicializarHeaderNav === "function") inicializarHeaderNav();
     if (typeof inicializarLogin === "function") inicializarLogin();
+    if (typeof StartCart === "function") StartCart();
 });
 </script>
 <!-- Contraseñas deben coincidir -->
@@ -146,9 +145,9 @@ $(function() {
 <!-- redireccion -->
 <script>
     function redirigirLogin(e) {
-    e.preventDefault(); 
 
         if (window.matchMedia("(max-width: 400px)").matches) {
+            e.preventDefault(); 
             window.location.href = "Mobile/Inicio.php";
         } else {
             window.location.href = "login.html";
