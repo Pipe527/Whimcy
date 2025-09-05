@@ -66,4 +66,16 @@ function inicializarLogin() {
             console.error('Error fetching session data:', textStatus, errorThrown);
         });
     });
+
+    const links = $('.links');
+    links.each(function() {
+         $(this).on('click', function(event) {
+             event.preventDefault();
+             const section = $(this).data('section');
+             if (section) {
+                 window.location.href = '/whimcy/Views/Mapa.html#' + section;
+            }
+         });
+    });
 }
+

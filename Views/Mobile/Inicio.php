@@ -30,7 +30,7 @@
             <div class="remember">
                 <input type="checkbox"> <p>Recordarme</p>
             </div>
-            <a href="" class="space">¿Olvidaste la contraseña?</a>
+            <a href="../PasswordA.php" class="space">¿Olvidaste la contraseña?</a>
         </div>
         <h2>TASTELY</h2>
     </div>

@@ -1521,6 +1521,9 @@ input#amount {
     margin: 1em 0;
     font-family: 'Offside', cursive;
 }
+.input-group-text {
+  font-size: 1.5rem;
+}
 /*-- //login-page --*/
 /*-- offers-page --*/
 h3.w3ls-title.w3ls-title1 {
@@ -2065,6 +2068,9 @@ p.single-price-text {
 }
 .single-page-icons.social-icons ul li { 
     vertical-align: middle;
+}
+.login-box-msg.send {
+    color: #006653;
 }
 /*-- collapse-tabs -*/
 .collpse.tabs {
@@ -2887,7 +2893,6 @@ h4.clrchg {
     width: 100%;
     margin-top: -2em;
 	padding: 0;
-    background-color: #012f0ac4;
 }
 .footer {
     padding: 3em 0 9em;
@@ -3587,6 +3592,12 @@ ul.dropdown-menu {
     }
     .galry-like a {
         color: #b70000;
+    }
+    .offer-card-grids a {
+        color: #02e10b;
+    }
+    .offer-card-grids p {
+        color: #9ae3b8;
     }
     .rsidebar h4, .related-row h4 {
         color: #400;

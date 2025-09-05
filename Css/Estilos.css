@@ -685,6 +685,10 @@ a.doble {
     font-size: 1.1vw;
 }
 
+.text-center b {
+    font-size: 2em;
+}
+
 .OpenSub:hover+.SubMenu,
 .combo:hover+.SubMenu {
     display: grid;
@@ -749,8 +753,11 @@ a.doble {
     }
 
     /* Estilos de submenus - Movíl */
-    .cambio {
-        margin-top: 7em;
+    .activo:not(.M1) {
+        left: 38%;
+    }
+    .M1.activo {
+        left: 0%;
     }
     .M1 {
         position: absolute;
@@ -785,6 +792,7 @@ a.doble {
         height: 20.83vh;
         width: 35.5vw;
         z-index: 900;
+        position: relative;
     }
     .M1 a, .M2 a, .M3 a, .M4 a {
         color: black;
@@ -813,8 +821,8 @@ a.doble {
     .Padres.open {
       position: fixed;
       inset: 0;
-      width: 92%;
-      height: 93%;
+      width: 100vw;
+      height: 100vh;
       background: rgba(20,20,20,0.97);
       flex-direction: column;
       padding: 2rem 1rem;

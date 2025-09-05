@@ -771,6 +771,25 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<script src="../JS/jquery.menu-aim.js"> </script>
 	<script src="../JS/main.js"></script> <!-- Resource jQuery --> 
 	<script src="../JS/bootstrap.js"></script>
+	<!-- Filtros de otras paginas -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// Leer parametros
+			const params = new URLSearchParams(window.location.search);
+			const valor = params.get("activar");
+			console.log("activar:", valor);
+
+			if (!valor) return;
+
+			// Primer checkbox del 10% 0 20% off
+			const $check = $(`input[type="checkbox"][data-off="${valor}"]`).first();
+			setTimeout(() => {
+				if ($check.length) {
+				$check.prop("checked", true).trigger("change"); 
+				}
+			}, 100);
+		});
+	</script>
 	<!-- Importar el Menu -->
 	<script>
         const base = "<?= $base ?>"; // siempre disponible desde PHP

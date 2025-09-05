@@ -10,11 +10,14 @@ if (isset($_SESSION['Nombre'])) {
     $response['user'] = $_SESSION['Nombre'];
     $response['id'] = $_SESSION['idUsuarios'];
     $response['email'] = $_SESSION['Correo'];
+    $response['alias'] = $_SESSION['Nickname'];
+    $response['telefono'] = $_SESSION['Celular'];
+    $response['address'] = $_SESSION['Dirección'];
 }
 
+echo "<script>console.log('SESSION response:', " . json_encode($response) . ");</script>";
 require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -22,17 +25,169 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/whimcy/Css/Estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/b59d19b6f4.js"></script>
     <title>Perfil</title>
+    <style>
+        body {
+            background-image: url("../../images/Fondo.gif");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        :root {
+            --footer-h: 967px;
+        }
+    </style>
 </head>
 <body>
     <div class="header">	</div>
+    <div class="container py-5">
+        <div class="row">
+            <!-- Menú lateral -->
+            <div class="col-md-3 mb-3">
+            <div class="nav flex-column nav-pills" id="profile-tabs" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="tab-profile" data-bs-toggle="pill" data-bs-target="#content-profile" type="button" role="tab">👤 Mi Perfil</button>
+                <button class="nav-link" id="tab-orders" data-bs-toggle="pill" data-bs-target="#content-orders" type="button" role="tab">📦 Mis Pedidos</button>
+                <button class="nav-link" id="tab-address" data-bs-toggle="pill" data-bs-target="#content-address" type="button" role="tab">🏠 Direcciones</button>
+                <button class="nav-link" id="tab-payments" data-bs-toggle="pill" data-bs-target="#content-payments" type="button" role="tab">💳 Métodos de Pago</button>
+                <button class="nav-link" id="tab-security" data-bs-toggle="pill" data-bs-target="#content-security" type="button" role="tab">🔒 Seguridad</button>
+                <button class="nav-link" id="tab-notifications" data-bs-toggle="pill" data-bs-target="#content-notifications" type="button" role="tab">🔔 Notificaciones</button>
+                <button class="nav-link" id="tab-settings" data-bs-toggle="pill" data-bs-target="#content-settings" type="button" role="tab">⚙️ Configuración</button>
+            </div>
+            </div>
 
+            <!-- Contenido -->
+            <div class="col-md-9">
+            <div class="tab-content" id="profile-tabs-content">
+                <div class="tab-pane fade show active" id="content-profile" role="tabpanel">
+                <h3>👤 Mi Perfil</h3>
+                <p>Bienvenido/a <?php echo ($response['user'])?> recuerda mantener tus datos actualizados.</p>
+                <div class="profile-box">
+                    <div id="cardB" class="card card-outline card-success">
+                        <div class="card-body">
+                            <form action="" class="edit-profile" id= "profileForm" method= "post">
+                                Tu Alias: <input type="text" class="form-control" name="Nickname" Value="<?php echo $response['alias'] ?>" disabled>
+                                <br>
+                                Tu Correo: <input type="text" class="form-control" name="Correo" Value="<?php echo $response['email'] ?>" disabled>
+                                <br>
+                                Tu Celular: <input type="text" class="form-control" name="Phone" Value="<?php echo $response['telefono'] ?>" disabled>
+                                <br>
+                                Tu Dirección: <input type="text" class="form-control" name="Direccion" value="<?php echo $response['address']; ?>" disabled>
+                                <p>Haz click en editar para cambiar más datos</p>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-block">Editar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="tab-pane fade" id="content-orders" role="tabpanel">
+                <h3>📦 Mis Pedidos</h3>
+                <p>Historial de compras y seguimiento de pedidos.</p>
+                </div>
+                <div class="tab-pane fade" id="content-address" role="tabpanel">
+                <h3>🏠 Direcciones</h3>
+                <p>Añadir, editar y eliminar direcciones de envío.</p>
+                </div>
+                <div class="tab-pane fade" id="content-payments" role="tabpanel">
+                <h3>💳 Métodos de Pago</h3>
+                <p>Tarjetas guardadas, PayPal, opciones de pago.</p>
+                </div>
+                <div class="tab-pane fade" id="content-security" role="tabpanel">
+                <h3>🔒 Seguridad</h3>
+                <p>¿Has olvidado tu contraseña? aquí puedes cambiarla</p>
+                <div class="login-box">
+                    <div class="card card-outline card-primary">
+                        <div class="card-header text-center">
+                        <b>Tastely</b>
+                        </div>
+                        <div class="card-body">
+                        <p class="login-box-msg">Debe incluir letras y números. te confirmaremos el cambio de contraseña</p>
+                        <form action="../../Controllers/NewPass.php" name="changepass" method="post">
+                            <div class="input-group mb-3">
+                            <input type="password" class="form-control" name="Pass2" id="pass" placeholder="Contraseña">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="input-group mb-3">
+                            <input type="password" class="form-control" name="Confpass" id="Confpass" placeholder="Confirmar contraseña">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-block">Cambiar contraseña</button>
+                            </div>
+                            <!-- /.col -->
+                            </div>
+                        </form>
 
+                        <!-- <p class="mt-3 mb-1">
+                            <a href="../login.html">Iniciar sesion</a>
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+                </div>
+                <div class="tab-pane fade" id="content-notifications" role="tabpanel">
+                <h3>🔔 Notificaciones</h3>
+                <p>Configura tus preferencias de notificación.</p>
+                </div>
+                <div class="tab-pane fade" id="content-settings" role="tabpanel">
+                <h3>⚙️ Configuración</h3>
+                <p>Idioma, moneda, preferencias generales.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Ajustar estilos -->
+    <style>
+        .container {
+            background-color: #fdfdfde8;
+            padding-right: calc(2.5rem * .5);
+            padding-left: calc(-.5 * -2.5rem);
+        }
+        .col-md-9 {
+            background-color: #0eb170;
+            border: 2px solid black;
+            border-radius: 1em;
+        }
+        .col-md-3.mb-3 {
+            background-color: #077770;
+            border: 2px solid black;
+            border-radius: 1em;
+        }
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+            color: #2cfb2a;
+            background-color: #04413d;
+        }
+        .nav-link {
+            color: #fff;
+            padding: 1em var(--bs-nav-link-padding-x);
+        }
+        .nav-link:focus, .nav-link:hover {
+            color: #4cff49ff;
+        }
+        ol, ul {
+            padding-left: initial;
+        }
+    </style>
     <footer class="inferior">  </footer>
-    
-    <!-- ================================================== --> 
+    <!-- ================================================== -->
+    <!-- Formulario deslizante -->
+    <script src="../../JS/FormAnimation.js"></script> 
     <!-- Importar el Menu / PHP -->
     <script>
         const base = "<?= $base ?>"; // siempre disponible desde PHP

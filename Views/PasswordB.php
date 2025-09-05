@@ -1,29 +1,19 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Iniciar sesion</title>
+<title>Recuperar contraseña</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Smart Bazaar Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
-<link href="../Css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="../Css/style.css" rel="stylesheet" type="text/css" media="all" /> 
-<link href="../Css/animate.min.css" rel="stylesheet" type="text/css" media="all" /><!-- animation -->
-<link href="../Css/menu.css" rel="stylesheet" type="text/css" media="all" /> <!-- menu style -->   
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../Css/style.css" rel="stylesheet" type="text/css" media="all" />    
 <!-- //Custom Theme files -->
-<!-- font-awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <link href="../Css/font-awesome.css" rel="stylesheet"> 
-<!-- //font-awesome icons -->
 <!-- js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/b59d19b6f4.js"></script> 
 <script src="../JS/jquery-2.2.3.min.js"></script> 
 <script src="../JS/jquery-scrolltofixed-min.js" type="text/javascript"></script><!-- fixed nav js -->
@@ -70,8 +60,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		$(document).ready(function() {
 		
 			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
+				containerID: 'toTop', 
+				containerHoverID: 'toTopHover', 
 				scrollSpeed: 1200,
 				easingType: 'linear' 
 			};
@@ -87,108 +77,51 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<div class="header">	</div>
 		<div class="header-three"><!-- header-three -->
 			<div class="container">
-				<div class="menu">
-					<div class="cd-dropdown-wrapper">
-						<a class="cd-dropdown-trigger" href="#0">Tienda</a>
-						<nav class="cd-dropdown"> 
-							<a href="#0" class="cd-close">Cerrar</a>
-							<ul class="cd-dropdown-content">
-								<li class="has-children">
-									<a href="#">Menús</a> 
-									<ul class="cd-secondary-dropdown is-hidden">
-										<li class="go-back"><a href="#">Menús</a></li>
-										<li class="see-all"><a href="products.php">Productos</a></li>
-										<li class="main"><a href="products.php">Pedir</a></li>
-										<li><a href="products.php?category=Top">Top</a></li>
-										<li class="has-children">
-											<a href="#">Combos</a>  
-											<ul class="is-hidden"> 
-												<li class="go-back"><a href="#">Productos </a></li>
-												<li><a href="products.php?category=combos">Categorias</a></li>
-												<li><a href="#">Definidos</a></li>
-												<li><a href="#">Cartas</a></li>
-											</ul>
-										<li><a href="offers.html">Favoritos</a></li>
-										</li> 
-									</ul> <!-- .cd-secondary-dropdown -->
-								<li class="has-children">
-									<a href="#">Promociones</a> 
-									<ul class="is-hidden"> 
-										<li class="go-back"><a href="#">Promociones </a></li>
-										<li><a href="offers.html">Fechas</a></li> 
-										<li><a href="#">Para Año Nuevo</a></li>
-										<li><a href="#">Ocaciones especiales</a></li>
-									</ul>
-								</li> 
-								<li class="has-children">
-									<a href="#">Restaurantes</a> 
-									<ul class="is-hidden"> 
-										<li class="go-back"><a href="#">Restaurantes </a></li>
-										<li><a href="#" class="links" data-section="Seccion1">Mapa</a></li>
-										<li><a href="#" class="links" data-section="Restaurante">Todos</a></li>
-										<li><a href="#" class="links" data-section="Seccion01">Mi Zona</a></li>
-										<li><a href="#" class="links" data-section="Seccion2">Ubicación</a></li>
-										<li><a href="#" class="links" data-section="Seccion3">Reservación</a></li>
-									</ul>
-								</li> 
-								<li class="has-children">
-									<a href="#">Adicional</a> 
-									<ul class="is-hidden">
-										<li class="go-back"><a href="#0">Adicional </a></li>
-										<li><a href="#">Facturas pendientes</a></li>
-										<li><a href="forums.html">Comunidad</a></li>
-										<li><a href="#">Amigos</a></li>
-									</ul>
-								</li> 
-							</ul> <!-- .cd-dropdown-content -->
-						</nav> <!-- .cd-dropdown -->
-					</div> <!-- .cd-dropdown-wrapper -->	 
-				</div>
-				<div class="move-text">
-					<div class="marquee"><a href="offers.html"> Nuevos menús para fechas especiales...... <span>Obten un 10% de descuento | sin tarifas extra </span> <span> Disfruta de tus menus favoritos para cada ocación</span></a></div>
-					<script type="text/javascript" src="../JS/jquery.marquee.min.js"></script>
-					<script>
-					  $('.marquee').marquee({ pauseOnHover: true });
-					  //@ sourceURL=pen.js
-					</script>
-				</div>
+
 			</div>
 		</div>
 	</div>
-	<!-- //header --> 	
-	<!-- login-page -->
-	<div class="Fondo-body">
-	<div class="login-page">
-		<div class="container"> 
-			<h3 class="w3ls-title w3ls-title1">Iniciar sesion</h3>  
-			<div class="login-body">
-				<form action="../Controllers/LogIn.php" method="post">
-					<input type="text" class="user" name="Email" placeholder="Ingresa tu Email" required="">
-					<input type="password" name="Pass" class="lock" placeholder="Contraseña" required="">
-					<input type="submit" value="Ingresar">
-					<div class="forgot-grid">
-						<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Recordarme</label>
-						<div class="forgot">
-							<a href="PasswordA.php">¿Contraseña Olvidada?</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</form>
-			</div>  
-			<h6> Sin cuenta? <a href="Registro.php">Unirse ahora »</a> </h6> 
-			<div class="login-page-bottom social-icons">
-				<h5>Cuentas sociales</h5>
-				<ul>
-					<li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
-					<li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
-					<li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
-					<li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
-					<li><a href="#" class="fa fa-rss icon rss"> </a></li> 
-				</ul> 
-			</div>
-		</div>
+	<!-- //header -->
+	 <div class="Fondo-body"> 	
+	<!-- login-recover -->
+		<div class="login-box">
+            <div class="card card-outline card-primary">
+                <div class="card-header text-center">
+                <b>Recupera tu contraseña</b>
+                </div>
+                <div class="card-body">
+                <p class="login-box-msg">Debe incluir letras y números. te confirmaremos el cambio de contraseña</p>
+                <form action="../Controllers/NewPass.php" name="changepass" method="post">
+                    <div class="input-group mb-3">
+                    <input type="password" class="form-control" name="Pass2" id="pass" placeholder="Contraseña">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="input-group mb-3">
+                    <input type="password" class="form-control" name="Confpass" id="Confpass" placeholder="Confirmar contraseña">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary btn-block">Cambiar contraseña</button>
+                    </div>
+                    <!-- /.col -->
+                    </div>
+                </form>
+
+                <!-- <p class="mt-3 mb-1">
+                    <a href="../login.html">Iniciar sesion</a>
+                </p> -->
+            </div>
+        </div>
 	</div>
-	<!-- //login-page --> 
 	<!-- footer-top -->
 </div>
 	<!-- //subscribe --> 
@@ -248,6 +181,53 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			<p>© 2016 Smart bazaar . All rights reserved | Design by <a href="http://w3layouts.com"> W3layouts.</a></p>
 		</div>
 	</div> 
+	<style> 
+	    /* Reajustes */
+		.address-right {
+			display: none;
+		}
+		.address-left {
+			right: unset;
+			bottom: 6.2vh;
+			padding: unset;
+			margin: auto;
+		}
+		.exp {
+			margin-left: 3.3vw;
+		}
+		.col-md-8.address-right,
+		.col-md-8.address-right *,
+		.col-md-8.address-right *::before,
+		.col-md-8.address-right *::after {
+			box-sizing: content-box !important;
+		}
+		form {
+			margin-top: 0.7em;
+		}
+		.footer {
+			height: 32.2vh;
+			background-size: cover;
+		}
+		.Fondo-body {
+			height: 520px;
+		}
+		.login-box {
+			padding: 0px 15.015vw;
+			position: relative;
+  			top: 6em;
+		}
+		[type="submit"]:not(:disabled), button:not(:disabled) {
+			width: 100%;
+		}
+		@media (max-width:400px) {
+			.exp {
+				margin-right: -9.7vw;
+			}
+			.login-box {
+				padding: unset;
+			}
+		}
+	</style>
 	<!-- cart-js -->
 	<script src="../JS/minicart.js"></script>
 	<script src="../JS/StartCart.js"></script>  
@@ -261,7 +241,6 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<!-- //menu js aim --> 
 	<!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="../JS/bootstrap.js"></script>
 	<!-- Importar el Menu /HTML -->
 	<script>

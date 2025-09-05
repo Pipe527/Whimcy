@@ -15,6 +15,7 @@
     background-image: url(../images/Pie-de-pagina.gif);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: initial !important;
     height: 27vh;
 }
 .address-right{
@@ -105,7 +106,7 @@
         width: 100%;
         padding: 0;
         position: absolute;
-        top: 16em;
+        top: var(--footer-h);
     }
     .address-right:before {
         bottom: -127px;
@@ -122,6 +123,12 @@
     }
     .col-md-8{
         background-color: #161717;
+    }
+    .col-md-8.address-right,
+    .col-md-8.address-right *,
+    .col-md-8.address-right *::before,
+    .col-md-8.address-right *::after {
+        box-sizing: content-box !important;
     }
     .footer h3 {
         font-size: 1em;

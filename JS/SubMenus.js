@@ -154,7 +154,7 @@ if (typeof jQuery !== "undefined") {
                     event.preventDefault();
                     const section = $(this).data('section');
                     if (section) {
-                        window.location.href = 'Mapa.html#' + section;
+                        window.location.href = '/whimcy/Views/Mapa.html#' + section;
                     }
                 });
             });

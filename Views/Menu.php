@@ -9,6 +9,10 @@ if (isset($_SESSION['Nombre'])) {
     $response['loggedIn'] = true;
     $response['user'] = $_SESSION['Nombre'];
     $response['id'] = $_SESSION['idUsuarios'];
+    $response['email'] = $_SESSION['Correo'];
+    $response['alias'] = $_SESSION['Nickname'];
+    $response['telefono'] = $_SESSION['Celular'];
+    $response['address'] = $_SESSION['Dirección'];
 }
 // Traer ruta 
  require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php'); 
@@ -156,7 +160,7 @@ if (isset($_SESSION['Nombre'])) {
                     <label for="Remember">
                     <input type="checkbox" class="form" name="Rem"> Recordarme
                     </label>
-                    <a href="#">Contraseña Olvidada</a>
+                    <a href="/whimcy/Views/PasswordA.php">Contraseña Olvidada</a>
                 </div>
                 <div class="Login-foot">
                     <span>

@@ -15,6 +15,9 @@
             background-attachment: fixed;
             background-repeat: no-repeat;
         }
+        :root {
+            --footer-h: 2856px;
+        }
     </style>
 </head>
 
@@ -322,7 +325,7 @@
                     $('#login-section').hide();
                     $('#profile-section').html(
                         '<ul>' +
-                        '<li><a href="#">' + response.user + '</a></li>' +
+                        '<li><a href="Mobile/profile.php">' + response.user + '</a></li>' +
                         '<li><a href="UsersEdit.php?id=' + response.id + '">Configuración</a></li>' +
                         '<li><a href="../Controllers/Logout.php">Cerrar sesión</a></li>' +
                         '</ul>'
@@ -354,7 +357,7 @@
                         '<label for="Remember">' +
                         '<input type="checkbox" class="form-control" name="Rem"> Recordarme' +
                         '</label>' +
-                        '<a href="#">Contraseña Olvidada</a>' +
+                        '<a href="PasswordA.php">Contraseña Olvidada</a>' +
                         '</div>' +
                         '<div class="Login-foot">' +
                         '<span>' +

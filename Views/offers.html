@@ -21,6 +21,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <link href="../Css/menu.css" rel="stylesheet" type="text/css" media="all" /> <!-- menu style -->  
 <!-- //Custom Theme files -->
 <!-- font-awesome icons -->
+ <script src="https://kit.fontawesome.com/b59d19b6f4.js"></script> 
 <link href="../Css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 <!-- js -->
@@ -92,7 +93,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<h3 class="w3ls-title w3ls-title1">Oferteas y targetas de regalo </h3>
 			<div class="w3ls-add-grids w3agile-add-products">
-				<a href="#"> 
+				<a href="products.php?activar=30-20"> 
 					<h4>TOP 10 DE MENUS ELEGIDOS CON UN <span>20%</span> DE DESCUENTO</h4>
 					<h6>Comprar ahora <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h6>
 				</a>
@@ -101,7 +102,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 offer-card-grids">
 					<h4>20% De descuento </h4>
 					<p>Estos productos te devuelven 20% dedescuento</p>
-					<a href="products.php">Comprar ahora <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+					<a href="products.php?activar=30-20">Comprar ahora <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
 				</div>
 				<div class="col-md-4 offer-card-grids">
 					<h4>Quiero mis targetas</h4>
@@ -111,7 +112,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 offer-card-grids">
 					<h4>10% De descuento </h4>
 					<p>Comprar usando targeta de credito te devuelve el 10% </p>
-					<a href="products.php">Comprar ahora <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+					<a href="products.php?activar=10-5">Comprar ahora <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
 				</div>	
 				<div class="clearfix"> </div>
 			</div>	
@@ -262,39 +263,50 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	</div> 
 	<!-- cart-js -->
 	<script src="../JS/minicart.js"></script>
-	<script>
-        w3ls.render();
-
-        w3ls.cart.on('w3sb_checkout', function (evt) {
-        	var items, len, i;
-
-        	if (this.subtotal() > 0) {
-        		items = this.items();
-
-        		for (i = 0, len = items.length; i < len; i++) {
-        			items[i].set('shipping', 0);
-        			items[i].set('shipping2', 0);
-        		}
-        	}
-        });
-    </script>  
-	<!-- //cart-js --> 	 
+	<script src="../JS/StartCart.js"></script>
 	<!-- menu js aim -->
 	<script src="../JS/jquery.menu-aim.js"> </script>
 	<script src="../JS/main.js"></script> <!-- Resource jQuery -->
 	<!-- //menu js aim --> 
 	<!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
 	<!-- Abrir submenus -->
 	<script src="../JS/SubMenus.js"></script>
     <script src="../JS/bootstrap.js"></script>
-	<!-- Importar el Menu -->
+	<script src="../JS/Assest/sessionManager.js"></script>
+	<!-- Importar el Menu /HTML -->
 	<script>
-		$(document).ready(function () {
-		  $('.header').load('Menu.php');
+		document.addEventListener("DOMContentLoaded", async () => {
+			try {
+				const response = await fetch("/whimcy/Views/Menu.php");
+				if (!response.ok) throw new Error("Error al cargar Menu.php");
+
+				const html = await response.text();
+				document.querySelector(".header").innerHTML = html;
+				
+				// Activar scripts del menú
+				if (typeof inicializarHeaderNav === "function") inicializarHeaderNav();
+				if (typeof inicializarLogin === "function") inicializarLogin();
+				setTimeout(() => {
+					if (typeof StartCart === "function") StartCart();
+				}, 200);
+
+			} catch (err) {
+				console.error(err);
+			}
 		});
 	</script>
-	<!-- Importar el footer --> 
+	<!-- Enlaces dinamicos/ Movil -->
+	<script>
+		function redirigirLogin(e) { 
+
+        if (window.matchMedia("(max-width: 400px)").matches) {
+			e.preventDefault();
+            window.location.href = "Mobile/Inicio.php";
+        } else {
+            window.location.href = "login.html";
+        }
+    }
+    </script> 
 </body>
 </html>
