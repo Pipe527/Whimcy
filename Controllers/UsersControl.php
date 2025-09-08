@@ -52,6 +52,16 @@ $h= $User->getAddress();
             $id = $_POST["id"];
             $sql = "UPDATE `usuarios` SET `Nombre` = '$a', `Apellido` = '$b', `Nickname` = '$c', `Correo` = '$d', `Contraseña` = '$e',
             `Celular` = '$f', `F. Nacimiento` = '$g', `Dirección` = '$h' WHERE `usuarios`.`idUsuarios` = $id";
+
+            // Refrescar
+            session_start();
+            $_SESSION['Nombre']    = $a;
+            $_SESSION['Apellido']  = $b;
+            $_SESSION['Nickname']  = $c;
+            $_SESSION['Correo']    = $d;
+            $_SESSION['Celular']   = $f;
+            $_SESSION['Bday']      = $g;
+            $_SESSION['Direccion'] = $h;
             
             if ($Con->query($sql)) {
                 echo "<div class='exito'>Datos Actualizados correctamente</div>";

@@ -55,7 +55,7 @@ if (isset($_SESSION['Nombre'])) {
                                     <li><a href="#">Cartas</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#" >Favoritos</a></li>
+                            <li><a href="/whimcy/Views/Favoritos.php" >Favoritos</a></li>
                         </ul>
                     </span>
                 </li>

@@ -84,3 +84,10 @@ Object.entries(paths).forEach(([className, config]) => {
     });
   });
 });
+
+// Funciones adicionales
+
+function CancelarEdit(e) {
+  e.preventDefault();
+  location.reload();
+}

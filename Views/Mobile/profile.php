@@ -69,14 +69,15 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
                     <div id="cardB" class="card card-outline card-success">
                         <div class="card-body">
                             <form action="" class="edit-profile" id= "profileForm" method= "post">
-                                Tu Alias: <input type="text" class="form-control" name="Nickname" Value="<?php echo $response['alias'] ?>" disabled>
-                                <br>
-                                Tu Correo: <input type="text" class="form-control" name="Correo" Value="<?php echo $response['email'] ?>" disabled>
-                                <br>
-                                Tu Celular: <input type="text" class="form-control" name="Phone" Value="<?php echo $response['telefono'] ?>" disabled>
-                                <br>
-                                Tu Dirección: <input type="text" class="form-control" name="Direccion" value="<?php echo $response['address']; ?>" disabled>
-                                <p>Haz click en editar para cambiar más datos</p>
+                                <label class="inner-text"for="nickname">Tu Alias:</label>
+                                <input type="text" class="form-control" name="Nickname" Value="<?php echo $response['alias'] ?>" disabled>
+                                <label class="inner-text"for="correo">Tu Correo:</label>
+                                <input type="text" class="form-control" name="Correo" Value="<?php echo $response['email'] ?>" disabled>
+                                <label class="inner-text"for="phone">Tu Celular:</label>
+                                <input type="text" class="form-control" name="Phone" Value="<?php echo $response['telefono'] ?>" disabled>
+                                <label class="inner-text"for="direccion">Tu Dirección:</label>
+                                <input type="text" class="form-control" name="Direccion" value="<?php echo $response['address']; ?>" disabled>
+                                <p class="small text-muted mt-2">Haz click en editar para cambiar más datos</p>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary btn-block">Editar</button>
                                 </div>
@@ -152,7 +153,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
         </div>
     </div>
 
-   <!-- Ajustar estilos -->
+   <!-- Reajustar estilos -->
     <style>
         .container {
             background-color: #fdfdfde8;
@@ -169,6 +170,45 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
             border: 2px solid black;
             border-radius: 1em;
         }
+        .form-control {
+            color: #bdeeda;
+        }
+        .form-users {
+            background-color: #bdeeda;
+        }
+        .form-control:disabled {
+            background-color: #113910;
+            border-color: black;
+            opacity: 1;
+        }
+        .btn:hover {
+            color: #bdeeda;
+        }
+        button.btn-block {
+            margin-left: 1em;
+        }
+        button.btn-flex {
+            margin-left: 9em;
+        }
+        button.btn-block, button.btn-flex {
+            margin-top: 1em;
+        }
+        .card {
+            --bs-body-bg: #005e57;
+        }
+        .input-group.mb-3 input {
+            background-color: #bdeeda;
+        }
+        .inner-text {
+            color: rgba(167, 210, 174, 0.75) !important;
+        }
+        .inner-title {
+          margin-left: .5em;
+        }
+        .text-muted, .login-box-msg {
+            --bs-text-opacity: 1;
+            color: rgba(167, 210, 174, 0.75) !important;
+        }
         .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
             color: #2cfb2a;
             background-color: #04413d;
@@ -182,6 +222,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
         }
         ol, ul {
             padding-left: initial;
+        }
+        #profile-tabs-content {
+            padding: .5em;
         }
     </style>
     <footer class="inferior">  </footer>

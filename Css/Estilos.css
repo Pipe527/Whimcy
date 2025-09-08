@@ -412,6 +412,10 @@ p.sbmincart-empty-text {
     color: #fff;
 }
 
+.input-group-text {
+    font-size: 1.5rem;
+}
+
 .Logo {
     position: relative;
     bottom: 4px;

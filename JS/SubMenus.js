@@ -120,6 +120,11 @@
         window.location.href = 'single.html';
     }
 
+    //Obtener product-id
+    window.getpID = function(id) {
+        localStorage.setItem('product-id', id);
+    }
+
     // Botones del centro
     function redireccionar() {
         const a = document.querySelector("#Boa");
