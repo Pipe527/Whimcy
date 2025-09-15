@@ -29,7 +29,6 @@ if (isset($_SESSION['Nombre'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b59d19b6f4.js" crossorigin="anonymous" rel="stylesheet"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <header>
@@ -134,7 +133,7 @@ if (isset($_SESSION['Nombre'])) {
             document.getElementById('profile-section').innerHTML = `
                 <ul>
                 <li><a href="/whimcy/Views/Mobile/profile.php">${response.user}</a></li>
-                <li><a href="/whimcy/Views/UsersEdit.php?id=${response.id}">Configuración</a></li>
+                <li><a href="/whimcy/Views/Mobile/profile.php#content-settings">Configuración</a></li>
                 <li><a href="/whimcy/Controllers/Logout.php">Cerrar sesión</a></li>
                 </ul>
             `;

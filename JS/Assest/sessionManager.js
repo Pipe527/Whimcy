@@ -19,7 +19,7 @@ function inicializarLogin() {
                 $('#profile-section').html(
                     '<ul>' +
                     '<li><a href="/whimcy/Views/Mobile/profile.php">' + response.user + '</a></li>' +
-                    '<li><a href="/whimcy/Views/UsersEdit.php?id=' + response.id + '">Configuración</a></li>' +
+                    '<li><a href="/whimcy/Views/Mobile/profile.php#content-settings">Configuración</a></li>' +
                     '<li><a href="/whimcy/Controllers/Logout.php">Cerrar sesión</a></li>' +
                     '</ul>'
                 ).show();

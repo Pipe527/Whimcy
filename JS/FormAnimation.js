@@ -40,6 +40,7 @@ const paths = {
 Object.entries(paths).forEach(([className, config]) => {
   document.querySelectorAll(`.${className}`).forEach(form => {
     form.addEventListener("submit", function (e) {
+      if (form.id === "addresForm") { return; }
       e.preventDefault();
 
       const formData = new FormData(this);
@@ -89,5 +90,5 @@ Object.entries(paths).forEach(([className, config]) => {
 
 function CancelarEdit(e) {
   e.preventDefault();
-  location.reload();
+  location.href = location.pathname;
 }
