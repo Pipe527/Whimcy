@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../Css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../Css/ocations.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://kit.fontawesome.com/b59d19b6f4.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Perfil -->
+    <script src="../JS/Perfil.js"></script>
+    <title>Ocaciones</title>
+</head>
+<body>
+    <header class="header"> </header>
+    <div class="Fondo-body">
+        <div class="snow"> </div>
+        <h3 class="w3ls-title w3ls-title1">Ofertas del mes</h3>
+        <div class="card-date" id="date">
+            <div class="card-content">
+                <div class="column-content">
+                    <div class="izquierdo">
+                        <a href="products.php" class="bg1-link"><img src="../images/bg1.jpg" alt="BG1" class="img-card" id="imgA"></a>
+                    </div>
+                    <div class="derecho">
+                        <a href="products.php" class="bg2-link"><img src="../images/bg2.jpg" alt="BG2" class="img-card" id="imgB"></a>
+                    </div>
+                </div>
+                <div class="card-text">
+                    <h3 class="text-card">¡Apareceran ofertas en tus días especiales!</h3>
+                    <a href="offers.html" class="ofertas">Ofertas diponibles</a>
+                </div> 
+            </div>  
+            
+        </div>  
+        <h3 class="par-title">¡Visita Tastely tus días especiales!</h3>
+    </div>
+
+    <!-- Footer -->
+    <footer class="inferior"> </footer>
+    <!-- Reajustes -->
+	<style>
+       .footer {
+            padding-top: unset;
+            background: unset;
+            height: unset;
+        }
+        .address-right {
+            top: -3em;
+        }
+        .address-left {
+            bottom: 0.2vh;
+        }
+        .address-left ul li {
+            margin: unset;
+        }
+        .Fondo-body {
+            position: relative;
+            background-color: #631f1fdb;
+            z-index: 0;
+        }
+        h3[class*="title"] {
+            color: aquamarine;
+        }
+        h3.w3ls-title.w3ls-title1 {
+             padding: .7em 0 0;
+             margin: auto !important;
+        }
+	</style>
+    <!-- Scripts -->
+    <!-- Obtener Fecha -->
+    <script src="../JS/Fecha.js"></script>
+    <!-- submenus -->
+	<script src="../JS/SubMenus.js"></script>
+	<script src="../JS/Assest/sessionManager.js"></script>
+    <!-- Fecha de ocación -->
+    <script>
+    const banner = document.getElementById("date");
+    const titulo = document.querySelector(".w3ls-title1");
+    const subtitle=document.querySelector(".par-title");
+    const content =document.querySelector(".text-card");
+    const boton =document.querySelector(".ofertas");
+    const linkA = document.querySelector(".bg1-link");
+    const linkB = document.querySelector(".bg2-link");
+    const imgA = document.getElementById("imgA");
+    const imgB = document.getElementById("imgB");
+    const { day, month } = getFecha();
+    console.log("La fecha es: "+ day +"/ "+ month);
+
+        if (month === 12) {
+         banner.style.backgroundImage = 'url("../images/navidad.png")';
+         titulo.innerText = "Para Año Nuevo";
+         subtitle.innerText = "¡Feliz Navidad!";
+         boton.innerText = "¡Comprar ahora!";
+         boton.setAttribute("href","products.php?data-cat=navidad");
+         content.innerText = "¡Un 50% de descuento en productos navideños!";
+         imgA.setAttribute("src","../images/g17.png");
+         imgA.style.objectFit = 'contain';
+         imgA.style.backgroundColor = 'darkgreen';
+         linkA.setAttribute("href","products.php?data-cat=navidad");
+         imgB.setAttribute("src","../images/g18.png");
+         imgB.style.objectFit = 'contain';
+         imgB.style.backgroundColor = 'darkgreen';
+         linkB.setAttribute("href","products.php?data-cat=navidad");
+        } else if (month === 10 && day === 31) {
+         banner.style.backgroundImage = 'url("../images/halloween.jpg")';
+         titulo.innerText = "Halloween";
+         subtitle.innerText = "¡Feliz Halloween!";
+         boton.innerText = "¡Comprar ahora!";
+         boton.setAttribute("href","products.php?data-cat=gift");
+         content.innerText = "¡Un 50% de descuento en regalos!";
+         imgA.setAttribute("src","../images/g19.png");
+         imgA.style.objectFit = 'contain';
+         imgA.style.backgroundColor = 'darkgreen';
+         linkA.setAttribute("href","products.php?data-cat=gift");
+         imgB.setAttribute("src","../images/g20.png");
+         imgB.style.objectFit = 'contain';
+         imgB.style.backgroundColor = 'darkgreen';
+         linkB.setAttribute("href","products.php?data-cat=gift");
+        } else if (month === 2 && day === 14) {
+         banner.style.backgroundImage = 'url("../images/sanValentin.jpg")';
+         titulo.innerText = "San Valentin";
+         subtitle.innerText = "¡Feliz San Valentin!";
+         boton.innerText = "¡Comprar ahora!";
+         boton.setAttribute("href","products.php?data-cat=gift");
+         content.innerText = "¡Un 50% de descuento en regalos!";
+         imgA.setAttribute("src","../images/g19.png");
+         imgA.style.objectFit = 'contain';
+         imgA.style.backgroundColor = 'darkgreen';
+         linkA.setAttribute("href","products.php?data-cat=gift");
+         imgB.setAttribute("src","../images/g20.png");
+         imgB.style.objectFit = 'contain';
+         imgB.style.backgroundColor = 'darkgreen';
+         linkB.setAttribute("href","products.php?data-cat=gift");
+        } else {
+         banner.style.backgroundImage = 'url("../images/Offers.jpg")';
+        }
+    </script>
+    <!-- Importar el Menu /HTML -->
+	<script>
+		document.addEventListener("DOMContentLoaded", async () => {
+			try {
+				const response = await fetch("/whimcy/Views/Menu.php");
+				if (!response.ok) throw new Error("Error al cargar Menu.php");
+
+				const html = await response.text();
+				document.querySelector(".header").innerHTML = html;
+				
+				// Activar scripts del menú
+				if (typeof inicializarHeaderNav === "function") inicializarHeaderNav();
+				if (typeof inicializarLogin === "function") inicializarLogin();
+                if (typeof getFecha === "function") getFecha();
+				setTimeout(() => {
+					if (typeof StartCart === "function") StartCart();
+				}, 200);
+
+			} catch (err) {
+				console.error(err);
+			}
+		});
+	</script>
+    <!-- Importar el footer HTML -->
+    <script>
+        $(function () {
+            $(".inferior").load("/whimcy/Views/Footer.html", function () {
+            $.getJSON("/whimcy/Controllers/CheckSesion.php", function (response) {
+                if (response.loggedIn) {
+                $('a[href="login.html"]').on("click", function (e) {
+                    e.preventDefault();
+                    window.location.href = "/whimcy/Views/Mobile/profile.php";
+                });
+                }
+            }).fail(function (err) {
+                console.error("Error verificando sesión:", err);
+            });
+            });
+        });
+    </script>
+
+	<!-- Enlaces dinamicos/ Movil -->
+	<script>
+	function redirigirLogin(e) { 
+
+        if (window.matchMedia("(max-width: 400px)").matches) {
+			e.preventDefault();
+            window.location.href = "Mobile/Inicio.php";
+        } else {
+            window.location.href = "login.html";
+        }
+    }
+	</script>    
+</body>
+</html>

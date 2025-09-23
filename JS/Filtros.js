@@ -1,4 +1,91 @@
+// GLOBAL
+function aplicarFiltrosDeEtiqueta() {
+    var checkboxesSeleccionados = $('[data-cat]:checked');
+    
+    if (checkboxesSeleccionados.length === 0) {
+        $('.agile-products').parent().show();
+            return;
+    }
+    
+    $('.agile-products').parent().hide();
+    checkboxesSeleccionados.each(function() {
+        var catProduct = $(this).data('cat');
+        $('.agile-products[category*="'+catProduct+'"]').parent().show();
+    });
+}
+
+function offNavidad() {
+     // tag
+      document.querySelectorAll(".agile-products[category*='navidad'] .new-tag h6").forEach(tag => {
+           tag.innerText = "50%";
+      });
+      // Precio
+      document.querySelectorAll(".agile-products[category*='navidad']").forEach(prod => {
+       const h6 = prod.querySelector(".agile-product-text h6");
+       const inputPrecio = prod.querySelector("input.precio");
+       const link = prod.querySelector("a[data-product-id]");
+       
+       if (h6 && inputPrecio && link) {
+           const precioOriginal = parseInt(h6.querySelector("del").innerText.replace(/\D/g, ""));
+           if (!isNaN(precioOriginal)) {
+               const precioDescuento = Math.round(precioOriginal * 0.40);
+               h6.innerHTML = `<del>$${precioOriginal}</del> $${precioDescuento}`;
+               inputPrecio.value = precioDescuento;
+               let onclick = link.getAttribute("onclick");
+               if (onclick) {
+                   onclick = onclick.replace(/,\s*'?\d+'?\)/, `,'${precioDescuento}')`);
+                   link.setAttribute("onclick", onclick);
+               }
+           }
+       }
+    });
+}
+
+function offHalloween() {
+     // tag
+      document.querySelectorAll(".agile-products[category*='gift'] .new-tag h6").forEach(tag => {
+           tag.innerText = "50%";
+      });
+      // Precio
+      document.querySelectorAll(".agile-products[category*='gift']").forEach(prod => {
+       const h6 = prod.querySelector(".agile-product-text h6");
+       const inputPrecio = prod.querySelector("input.precio");
+       const link = prod.querySelector("a[data-product-id]");
+       
+       if (h6 && inputPrecio && link) {
+           const precioOriginal = parseInt(h6.querySelector("del").innerText.replace(/\D/g, ""));
+           if (!isNaN(precioOriginal)) {
+               const precioDescuento = Math.round(precioOriginal * 0.40);
+               h6.innerHTML = `<del>$${precioOriginal}</del> $${precioDescuento}`;
+               inputPrecio.value = precioDescuento;
+               let onclick = link.getAttribute("onclick");
+               if (onclick) {
+                   onclick = onclick.replace(/,\s*'?\d+'?\)/, `,'${precioDescuento}')`);
+                   link.setAttribute("onclick", onclick);
+               }
+           }
+       }
+    });
+}
+
 $(document).ready(function(){
+    // Inicializar Fechas
+    // ⚠️ Debe existir la función getFecha()
+    const { day, month } = getFecha();
+    console.log("La fecha es: "+ day +"/ "+ month);
+
+        if (month === 12) {
+         offNavidad();
+        } else if (month === 10 && day === 31) {
+         console.log("La fecha es: "+ day +"/ "+ month);
+         offHalloween();
+        } else if (month === 2 && day === 14) {
+         // Amor y amistad misma 
+         offHalloween();
+        } else {
+         // default
+        }
+    // Filtro por categorias
     $('.categorias').click(function (event) {
        event.preventDefault();
        var catProduct = $(this).attr('category');
@@ -15,32 +102,27 @@ $(document).ready(function(){
         event.preventDefault();
         $('.categorias').removeClass('filtro-activo');
         $('[data-range]').prop('checked', false);
+        $('[data-cat]').prop('checked', false);
+        $('[data-off]').prop('checked', false);
         $('.agile-products').parent().show();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
     });
 
     // Si el parámetro "category" es especifico, aplicar el filtro
-    $(document).ready(function(){
     setTimeout(function() {
         // Obtener los parámetros de la URL
         const urlParams = new URLSearchParams(window.location.search);
         const category = urlParams.get('category');
         console.log('Category:', category); // Depuración
 
-        if (category) {
-            $('.agile-products[category*="' + category + '"]').addClass('filtro-activo');
-            $('.agile-products').parent().hide();
-            $('.agile-products[category*="' + category + '"]').parent().show();
-        }
+        if (!category) return;
+         $('.agile-products').parent().hide();
+         $('.agile-products[category*="' + category + '"]').parent().show();
     }, 100);
-});
 
 
     // Filtro por rango de precios
-    $(document).ready(function(){
-        // Función para aplicar filtros de precio
         function aplicarFiltrosDePrecio() {
-            // Obtener todos los checkboxes seleccionados
             var checkboxesSeleccionados = $('[data-range]:checked');
             
             // Si no hay checkboxes seleccionados, mostrar todos los productos
@@ -82,13 +164,8 @@ $(document).ready(function(){
         });
         // Inicializar filtros al cargar la página
         aplicarFiltrosDePrecio();
-    });
-    
-});
 
 //Filtros por descuento
-$(document).ready(function(){
-    // Función para aplicar filtros de descuento
     function aplicarFiltrosDeDescuento() {
         // Obtener todos los checkboxes seleccionados
         var checkboxesSeleccionados = $('[data-off]:checked');
@@ -134,5 +211,20 @@ $(document).ready(function(){
     });
     // Inicializar filtros al cargar la página
     aplicarFiltrosDeDescuento();
-});
 
+//Filtros por etiqueta
+    // Cambiar estado
+    $('[data-cat]').change(function() {
+        aplicarFiltrosDeEtiqueta();
+    });
+    // Al cargar la página
+    aplicarFiltrosDeEtiqueta();
+    // filtros desde la URL (parametro)
+    setTimeout(function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const catebox = urlParams.get('data-cat');
+        if (!catebox) return;
+        $('[data-cat="'+catebox+'"]').prop('checked', true);
+        aplicarFiltrosDeEtiqueta();
+    }, 100);
+});

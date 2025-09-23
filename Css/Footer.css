@@ -16,7 +16,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     font-family: initial !important;
-    height: 27vh;
+    height: 28vh;
 }
 .address-right{
 	position:relative;
@@ -74,6 +74,9 @@
     font-size: 1em;
     line-height: 1.5em;
     color: #05b2da;
+}
+.footer-grids.h> ul > li {
+    width: max-content;
 }
 .footer-grids ul li a{ 
 	color:#fff;
@@ -135,7 +138,7 @@
     }
     .footer-grids {
         padding: 2em;
-      }
+    }
     .footer-grids ul li { 
         font-size: 0.9em; 
     }

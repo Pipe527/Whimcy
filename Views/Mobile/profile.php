@@ -60,7 +60,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
                 <button class="nav-link active" id="tab-profile" data-bs-toggle="pill" data-bs-target="#content-profile" type="button" role="tab">👤 Perfil</button>
                 <button class="nav-link" id="tab-orders" data-bs-toggle="pill" data-bs-target="#content-orders" type="button" role="tab">⭐ Favoritos</button>
                 <button class="nav-link" id="tab-address" data-bs-toggle="pill" data-bs-target="#content-address" type="button" role="tab">🏠 Direcciones</button>
-                <button class="nav-link" id="tab-payments" data-bs-toggle="pill" data-bs-target="#content-payments" type="button" role="tab">💳 Métodos de Pago</button>
+                <button class="nav-link" id="tab-payments" data-bs-toggle="pill" data-bs-target="#cardC" type="button" role="tab">💳 Métodos de Pago</button>
                 <button class="nav-link" id="tab-security" data-bs-toggle="pill" data-bs-target="#content-security" type="button" role="tab">🔒 Seguridad</button>
                 <button class="nav-link" id="tab-notifications" data-bs-toggle="pill" data-bs-target="#content-notifications" type="button" role="tab">🔔 Notificaciones</button>
                 <button class="nav-link" id="tab-settings" data-bs-toggle="pill" data-bs-target="#content-settings" type="button" role="tab">⚙️ Configuración</button>
@@ -156,9 +156,42 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
                     </form>
                 </div>
                 </div>
-                <div class="tab-pane fade" id="content-payments" role="tabpanel">
+                <div class="tab-pane fade" id="cardC" role="tabpanel">
                 <h3>💳 Métodos de Pago</h3>
                 <p>Tarjetas guardadas, PayPal, opciones de pago.</p>
+                <div class="card-body my-4 text-center">
+                    <h4 class="mb-3">Elige tu método preferido</h4>
+                    <p>Este será el método por defecto</p>
+                    <form id="default-payment-form" class="default-payment-form" method="post">
+                        <div class="list-group">
+                        <!-- Daviplata -->
+                        <label class="list-group-item d-flex align-items-center">
+                            <input class="form-check-input me-3x" type="radio" name="method" id="daviplata" value="daviplata" <?php if (isset($metodo) && $metodo === 'daviplata') echo 'checked'; ?>>
+                            <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" 
+                                alt="Daviplata" style="height:30px;" class="me-6">
+                            <span>Daviplata</span>
+                        </label>
+                        <!-- Tarjeta -->
+                        <label class="list-group-item d-flex align-items-center">
+                            <input class="form-check-input me-2" type="radio" name="method" id="card" value="card" <?php if (isset($metodo) && $metodo === 'card') echo 'checked'; ?>>
+                            <img src="https://cdn-icons-png.flaticon.com/512/217/217425.png" 
+                                alt="Tarjeta" style="height:30px;" class="me-2">
+                            <span>Tarjeta de crédito / débito</span>
+                        </label>
+                        <!-- PayPal -->
+                        <label class="list-group-item d-flex align-items-center">
+                            <input class="form-check-input me-3x" type="radio" name="method" id="paypal" value="paypal" <?php if (isset($metodo) && $metodo === 'paypal') echo 'checked'; ?>>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" 
+                                alt="PayPal" style="height:30px;" class="me-2">
+                            <span>PayPal</span>
+                        </label>
+                        <div class="mt-3">
+                            <button type="submit" class="btn btn-primary">Editar métodos</button>
+                        </div>
+
+                        </div>
+                    </form>
+                </div>
                 </div>
                 <div class="tab-pane fade" id="content-security" role="tabpanel">
                 <h3>🔒 Seguridad</h3>
@@ -265,6 +298,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
 
    <!-- Reajustar estilos -->
     <style>
+        .align-items-center {
+            justify-content: center;
+        }
         .btn-help {
             display: inline-flex;
             align-items: center;
@@ -333,6 +369,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
         button.btn-flex {
             margin-left: 9em;
         }
+        button.btn-flex.b {
+            margin-left: initial;
+        }
         button.btn-block, button.btn-flex {
             margin-top: 1em;
         }
@@ -341,6 +380,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
         }
         .carousel-caption {
             bottom: -1.25rem;
+        }
+        .container.py-5.b-e {
+            background-color: #0eb170;
         }
         h4.title-card {
             position: relative;
@@ -362,7 +404,23 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
         }
         .text-muted, .login-box-msg {
             --bs-text-opacity: 1;
-            color: rgba(167, 210, 174, 0.75) !important;
+            color: hsla(130, 32%, 74%, 0.75) !important;
+        }
+        label.list-group-item span {
+            color: #bdeeda;
+        }
+        label.form-label.a-c {
+            color: #fff;
+        }
+        .list-group {
+            padding: 8px 12em;
+            --bs-list-group-bg: #005e57;
+        }
+        .me-3x {
+            margin-right: 3.5rem;
+        }
+        .me-6 {
+            margin-right: 4.5rem;
         }
         .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
             color: #2cfb2a;
@@ -386,6 +444,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
             font-weight: bold;
             font-family: math;
             color: #413d3d;
+        }
+        .text-muted.n {
+            color: red !important;
         }
         #addresForm {
             display: flex;
@@ -429,8 +490,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
     </body>
     <!-- ================================================== -->
     <!-- Formulario deslizante -->
+    <script src="../../JS/PagosForm.js"></script>
     <script src="../../JS/FormAnimation.js"></script>
-    <!-- selección  -->
+    <!-- selección de direcciones -->
      <script src="../../JS/Selection.js"></script>
     <!-- carrusel -->
      <script src="../../JS/Assest/BSCarousel.js"></script>

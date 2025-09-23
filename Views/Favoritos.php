@@ -376,6 +376,86 @@
 							</div>
 						</div>
 					</div>
+					<div class="col-md-3 product-grids"> 
+						<div class="agile-products" data-price="100-10000" category="navidad Off dessert" data-ref="0-0" data-product-id="17">
+							<div class="new-tag"><h6>Venta</h6></div>
+							<a href="single.html" onclick="cambiarImagen('../images/g17.png','Galletas','4950'); getpID('17')" data-product-id="17"><img src="../images/g17.png" class="img-responsive" alt="img"></a>
+							<div class="agile-product-text">              
+								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g17.png','Galletas','4950'); getpID('17')" data-product-id="17">Galletas</a></h5> 
+								<h6><del>$5500</del> $4950</h6> 
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart" />
+									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="w3ls_item" value="Galletas"/> 
+									<input class="precio" type="hidden" name="amount" value="4950" /> 
+									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
+									<button class="fav w3ls-cart-like" data-product-id="17" data-active="false">
+                                        <i class="fa-solid fa-heart-crack" aria-hidden="true"></i>
+                                    </button>
+								</form> 
+							</div>
+						</div> 
+					</div>
+					<div class="col-md-3 product-grids"> 
+						<div class="agile-products" data-price="30000-35000" category="navidad Off Bar licor" data-ref="0-0" data-product-id="18">
+							<div class="new-tag"><h6>Venta</h6></div>
+							<a href="single.html" onclick="cambiarImagen('../images/g18.png','Vino','27000'); getpID('18')" data-product-id="18"><img src="../images/g18.png" class="img-responsive" alt="img"></a>
+							<div class="agile-product-text">              
+								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g18.png','Vino','27000'); getpID('18')" data-product-id="18">Vino</a></h5> 
+								<h6><del>$30000</del> $27000</h6> 
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart" />
+									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="w3ls_item" value="Vino"/> 
+									<input class="precio" type="hidden" name="amount" value="27000" /> 
+									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
+									<button class="fav w3ls-cart-like" data-product-id="18" data-active="false">
+                                        <i class="fa-solid fa-heart-crack" aria-hidden="true"></i>
+                                    </button>
+								</form> 
+							</div>
+						</div> 
+					</div> 
+					<div class="col-md-3 product-grids"> 
+						<div class="agile-products" data-price="30000-35000" category="gift Off dessert" data-ref="0-0" data-product-id="19">
+							<div class="new-tag"><h6>Venta</h6></div>
+							<a href="single.html" onclick="cambiarImagen('../images/g19.png','Chocolatina','31500'); getpID('19')" data-product-id="19"><img src="../images/g19.png" class="img-responsive" alt="img"></a>
+							<div class="agile-product-text">              
+								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g19.png','Chocolatina','31500'); getpID('19')" data-product-id="19">Chocolatina</a></h5> 
+								<h6><del>$35000</del> $31500</h6> 
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart" />
+									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="w3ls_item" value="Chocolatina"/> 
+									<input class="precio" type="hidden" name="amount" value="31500" /> 
+									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
+									<button class="fav w3ls-cart-like" data-product-id="19" data-active="false">
+                                        <i class="fa-solid fa-heart-crack" aria-hidden="true"></i>
+                                    </button>
+								</form> 
+							</div>
+						</div> 
+					</div> 
+					<div class="col-md-3 product-grids"> 
+						<div class="agile-products" data-price="mas" category="gift Off" data-ref="0-0" data-product-id="20">
+							<div class="new-tag"><h6>Venta</h6></div>
+							<a href="single.html" onclick="cambiarImagen('../images/g20.png','Canasta regalo','46800'); getpID('20')" data-product-id="20"><img src="../images/g20.png" class="img-responsive" alt="img"></a>
+							<div class="agile-product-text">              
+								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g20.png','Canasta regalo','46800'); getpID('20')" data-product-id="20">Canasta regalo</a></h5> 
+								<h6><del>$52000</del> $46800</h6> 
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart" />
+									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="w3ls_item" value="Canasta regalo"/> 
+									<input class="precio" type="hidden" name="amount" value="46800" /> 
+									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
+									<button class="fav w3ls-cart-like" data-product-id="20" data-active="false">
+                                        <i class="fa-solid fa-heart-crack" aria-hidden="true"></i>
+                                    </button>
+								</form> 
+							</div>
+						</div> 
+					</div> 
 			<div class="clearfix"> </div>
 		</div>
     </div>

@@ -1,0 +1,157 @@
+ /* Ocultar menú movil */
+ #menu-toggle {
+     display: none !important;
+ }
+
+ /* El footer se ajusta debajo */
+ html,
+ body {
+     height: 100%;
+     margin: 0;
+    }
+    .inferior {
+     position: relative;
+     min-height: 28vh;
+    }
+    .inferior .footer {
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     z-index: 1;
+    }
+ body::before {
+     content: "";
+     position: fixed;
+     inset: 0;
+     background-image: url(../images/Fondo.gif);
+     background-attachment: fixed;
+     background-repeat: repeat-x;
+     background-size: cover;
+     filter: sepia(80%) hue-rotate(-50deg) saturate(500%) contrast(90%);
+     pointer-events: none;
+     z-index: -2;
+    }
+    @media (max-width: 400px) {
+         .address-right {
+             top: 16.7em !important;
+         }
+         .column-content {
+             display: unset !important;
+         }
+         .inferior {
+             height: auto;
+         }
+         .izquierdo img, .derecho img {
+            max-width: 222px;
+            max-height: 139px;
+        }
+         .footer-grids.h> ul > li {
+             width: unset !important;
+         }
+         .Fondo-body {
+             background-clip: initial;
+         }
+         #menu-toggle {
+             display: block !important;
+         }
+        }
+ /* ----- */
+
+.inferior {
+    flex: 1;
+}
+.img-card:hover {
+    background-color: #347534 !important;
+}
+.card-date {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 2em auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 4px 6px 15px black;
+  background-image: url(../images/Offers.jpg);
+  background-size: cover;
+}
+.card-date > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-content {
+  position: relative;
+  z-index: 1;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 100%;
+}
+.card-text {
+    text-align: center;
+}
+.card-text a {
+  display: inline-block;
+  padding: 0.6em 1.5em;
+  background: #631f1f;
+  color: #a8f3c3;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 1em;
+}
+.card-content a:hover:not(.bg1-link, .bg2-link) {
+  background: #822626;
+  transform: scale(1.05);
+  letter-spacing: 4px;
+  color: black;
+}
+.column-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.3em;
+    gap: 1em;
+}
+.izquierdo,
+.derecho {
+    flex: 1;
+    text-align: center;
+}
+.izquierdo img,
+.derecho img {
+    width: 320px;
+    height: 160px;
+    object-fit: cover;
+    box-shadow: 4px 6px 15px black;
+    border-radius: 8px;
+}
+h3.par-title {
+    padding: .5em 0 .5em;
+    font-size: xx-large;
+    text-align: center;
+}
+h3.text-card {
+    text-shadow: 3px 1px 3px aquamarine;
+}
+ .superior {
+    z-index: 2;
+}
+
+ /* Capa de nieve */
+ .snow {
+     position: fixed;
+     inset: 0;
+     pointer-events: none;
+     background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+     animation: snowFall 20s linear infinite;
+     z-index: -1;
+ }
+ @keyframes snowFall {
+     from {
+         background-position: 0 0;
+     }
+     to {
+         background-position: 0 1000px;
+     }
+ }
