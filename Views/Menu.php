@@ -63,8 +63,8 @@ if (isset($_SESSION['Nombre'])) {
                     <span class="M2">
                         <ul class="activo">
                             <li><a href="/whimcy/Views/offers.html" >Fechas</a></li>   
-                            <li><a href="#" class="doble">Para <br>Año Nuevo</a></li>
-                            <li><a href="#" class="doble">Ocaciones <br>Especiales</a></li>
+                            <li><a href="ocations.html" class="doble">Para <br>Año Nuevo</a></li>
+                            <li><a href="ocations.html" class="doble">Ocaciones <br>Especiales</a></li>
                         </ul>
                     </span>
                 </li>
@@ -107,7 +107,7 @@ if (isset($_SESSION['Nombre'])) {
                 <li>
                     <span class="M4">
                         <ul class="activo">
-                            <li><a href="#" class="doble">Facturas<br>Pendientes</a></li>   
+                            <li><a href="/whimcy/Views/Recetas.php" class="doble">Mis<br>Menús</a></li>   
                             <li><a href="/whimcy/Views/forums.html" >Comunidad</a></li>
                             <li><a href="#">Amigos</a></li>
                         </ul>

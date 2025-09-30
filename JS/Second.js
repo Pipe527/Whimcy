@@ -16,11 +16,11 @@ function showIconBar(){
 //Comment
 function showComment(){
     var commentArea = document.getElementById("comment-area");
-    commentArea.classList.remove("hide");
+    commentArea.classList.toggle("hide");
 }
 
 //Reply
 function showReply(){
     var replyArea = document.getElementById("reply-area");
-    replyArea.classList.remove("hide");
+    replyArea.classList.toggle("hide");
 }

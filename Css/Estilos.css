@@ -489,6 +489,7 @@ p.sbmincart-empty-text {
     display: grid;
     justify-items: center;
     align-content: space-evenly;
+    text-align: center;
 }
 
 .btn-sing {

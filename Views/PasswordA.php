@@ -203,6 +203,10 @@
 		.Fondo-body {
 			height: 520px;
 		}
+		.form-control[name="Rem"] {
+			display: unset;
+			width: unset;
+		}
 		.login-box {
 			padding: 0px 15.015vw;
 			position: relative;

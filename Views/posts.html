@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b59d19b6f4.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
@@ -243,15 +244,44 @@
     <footer>
         <span>&copy;  Selmi Abderrahim | All Rights Reserved</span>
     </footer>
+    <!-- submenus -->
+	<script src="../JS/SubMenus.js"></script>
+	<script src="../JS/Assest/sessionManager.js"></script>
     <!-- Menus del Foro -->
     <script src="../JS/Second.js"></script>
-    <!-- Importar el Menu -->
+    <!-- Importar el Menu /HTML -->
 	<script>
-		$(document).ready(function () {
-		  $('.header').load('Menu.php');
+		document.addEventListener("DOMContentLoaded", async () => {
+			try {
+				const response = await fetch("/whimcy/Views/Menu.php");
+				if (!response.ok) throw new Error("Error al cargar Menu.php");
+
+				const html = await response.text();
+				document.querySelector(".header").innerHTML = html;
+				
+				// Activar scripts del menú
+				if (typeof inicializarHeaderNav === "function") inicializarHeaderNav();
+				if (typeof inicializarLogin === "function") inicializarLogin();
+				setTimeout(() => {
+					if (typeof StartCart === "function") StartCart();
+				}, 200);
+
+			} catch (err) {
+				console.error(err);
+			}
 		});
 	</script>
-	<!-- Abrir submenus -->
-	<script src="../JS/SubMenus.js"></script>
+	<!-- Enlaces dinamicos/ Movil -->
+	<script>
+	function redirigirLogin(e) { 
+
+        if (window.matchMedia("(max-width: 400px)").matches) {
+			e.preventDefault();
+            window.location.href = "Mobile/Inicio.php";
+        } else {
+            window.location.href = "login.html";
+        }
+    }
+	</script>
 </body>
 </html>

@@ -141,8 +141,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 									<ul class="is-hidden"> 
 										<li class="go-back"><a href="#">Promociones </a></li>
 										<li><a href="offers.html">Fechas</a></li> 
-										<li><a href="#">Para Año Nuevo</a></li>
-										<li><a href="#">Ocaciones especiales</a></li>
+										<li><a href="ocations.html">Para Año Nuevo</a></li>
+										<li><a href="ocations.html">Ocaciones especiales</a></li>
 									</ul>
 								</li> 
 								<li class="has-children">
@@ -160,7 +160,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 									<a href="#">Adicional</a> 
 									<ul class="is-hidden">
 										<li class="go-back"><a href="#0">Adicional </a></li>
-										<li><a href="#">Facturas pendientes</a></li>
+										<li><a href="#">Mis Menús</a></li>
 										<li><a href="forums.html">Comunidad</a></li>
 										<li><a href="#">Amigos</a></li>
 									</ul>
@@ -544,14 +544,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-3 product-grids"> 
 						<div class="agile-products" data-price="mas" category="gift Off" data-ref="0-0">
 							<div class="new-tag"><h6>Venta</h6></div>
-							<a href="single.html" onclick="cambiarImagen('../images/g20.png','Canasta regalo','46800'); getpID('20')" data-product-id="20"><img src="../images/g20.png" class="img-responsive" alt="img"></a>
+							<a href="single.html" onclick="cambiarImagen('../images/g20.png','Canasta Regalo','46800'); getpID('20')" data-product-id="20"><img src="../images/g20.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
-								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g20.png','Canasta regalo','46800'); getpID('20')" data-product-id="20">Canasta regalo</a></h5> 
+								<h5 class="Rtext"><a href="single.html" onclick="cambiarImagen('../images/g20.png','Canasta Regalo','46800'); getpID('20')" data-product-id="20">Canasta regalo</a></h5> 
 								<h6><del>$52000</del> $46800</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
 									<input type="hidden" name="add" value="1" /> 
-									<input type="hidden" name="w3ls_item" value="Canasta regalo"/> 
+									<input type="hidden" name="w3ls_item" value="Canasta Regalo"/> 
 									<input class="precio" type="hidden" name="amount" value="46800" /> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form> 

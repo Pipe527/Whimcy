@@ -87,7 +87,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
                                 <input type="text" class="form-control" name="Direccion" value="<?php echo $response['address']; ?>" disabled>
                                 <p class="small text-muted mt-2">Haz click en editar para cambiar más datos</p>
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary btn-block">Editar</button>
+                                    <button type="submit" class="btn btn-primary btn-block no">Editar</button>
                                 </div>
                             </form>
                         </div>
@@ -222,7 +222,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
                             </div>
                             <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary btn-block">Cambiar contraseña</button>
+                                <button type="submit" class="btn btn-primary btn-block no">Cambiar contraseña</button>
                             </div>
                             <!-- /.col -->
                             </div>
@@ -363,7 +363,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');
         .btn:hover {
             color: #bdeeda;
         }
-        button.btn-block {
+        button.btn-block:not(.no) {
             margin-left: 5em;
         }
         button.btn-flex {
