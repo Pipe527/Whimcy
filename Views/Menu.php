@@ -63,8 +63,8 @@ if (isset($_SESSION['Nombre'])) {
                     <span class="M2">
                         <ul class="activo">
                             <li><a href="/whimcy/Views/offers.html" >Fechas</a></li>   
-                            <li><a href="ocations.html" class="doble">Para <br>Año Nuevo</a></li>
-                            <li><a href="ocations.html" class="doble">Ocaciones <br>Especiales</a></li>
+                            <li><a href="/whimcy/Views/ocations.html?normalDay=1" class="doble">Para <br>Año Nuevo</a></li>
+                            <li><a href="/whimcy/Views/ocations.html" class="doble">Ocaciones <br>Especiales</a></li>
                         </ul>
                     </span>
                 </li>

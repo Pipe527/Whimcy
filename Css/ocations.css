@@ -35,6 +35,9 @@
          .address-right {
              top: 16.7em !important;
          }
+         .card-date {
+             margin: .8em 1.5em !important;
+         }
          .column-content {
              display: unset !important;
          }
@@ -44,6 +47,9 @@
          .izquierdo img, .derecho img {
             max-width: 222px;
             max-height: 139px;
+        }
+        .derecho img {
+            margin-top: 1em;
         }
          .footer-grids.h> ul > li {
              width: unset !important;

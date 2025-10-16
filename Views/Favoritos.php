@@ -1,4 +1,4 @@
-<?php session_start(); require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php');?>
+<?php session_start(); require_once($_SERVER['DOCUMENT_ROOT'] . '/whimcy/Controllers/Paths.php'); ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../Css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="../Css/style.css" rel="stylesheet" type="text/css" media="all" /> 
+	<link href="../Css/LogedOut.css" rel="stylesheet" type="text/css" media="all" />
     <title>Favoritos</title>
     <!-- font-awesome icons -->
     <link href="../Css/font-awesome.css" rel="stylesheet"> 
@@ -43,6 +44,20 @@
         });
     </script>
 </head>
+
+<?php 
+	if (!isset($_SESSION['idUsuarios'])) {
+		echo "<div class='body center sin-login-container'>
+		<p class='Sin-login'>Usuario no autenticado</p>
+		<small>Error: debes iniciar sesión para ver tus favoritos</small>
+		</div>
+		<a href='login.html' class='login center'>
+		<button class='return'>Iniciar sesión</button>
+		</a>";
+		exit;
+	}
+?>
+
 <body>
     <div class="header"> </div>
         <div class="Fondo-body">

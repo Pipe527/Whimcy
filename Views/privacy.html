@@ -21,6 +21,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <link href="../Css/menu.css" rel="stylesheet" type="text/css" media="all" /> <!-- menu style -->   
 <!-- //Custom Theme files -->
 <!-- font-awesome icons -->
+<script src="https://kit.fontawesome.com/b59d19b6f4.js"></script>
 <link href="../Css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 <!-- js -->
@@ -88,7 +89,58 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="menu">
 					<div class="cd-dropdown-wrapper">
-						<a class="cd-dropdown-trigger" href="#0">Tienda Categorias</a>
+						<a class="cd-dropdown-trigger" href="#0">Tienda</a>
+						<nav class="cd-dropdown"> 
+							<a href="#0" class="cd-close">Cerrar</a>
+							<ul class="cd-dropdown-content">
+								<li class="has-children">
+									<a href="#">Menús</a> 
+									<ul class="cd-secondary-dropdown is-hidden">
+										<li class="go-back"><a href="#">Menús</a></li>
+										<li class="see-all"><a href="products.php">Productos</a></li>
+										<li class="main"><a href="products.php">Pedir</a></li>
+										<li><a href="products.php?category=Top">Top</a></li>
+										<li class="has-children">
+											<a href="#">Combos</a>  
+											<ul class="is-hidden"> 
+												<li class="go-back"><a href="#">Productos </a></li>
+												<li><a href="products.php?category=combos">Categorias</a></li>
+												<li><a href="#">Definidos</a></li>
+												<li><a href="#">Cartas</a></li>
+											</ul>
+										<li><a href="Favoritos.php">Favoritos</a></li>
+										</li> 
+									</ul> <!-- .cd-secondary-dropdown -->
+								<li class="has-children">
+									<a href="#">Promociones</a> 
+									<ul class="is-hidden"> 
+										<li class="go-back"><a href="#">Promociones </a></li>
+										<li><a href="offers.html">Fechas</a></li> 
+										<li><a href="ocations.html?normalDay=1">Para Año Nuevo</a></li>
+										<li><a href="ocations.html">Ocaciones especiales</a></li>
+									</ul>
+								</li> 
+								<li class="has-children">
+									<a href="#">Restaurantes</a> 
+									<ul class="is-hidden"> 
+										<li class="go-back"><a href="#">Restaurantes </a></li>
+										<li><a href="#" class="links" data-section="Seccion1">Mapa</a></li>
+										<li><a href="#" class="links" data-section="Restaurante">Todos</a></li>
+										<li><a href="#" class="links" data-section="Seccion01">Mi Zona</a></li>
+										<li><a href="#" class="links" data-section="Seccion2">Ubicación</a></li>
+										<li><a href="#" class="links" data-section="Seccion3">Reservación</a></li>
+									</ul>
+								</li> 
+								<li class="has-children">
+									<a href="#">Adicional</a> 
+									<ul class="is-hidden">
+										<li class="go-back"><a href="#0">Adicional </a></li>
+										<li><a href="Recetas.php">Mis Menús</a></li>
+										<li><a href="forums.html">Comunidad</a></li>
+										<li><a href="#">Amigos</a></li>
+									</ul>
+								</li> 
+							</ul> <!-- .cd-dropdown-content -->
 						</nav> <!-- .cd-dropdown -->
 					</div> <!-- .cd-dropdown-wrapper -->	 
 				</div>
@@ -120,7 +172,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<p><strong>1.8.	Cluf:</strong> Sección.
 				<p><strong>1.9.	Instalación:</strong> Consiste en la transferencia de nuevos programas a un computador y, eventualmente, configurados, para ser usados con el fin para el cual fueron desarrollados.
 				<p class="end"><strong>1.10.	PC:</strong> Se refiere al Computador en general.
-				<h5><strong> 2.	SEGUNDA. UTILIZACIÓN.</strong></h5> <strong>EL BENEFICIADO</strong> Registre en esta cláusula las especificaciones de utilización de sistema de información contratado. (Incluir los términos de referencia como Cobertura, fuentes, usuarios etc.)</p>
+				<h5><strong> 2.	SEGUNDA. UTILIZACIÓN.</strong></h5> <strong>EL BENEFICIADO</strong> <p>Registre en esta cláusula las especificaciones de utilización de sistema de información contratado. (Incluir los términos de referencia como Cobertura, fuentes, usuarios etc.)</p>
 				<h5><strong> 3.	TERCERA. AMBIENTE TÉCNICO DE OPERACIÓN.</strong></h5>  
 				<p>EL BENEFICIADO instalará y garantizará el buen funcionamiento del <strong>HARDWARE Y SOFTWARE OPERATIVO</strong> necesario para la instalación y funcionamiento de Software WHIMCY, de acuerdo con las especificaciones técnicas exigida por EL BENEFICIARIO, para que opere la solución. 
 				En el evento que cumplidas por EL BENEFICIADO las especificaciones técnicas indicadas en el Anexo B y una vez en producción el Software WHIMCY, presente fallas o deficiencias que no sean causadas por el HARDWARE Y/O EL SOFTWARE OPERATIVO, <strong>EL BENEFICIARIO</strong> debe atender y solucionar dichas fallas o deficiencias
@@ -289,16 +341,47 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<!-- menu js aim -->
 	<script src="../JS/jquery.menu-aim.js"> </script>
 	<script src="../JS/main.js"></script> <!-- Resource jQuery -->
-	<!-- //menu js aim --> 
+	<!-- //menu js aim -->
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../JS/bootstrap.js"></script>
-	<!-- Importar el Menu -->
+	<!-- submenus -->
+	<script src="../JS/SubMenus.js"></script>
+	<script src="../JS/Assest/sessionManager.js"></script>
+	<!-- Importar el Menu /HTML -->
 	<script>
-		$(document).ready(function () {
-		  $('.header').load('Menu.php');
+		document.addEventListener("DOMContentLoaded", async () => {
+			try {
+				const response = await fetch("/whimcy/Views/Menu.php");
+				if (!response.ok) throw new Error("Error al cargar Menu.php");
+
+				const html = await response.text();
+				document.querySelector(".header").innerHTML = html;
+				
+				// Activar scripts del menú
+				if (typeof inicializarHeaderNav === "function") inicializarHeaderNav();
+				if (typeof inicializarLogin === "function") inicializarLogin();
+				setTimeout(() => {
+					if (typeof StartCart === "function") StartCart();
+				}, 200);
+
+			} catch (err) {
+				console.error(err);
+			}
 		});
-	</script> 
+	</script>
+	<!-- Enlaces dinamicos/ Movil -->
+	<script>
+	function redirigirLogin(e) { 
+
+        if (window.matchMedia("(max-width: 400px)").matches) {
+			e.preventDefault();
+            window.location.href = "Mobile/Inicio.php";
+        } else {
+            window.location.href = "login.html";
+        }
+    }
+	</script>
 </body>
 </html>

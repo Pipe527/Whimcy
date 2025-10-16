@@ -3,10 +3,6 @@
 
  session_start();
 
- if (!isset($_SESSION['idUsuarios'])) {
-    echo json_encode(["status" => "error", "message" => "Usuario no autenticado"]);
-    exit;
- }
  $editando = false;
  $recetaEditar = [
      'idMenu' => '',
@@ -47,6 +43,18 @@ $result = $Con->query($sql);
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
+<?php
+ if (!isset($_SESSION['idUsuarios'])) {
+    echo "<div class='body center sin-login-container'>
+     <p class='Sin-login'>Usuario no autenticado</p>
+     <small>Error: debes iniciar sesión para ver las recetas</small>
+    </div>
+     <a href='login.html' class='login center'>
+      <button class='return'>Iniciar sesión</button>
+     </a>";
+    exit;
+ }
+?>
 <body>
     <div class="header"></div>
     <header>

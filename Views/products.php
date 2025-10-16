@@ -133,7 +133,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 												<li><a href="#">Definidos</a></li>
 												<li><a href="#">Cartas</a></li>
 											</ul>
-										<li><a href="offers.html">Favoritos</a></li>
+										<li><a href="Favoritos.php">Favoritos</a></li>
 										</li> 
 									</ul> <!-- .cd-secondary-dropdown -->
 								<li class="has-children">
@@ -141,7 +141,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 									<ul class="is-hidden"> 
 										<li class="go-back"><a href="#">Promociones </a></li>
 										<li><a href="offers.html">Fechas</a></li> 
-										<li><a href="ocations.html">Para Año Nuevo</a></li>
+										<li><a href="ocations.html?normalDay=1">Para Año Nuevo</a></li>
 										<li><a href="ocations.html">Ocaciones especiales</a></li>
 									</ul>
 								</li> 
@@ -160,7 +160,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 									<a href="#">Adicional</a> 
 									<ul class="is-hidden">
 										<li class="go-back"><a href="#0">Adicional </a></li>
-										<li><a href="#">Mis Menús</a></li>
+										<li><a href="Recetas.php">Mis Menús</a></li>
 										<li><a href="forums.html">Comunidad</a></li>
 										<li><a href="#">Amigos</a></li>
 									</ul>
@@ -406,7 +406,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>
 					<div class="col-md-3 product-grids">
-						<div class="agile-products" data-price="10000-15000" category="market2 dessert Top" data-ref="0-0">
+						<div class="agile-products" data-price="10000-15000" category="market2 dessert Top ice" data-ref="0-0">
 							<div class="new-tag"><h6>Venta</h6></div>
 							<a href="single.html" onclick="cambiarImagen('../images/g12.png','McFlurry Oreo','11500'); getpID('12')" data-product-id="12"><img src="../images/g12.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
@@ -423,7 +423,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>
 					<div class="col-md-3 product-grids"> 
-						<div class="agile-products" data-price="100-10000" category="market2 Off dessert" data-ref="10-0">
+						<div class="agile-products" data-price="100-10000" category="market2 Off dessert ice" data-ref="10-0">
 							<div class="new-tag"><h6>10%<br>Off</h6></div>
 							<a href="single.html" onclick="cambiarImagen('../images/g13.png','Helado','8100'); getpID('13')" data-product-id="13"><img src="../images/g13.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
@@ -440,7 +440,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						</div> 
 					</div>   
 					<div class="col-md-3 product-grids">
-						<div class="agile-products" data-price="100-10000" category="market2 food combos prep new" data-ref="0-0">
+						<div class="agile-products" data-price="100-10000" category="market2 food chicken combos prep new" data-ref="0-0">
 							<div class="new-tag"><h6>New</h6></div>
 							<a href="single.html" onclick="cambiarImagen('../images/g14.png','Frijoles MC','10000'); getpID('14')" data-product-id="14"><img src="../images/g14.png" class="img-responsive" alt="img"></a>
 							<div class="agile-product-text">              
@@ -638,14 +638,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="sidebar-row">
 						<h4>DESCUENTOS</h4>
 						<div class="row row1 scroll-pane">
-							<label class="checkbox"><input type="checkbox" data-off="0-10" name="checkbox"><i></i>Del - 10% (0)</label>
-							<label class="checkbox"><input type="checkbox" data-off="70-60" name="checkbox"><i></i>70% - 60% (0)</label>
-							<label class="checkbox"><input type="checkbox" data-off="50-40" name="checkbox"><i></i>50% - 40% (1)</label>
-							<label class="checkbox"><input type="checkbox" data-off="30-20" name="checkbox"><i></i>30% - 20% (3)</label>
-							<label class="checkbox"><input type="checkbox" data-off="10-5" name="checkbox"><i></i>10% - 5% (5)</label>
-							<label class="checkbox"><input type="checkbox" data-off="30-20" name="checkbox"><i></i>30% - 20% (3)</label>
-							<label class="checkbox"><input type="checkbox" data-off="10-5" name="checkbox"><i></i>10% - 5% (5)</label>
-							<label class="checkbox"><input type="checkbox" data-off="0-0" name="checkbox"><i></i>Otros(8)</label>
+							<label class="checkbox"><input type="checkbox" data-off="0-10" name="checkbox"><i></i>Del - 10% <span class="count">(0)</span></label>
+							<label class="checkbox"><input type="checkbox" data-off="70-60" name="checkbox"><i></i>70% - 60% <span class="count">(0)</span></label>
+							<label class="checkbox"><input type="checkbox" data-off="50-40" name="checkbox"><i></i>50% - 40% <span class="count">(0)</span></label>
+							<label class="checkbox"><input type="checkbox" data-off="30-20" name="checkbox"><i></i>30% - 20% <span class="count">(3)</span></label>
+							<label class="checkbox"><input type="checkbox" data-off="10-5" name="checkbox"><i></i>10% - 5% <span class="count">(5)</span></label>
+							<label class="checkbox"><input type="checkbox" data-off="30-20" name="checkbox"><i></i>30% - 20% <span class="count">(3)</span></label>
+							<label class="checkbox"><input type="checkbox" data-off="10-5" name="checkbox"><i></i>10% - 5% <span class="count">(5)</span></label>
+							<label class="checkbox"><input type="checkbox" data-off="0-0" name="checkbox"><i></i>Otros <span class="count">(12)</span></label>
 						</div>
 					</div>
 					<div class="sidebar-row">
@@ -663,16 +663,16 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="related-row">
 					<h4>Busquedas relacionadas</h4>
 					<ul>
-						<li><a href="products.html">Postres </a></li>
-						<li><a href="products.html">Helados</a></li>
-						<li><a href="products.html">Comidas</a></li>
-						<li><a href="products.html">Bebidas </a></li>
-						<li><a href="products.html">Comida rapida</a></li>
-						<li><a href="products.html">McDonalds</a></li>
-						<li><a href="products.html">Bandejas</a></li>
-						<li><a href="products.html">Sopas</a></li>
-						<li><a href="products.html">Pollo</a></li>
-						<li><a href="products.html">KFC</a></li>
+						<li><a href="#" class="categorias" category="dessert">Postres </a></li>
+						<li><a href="#" class="categorias" category="ice">Helados</a></li>
+						<li><a href="#" class="categorias" category="food">Comidas</a></li>
+						<li><a href="#" class="categorias" category="bebida">Bebidas </a></li>
+						<li><a href="#" class="categorias" category="food">Comida rapida</a></li>
+						<li><a href="#" class="categorias" category="market2">McDonalds</a></li>
+						<li><a href="#" class="categorias" category="food">Bandejas</a></li>
+						<li><a href="#" class="categorias" >Sopas</a></li>
+						<li><a href="#" class="categorias" category="chicken">Pollo</a></li>
+						<li><a href="#" class="categorias" >KFC</a></li>
 					</ul>
 				</div>
 				<div class="related-row">
@@ -812,7 +812,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
-	<!-- //footer --> 		
+	<!-- //footer -->
+	<div id="toast-filtros" class="toast-filtros">Filtros aplicados</div> 		
 	<div class="copy-right"> 
 		<div class="container">
 			<p>© 2016 Smart bazaar . All rights reserved | Design by <a href="http://w3layouts.com"> W3layouts.</a></p>

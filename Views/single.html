@@ -125,7 +125,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<li><a href="#">Definidos</a></li>
 												<li><a href="#">Cartas</a></li>
 											</ul>
-										<li><a href="offers.html">Favoritos</a></li>
+										<li><a href="Favoritos.php">Favoritos</a></li>
 										</li> 
 									</ul> <!-- .cd-secondary-dropdown -->
 								<li class="has-children">
@@ -133,8 +133,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<ul class="is-hidden"> 
 										<li class="go-back"><a href="#">Promociones </a></li>
 										<li><a href="offers.html">Fechas</a></li> 
-										<li><a href="#">Para Año Nuevo</a></li>
-										<li><a href="#">Ocaciones especiales</a></li>
+										<li><a href="ocations.html?normalDay=1">Para Año Nuevo</a></li>
+										<li><a href="ocations.html">Ocaciones especiales</a></li>
 									</ul>
 								</li> 
 								<li class="has-children">
@@ -152,7 +152,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<a href="#">Adicional</a> 
 									<ul class="is-hidden">
 										<li class="go-back"><a href="#0">Adicional </a></li>
-										<li><a href="#">Facturas pendientes</a></li>
+										<li><a href="Recetas.php">Mis Menús</a></li>
 										<li><a href="forums.html">Comunidad</a></li>
 										<li><a href="#">Amigos</a></li>
 									</ul>
@@ -173,7 +173,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<!-- //header -->
 	<!-- breadcrumbs -->
-	<div class="container">
+	<div class="container fix">
 		<ol class="breadcrumb breadcrumb1">
 			<li><a href="index.html">Inicio</a></li>
 			<li><a href="products.php">Pedir</a></li>
@@ -729,6 +729,48 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			display: unset;
 			width: unset;
 			height: unset;
+		}
+		/* Reajustes*/
+		@media (max-width: 400px) {
+			.breadcrumb {
+				margin-bottom: unset;
+			}
+			.container.fix {
+				padding-right: unset;
+				padding-left: unset;	
+			}
+			.single-top-left {
+        		margin-left: 20%;
+			}
+			.single-top-right .w3ls-cart {
+				width: 34% !important;
+			}
+			.single-top-right p {
+				color: black;
+			}
+			.single-top-right h3 {
+				font-weight: 1000;
+			}
+			.single-top-right li:not(:has(i)) {
+				color: #222 !important;
+			}
+			.single-top-right ul li i {
+				color: #ebf58d;
+			}
+			.single-top-right .w3ls-cart {
+				width: 28%;
+			}
+			.single-top-right ul li a {
+				color: #e7ffbb;
+			}
+			.single-price ul li span.w3off {
+				color: #5ab7ff;
+			}
+			.single-top-right .w3ls-cart.w3ls-cart-like {
+				border-color: #59b3f5;
+				color: #59b3f5;
+				background-color: #003b67;
+			}
 		}
 	</style>
 	<!--flex slider-->

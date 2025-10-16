@@ -12,7 +12,7 @@
     <title>Ocaciones</title>
 </head>
 <body>
-    <header class="header"> </header>
+    <header class="header superior"> </header>
     <div class="Fondo-body">
         <div class="snow"> </div>
         <h3 class="w3ls-title w3ls-title1">Ofertas del mes</h3>
@@ -75,6 +75,8 @@
 	<script src="../JS/Assest/sessionManager.js"></script>
     <!-- Fecha de ocación -->
     <script>
+    const header = document.querySelector(".header");
+    const footer = document.querySelector(".inferior");
     const banner = document.getElementById("date");
     const titulo = document.querySelector(".w3ls-title1");
     const subtitle=document.querySelector(".par-title");
@@ -103,6 +105,8 @@
          imgB.style.backgroundColor = 'darkgreen';
          linkB.setAttribute("href","products.php?data-cat=navidad");
         } else if (month === 10 && day === 31) {
+         header.style.filter = 'hue-rotate(-150deg)';
+         footer.style.filter = 'hue-rotate(-150deg)';
          banner.style.backgroundImage = 'url("../images/halloween.jpg")';
          titulo.innerText = "Halloween";
          subtitle.innerText = "¡Feliz Halloween!";
@@ -111,13 +115,15 @@
          content.innerText = "¡Un 50% de descuento en regalos!";
          imgA.setAttribute("src","../images/g19.png");
          imgA.style.objectFit = 'contain';
-         imgA.style.backgroundColor = 'darkgreen';
+         imgA.style.backgroundColor = '#a95e03';
          linkA.setAttribute("href","products.php?data-cat=gift");
          imgB.setAttribute("src","../images/g20.png");
          imgB.style.objectFit = 'contain';
-         imgB.style.backgroundColor = 'darkgreen';
+         imgB.style.backgroundColor = '#a95e03';
          linkB.setAttribute("href","products.php?data-cat=gift");
         } else if (month === 2 && day === 14) {
+         header.style.filter = 'hue-rotate(180deg)';
+         footer.style.filter = 'hue-rotate(180deg)';
          banner.style.backgroundImage = 'url("../images/sanValentin.jpg")';
          titulo.innerText = "San Valentin";
          subtitle.innerText = "¡Feliz San Valentin!";
@@ -135,6 +141,30 @@
         } else {
          banner.style.backgroundImage = 'url("../images/Offers.jpg")';
          banner.style.filter = 'hue-rotate(-18deg)';
+
+         const params = new URLSearchParams(window.location.search);
+         const normalDay = params.get("normalDay");
+
+         if (normalDay === "1") {
+             mostrarAvisoNavidad();
+         }
+        }
+
+        function mostrarAvisoNavidad() {
+            const aviso = document.createElement("div");
+            aviso.className = "aviso-navidad";
+            aviso.innerHTML = `
+                <div class="aviso-card">
+                🎄 <strong>¡Promoción Especial!</strong><br>
+                ¡Un 50% de descuento en productos navideños! <br>
+                <p class="text-card">¡Visita <b>TASTELY</b> en Navidad!</p> <br>
+                <a href="offers.html" class="btn-aviso">Ver ofertas actuales</a>
+                </div>
+            `;
+            document.body.appendChild(aviso);
+
+            setTimeout(() => aviso.classList.add("visible"), 100);
+            setTimeout(() => aviso.remove(), 10000);
         }
     </script>
     <!-- Importar el Menu /HTML -->

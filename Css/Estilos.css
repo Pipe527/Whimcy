@@ -816,7 +816,7 @@ a.doble {
         margin-right: 5vw;
     }
     .fa.fa-cart-arrow-down {
-        font-size: 2.8em;
+        font-size: 2.4em;
     }
 
     .us i {
@@ -881,6 +881,15 @@ a.doble {
     .M1 a, .M2 a, .M3 a, .M4 a {
         color: black;
     }
+    .profile.actived {
+        height: 18em;
+        width: 17em;
+        translate: -39px;
+    }
+    .actived #profile-section a {
+        bottom: -0.2em;
+        font-size: 3em;
+    }
     .SubMenu {
       display: none;         
       opacity: 0;
@@ -896,6 +905,11 @@ a.doble {
     }
     .SubMenu.open a {
       font-size: 1em;
+    }
+    .superior {
+        image-rendering: pixelated;
+        background-size: auto 100%;
+        border-inline-end: 3px solid rgba(0, 0, 0, 0.5);;
     }
 
     /* Oculta por defecto SOLO los items navegables (Menú/Promos/Rest/Adicional) */
@@ -951,4 +965,8 @@ a.doble {
         display: flex !important;
         font-size: 2.5rem;
     }
+    /* Otros elementos */
+    h4.title-card {
+        left: 1em !important;
+    } 
 }

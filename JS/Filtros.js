@@ -28,6 +28,7 @@ function offNavidad() {
        if (h6 && inputPrecio && link) {
            const precioOriginal = parseInt(h6.querySelector("del").innerText.replace(/\D/g, ""));
            if (!isNaN(precioOriginal)) {
+               const porcentaje = 50;
                const precioDescuento = Math.round(precioOriginal * 0.40);
                h6.innerHTML = `<del>$${precioOriginal}</del> $${precioDescuento}`;
                inputPrecio.value = precioDescuento;
@@ -36,6 +37,7 @@ function offNavidad() {
                    onclick = onclick.replace(/,\s*'?\d+'?\)/, `,'${precioDescuento}')`);
                    link.setAttribute("onclick", onclick);
                }
+               prod.setAttribute("data-ref", porcentaje);
            }
        }
     });
@@ -55,6 +57,7 @@ function offHalloween() {
        if (h6 && inputPrecio && link) {
            const precioOriginal = parseInt(h6.querySelector("del").innerText.replace(/\D/g, ""));
            if (!isNaN(precioOriginal)) {
+            const porcentaje = 50;
                const precioDescuento = Math.round(precioOriginal * 0.40);
                h6.innerHTML = `<del>$${precioOriginal}</del> $${precioDescuento}`;
                inputPrecio.value = precioDescuento;
@@ -63,10 +66,54 @@ function offHalloween() {
                    onclick = onclick.replace(/,\s*'?\d+'?\)/, `,'${precioDescuento}')`);
                    link.setAttribute("onclick", onclick);
                }
+               prod.setAttribute("data-ref", porcentaje);
            }
        }
     });
 }
+
+function totalProducts() {
+  document.querySelectorAll('[data-off]').forEach(input => {
+    const label = input.parentElement;
+    const rango = input.getAttribute('data-off');
+    const countSpan = label.querySelector('.count');
+    let total = 0;
+
+    document.querySelectorAll('.agile-products').forEach(prod => {
+      if (prod.offsetParent === null) return;
+      const descuento = parseInt(prod.getAttribute('data-ref'));
+      if (!isNaN(descuento)) {
+        if (rango === '0-0' && descuento < 10) total++;
+        else {
+          const [max, min] = rango.split('-').map(Number);
+          if (descuento >= min && descuento <= max) total++;
+        }
+      }
+    });
+
+    if (countSpan) {
+      countSpan.textContent = `(${total})`;
+    }
+  });
+}
+
+function mostrarToastFiltros(mensaje = "Filtros aplicados") {
+  const toast = document.getElementById("toast-filtros");
+  if (!toast) return;
+
+  // Solo Móvil
+  if (window.matchMedia("(max-width: 400px)").matches) {
+	toast.textContent = mensaje;
+    if (!toast.classList.contains("show")) {
+      toast.classList.add("show");
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2500);
+    }
+  }
+}
+
 
 $(document).ready(function(){
     // Inicializar Fechas
@@ -90,11 +137,12 @@ $(document).ready(function(){
        event.preventDefault();
        var catProduct = $(this).attr('category');
        // Clase para el filtro activo
-       $('.categorias').removeClass('filtro-activo');
+       $(this).closest('.dropdown-menu, .related-row, .faq').find('.categorias').removeClass('filtro-activo');
        $(this).addClass('filtro-activo');
        // Ocultar y mostrar productos
        $('.agile-products').parent().hide();
        $('.agile-products[category*="'+catProduct+'"]').parent().show();
+       mostrarToastFiltros();
     });
     
     //Limpiar categorias
@@ -106,6 +154,7 @@ $(document).ready(function(){
         $('[data-off]').prop('checked', false);
         $('.agile-products').parent().show();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
+        mostrarToastFiltros("Filtros eliminados");
     });
 
     // Si el parámetro "category" es especifico, aplicar el filtro
@@ -161,6 +210,7 @@ $(document).ready(function(){
         // Evento al cambiar el estado de los checkboxes de rango de precios
         $('[data-range]').change(function() {
             aplicarFiltrosDePrecio();
+            mostrarToastFiltros();
         });
         // Inicializar filtros al cargar la página
         aplicarFiltrosDePrecio();
@@ -208,14 +258,18 @@ $(document).ready(function(){
     // Evento al cambiar el estado de los checkboxes de rango de descuentos
     $('[data-off]').change(function() {
         aplicarFiltrosDeDescuento();
+        mostrarToastFiltros();
+        totalProducts();
     });
     // Inicializar filtros al cargar la página
     aplicarFiltrosDeDescuento();
+    totalProducts();
 
 //Filtros por etiqueta
     // Cambiar estado
     $('[data-cat]').change(function() {
         aplicarFiltrosDeEtiqueta();
+        mostrarToastFiltros();
     });
     // Al cargar la página
     aplicarFiltrosDeEtiqueta();

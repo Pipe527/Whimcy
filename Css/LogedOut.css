@@ -1,0 +1,64 @@
+/* ============================== */
+/* Mensaje de usuario no autenticado */
+/* ============================== */
+
+.body {
+  display: flex;
+  background-color: #ebf1f7c4; /* Fondo claro */
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sin-login-container {
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+}
+
+p.Sin-login {
+  color: red;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.login .return {
+  background-color: #ff5a5f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login .return:hover {
+  background-color: #ff3b3f;
+  transform: scale(1.05);
+}
+
+.login .return:active {
+  transform: scale(0.95);
+}
+
+/* Versión responsive para móviles */
+@media (max-width: 400px) {
+  .Sin-login {
+    font-size: 1.1em;
+  }
+
+  .login .return {
+    width: 90%;
+    font-size: 1em;
+    padding: 14px;
+  }
+}

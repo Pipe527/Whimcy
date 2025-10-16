@@ -6394,6 +6394,29 @@ button.close {
 .visible-lg-inline-block {
   display: none !important;
 }
+@media (max-width: 400px) {
+  b, strong {
+    color: aquamarine !important;
+  }
+  .privacy-w3row p {
+    color: #ceffe6 !important;
+  }
+  .products-row {
+    padding-bottom: 2em !important;
+    margin: 0 1em !important;
+  }
+  .agile-product-text form {
+    padding-bottom: 4em;
+  }
+  .fav.w3ls-cart-like {
+    width: 25% !important;
+    left: 71%;
+    bottom: 20% !important;
+  }
+  .w3ls-cart.pw3ls-cart {
+    bottom: 2.5% !important;
+  }
+}
 @media (max-width: 767px) {
   .visible-xs {
     display: block !important;
