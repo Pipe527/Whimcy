@@ -227,9 +227,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<h6><del>$2500</del> $2250</h6> 
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
-									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="add" value="1" />
+									<input type="hidden" name="item_number" value="1"> 
 									<input type="hidden" name="w3ls_item" value="Coca Cola"/> 
-									<input class="precio" type="hidden" name="amount" value="2250" /> 
+									<input class="precio" type="hidden" name="amount" value="2250.00" /> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form> 
 							</div>
@@ -245,8 +246,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
 									<input type="hidden" name="add" value="1"/> 
+									<input type="hidden" name="item_number" value="2">
 									<input type="hidden" name="w3ls_item" value="Gourmet "/> 
-									<input class="precio" type="hidden" name="amount" value="100"/> 
+									<input class="precio" type="hidden" name="amount" value="100.00"/> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form>
 							</div>
@@ -262,8 +264,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
 									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="item_number" value="3">
 									<input type="hidden" name="w3ls_item" value="Refrigerios" /> 
-									<input class="precio" type="hidden" name="amount" value="4800" /> 
+									<input class="precio" type="hidden" name="amount" value="4800.00" /> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form> 
 							</div>
@@ -279,8 +282,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
 									<input type="hidden" name="add" value="1"/> 
+									<input type="hidden" name="item_number" value="4">
 									<input type="hidden" name="w3ls_item" value="Raisin Bran"/> 
-									<input class="precio" type="hidden" name="amount" value="40"/> 
+									<input class="precio" type="hidden" name="amount" value="40.00"/> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form>
 							</div>
@@ -296,8 +300,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
 									<input type="hidden" name="add" value="1"/> 
+									<input type="hidden" name="item_number" value="5">
 									<input type="hidden" name="w3ls_item" value="Frutos secos"/> 
-									<input class="precio" type="hidden" name="amount" value="3500"/> 
+									<input class="precio" type="hidden" name="amount" value="3500.00"/> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form>
 							</div>
@@ -313,8 +318,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
 									<input type="hidden" name="add" value="1"/> 
+									<input type="hidden" name="item_number" value="6">
 									<input type="hidden" name="w3ls_item" value="Nescafe Café"/> 
-									<input class="precio" type="hidden" name="amount" value="10"/> 
+									<input class="precio" type="hidden" name="amount" value="10.00"/> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form>
 							</div>
@@ -330,8 +336,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
 									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="item_number" value="7">
 									<input type="hidden" name="w3ls_item" value="Botana"/> 
-									<input class="precio" type="hidden" name="amount" value="22500" /> 
+									<input class="precio" type="hidden" name="amount" value="22500.00" /> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form> 
 							</div>
@@ -347,8 +354,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
 									<input type="hidden" name="add" value="1"/> 
+									<input type="hidden" name="item_number" value="8">
 									<input type="hidden" name="w3ls_item" value="Coctel de jabalí"/> 
-									<input class="precio" type="hidden" name="amount" value="46000"/> 
+									<input class="precio" type="hidden" name="amount" value="46000.00"/> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form>
 							</div>
@@ -364,8 +372,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
 									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="item_number" value="9">
 									<input type="hidden" name="w3ls_item" value="Coctel Margarita" /> 
-									<input class="precio" type="hidden" name="amount" value="27000" /> 
+									<input class="precio" type="hidden" name="amount" value="27000.00" /> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form> 
 							</div>
@@ -381,8 +390,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
 									<input type="hidden" name="add" value="1"/> 
+									<input type="hidden" name="item_number" value="10">
 									<input type="hidden" name="w3ls_item" value="Halloumi Fries"/> 
-									<input class="precio" type="hidden" name="amount" value="14130"/> 
+									<input class="precio" type="hidden" name="amount" value="14130.00"/> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form>
 							</div>
@@ -398,8 +408,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
 									<input type="hidden" name="add" value="1"/> 
+									<input type="hidden" name="item_number" value="11">
 									<input type="hidden" name="w3ls_item" value="Picada"/> 
-									<input class="precio" type="hidden" name="amount" value="26000"/> 
+									<input class="precio" type="hidden" name="amount" value="26000.00"/> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form>
 							</div>
@@ -415,8 +426,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
 									<input type="hidden" name="add" value="1"/> 
+									<input type="hidden" name="item_number" value="12">
 									<input type="hidden" name="w3ls_item" value="McFlurry Oreo"/> 
-									<input class="precio" type="hidden" name="amount" value="11500"/> 
+									<input class="precio" type="hidden" name="amount" value="11500.00"/> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form>
 							</div>
@@ -432,8 +444,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
 									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="item_number" value="13">
 									<input type="hidden" name="w3ls_item" value="Helado"/> 
-									<input class="precio" type="hidden" name="amount" value="8100" /> 
+									<input class="precio" type="hidden" name="amount" value="8100.00" /> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form> 
 							</div>
@@ -449,8 +462,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
 									<input type="hidden" name="add" value="1"/> 
+									<input type="hidden" name="item_number" value="14">
 									<input type="hidden" name="w3ls_item" value="Frijoles MC "/> 
-									<input class="precio" type="hidden" name="amount" value="10000"/> 
+									<input class="precio" type="hidden" name="amount" value="10000.00"/> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form>
 							</div>
@@ -466,8 +480,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
 									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="item_number" value="15">
 									<input type="hidden" name="w3ls_item" value="Chorote Paisa" /> 
-									<input class="precio" type="hidden" name="amount" value="22320" /> 
+									<input class="precio" type="hidden" name="amount" value="22320.00" /> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form> 
 							</div>
@@ -483,8 +498,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart"/>
 									<input type="hidden" name="add" value="1"/> 
+									<input type="hidden" name="item_number" value="16">
 									<input type="hidden" name="w3ls_item" value="Hamburguesa"/> 
-									<input class="precio" type="hidden" name="amount" value="4800"/> 
+									<input class="precio" type="hidden" name="amount" value="4800.00"/> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form>
 							</div>
@@ -500,8 +516,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
 									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="item_number" value="17">
 									<input type="hidden" name="w3ls_item" value="Galletas"/> 
-									<input class="precio" type="hidden" name="amount" value="4950" /> 
+									<input class="precio" type="hidden" name="amount" value="4950.00" /> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form> 
 							</div>
@@ -517,8 +534,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
 									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="item_number" value="18">
 									<input type="hidden" name="w3ls_item" value="Vino"/> 
-									<input class="precio" type="hidden" name="amount" value="27000" /> 
+									<input class="precio" type="hidden" name="amount" value="27000.00" /> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form> 
 							</div>
@@ -534,8 +552,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
 									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="item_number" value="19">
 									<input type="hidden" name="w3ls_item" value="Chocolatina"/> 
-									<input class="precio" type="hidden" name="amount" value="31500" /> 
+									<input class="precio" type="hidden" name="amount" value="31500.00" /> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form> 
 							</div>
@@ -551,8 +570,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart" />
 									<input type="hidden" name="add" value="1" /> 
+									<input type="hidden" name="item_number" value="20">
 									<input type="hidden" name="w3ls_item" value="Canasta Regalo"/> 
-									<input class="precio" type="hidden" name="amount" value="46800" /> 
+									<input class="precio" type="hidden" name="amount" value="46800.00" /> 
 									<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir carrito</button>
 								</form> 
 							</div>
@@ -819,25 +839,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			<p>© 2016 Smart bazaar . All rights reserved | Design by <a href="http://w3layouts.com"> W3layouts.</a></p>
 		</div>
 	</div>
-		<!-- cart-js -->
-		<script src="../JS/minicart.js"></script>
-		<script>
-			w3ls.render();
-	
-			w3ls.cart.on('w3sb_checkout', function (evt) {
-				var items, len, i;
-	
-				if (this.subtotal() > 0) {
-					items = this.items();
-	
-					for (i = 0, len = items.length; i < len; i++) {
-						items[i].set('shipping', 0);
-						items[i].set('shipping2', 0);
-					}
-				}
-			});
-		</script>  
-	<!-- //cart-js -->
+	<!-- cart-js -->
+	<script src="../JS/minicart.js"></script>
 	<script src="../JS/jquery.menu-aim.js"> </script>
 	<script src="../JS/main.js"></script> <!-- Resource jQuery --> 
 	<script src="../JS/bootstrap.js"></script>

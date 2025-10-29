@@ -6605,3 +6605,17 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+/* ---------- */
+/* Cart.html */
+/* ---------- */
+
+#cartContainer {
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+.title-cart {
+  padding: 0 1.5em;
+}
+.title-cart h1 {
+  text-align: center;
+}

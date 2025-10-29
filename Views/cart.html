@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link href="../Css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../Css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../Css/menu.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://kit.fontawesome.com/b59d19b6f4.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Perfil -->
+    <script src="../JS/Perfil.js"></script>
+    <!-- Ocultar menú movil -->
+    <style>
+	    #menu-toggle {
+	    	display: none !important;
+	    }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <div class="header"> </div>
+    <div class="header-three"><!-- header-three -->
+			<div class="container">
+				<div class="menu">
+					<div class="cd-dropdown-wrapper">
+						<a class="cd-dropdown-trigger" href="#0">Tienda</a>
+						<nav class="cd-dropdown"> 
+							<a href="#0" class="cd-close">Cerrar</a>
+							<ul class="cd-dropdown-content">
+								<li class="has-children">
+									<a href="#">Menús</a> 
+									<ul class="cd-secondary-dropdown is-hidden">
+										<li class="go-back"><a href="#">Menús</a></li>
+										<li class="see-all"><a href="products.php">Productos</a></li>
+										<li class="main"><a href="products.php">Pedir</a></li>
+										<li><a href="products.php?category=Top">Top</a></li>
+										<li class="has-children">
+											<a href="#">Combos</a>  
+											<ul class="is-hidden"> 
+												<li class="go-back"><a href="#">Productos </a></li>
+												<li><a href="products.php?category=combos">Categorias</a></li>
+												<li><a href="#">Definidos</a></li>
+												<li><a href="#">Cartas</a></li>
+											</ul>
+										<li><a href="Favoritos.php">Favoritos</a></li>
+										</li> 
+									</ul> <!-- .cd-secondary-dropdown -->
+								<li class="has-children">
+									<a href="#">Promociones</a> 
+									<ul class="is-hidden"> 
+										<li class="go-back"><a href="#">Promociones </a></li>
+										<li><a href="offers.html">Fechas</a></li> 
+										<li><a href="ocations.html?normalDay=1">Para Año Nuevo</a></li>
+										<li><a href="ocations.html">Ocaciones especiales</a></li>
+									</ul>
+								</li> 
+								<li class="has-children">
+									<a href="#">Restaurantes</a> 
+									<ul class="is-hidden"> 
+										<li class="go-back"><a href="#">Restaurantes </a></li>
+										<li><a href="#" class="links" data-section="Seccion1">Mapa</a></li>
+										<li><a href="#" class="links" data-section="Restaurante">Todos</a></li>
+										<li><a href="#" class="links" data-section="Seccion01">Mi Zona</a></li>
+										<li><a href="#" class="links" data-section="Seccion2">Ubicación</a></li>
+										<li><a href="#" class="links" data-section="Seccion3">Reservación</a></li>
+									</ul>
+								</li> 
+								<li class="has-children">
+									<a href="#">Adicional</a> 
+									<ul class="is-hidden">
+										<li class="go-back"><a href="#0">Adicional </a></li>
+										<li><a href="Recetas.php">Mis Menús</a></li>
+										<li><a href="forums.html">Comunidad</a></li>
+										<li><a href="#">Amigos</a></li>
+									</ul>
+								</li> 
+							</ul> <!-- .cd-dropdown-content -->
+						</nav> <!-- .cd-dropdown -->
+					</div> <!-- .cd-dropdown-wrapper -->	 
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //header --> 
+<div class="Fondo-body">
+    <!-- breadcrumbs -->
+            <div class="container">
+                <ol class="breadcrumb breadcrumb1">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="products.php">Pedir</a></li>
+                    <li class="active">Carrito</li>
+                </ol>
+                <div class="clearfix"> </div>
+            </div>
+        <div class="title-cart">
+            <h1>Mi carrito</h1>
+        </div>
+    <div id="cartContainer"> </div>
+    <div class="w3ls-add-grids w3agile-add-products">
+		<a href="offers.html"> 
+			<h4>TOP 10 DE MENUS ELEGIDOS CON UN<span>20%</span> DE DESCUENTO</h4>
+			<h6>Comprar ahora <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h6>
+		</a>
+	</div> 
+</div>
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-info w3-agileits-info">
+            <div class="col-md-4 address-left agileinfo">
+                <div class="footer-logo header-logo">
+                    <ul>
+                        <li><i class="fa fa-map-marker"></i> 123 San Sebastian, Bogotá Colombia.</li>
+                        <li><i class="fa fa-mobile"></i> 333 222 3333 </li>
+                        <li><i class="fa fa-phone"></i> +222 11 4444 </li>
+                        <li><i class="fa fa-envelope-o"></i> <a href="mailto:mail@whimcy.com"> mail@whimcy.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8 address-right">
+                <div class="col-md-4 footer-grids">
+                    <h3>Compañia</h3>
+                    <ul>
+                        <li><a href="about.html">Sobre Nosotros</a></li>
+                        <li><a href="marketplace.html">Mercado</a></li>
+                        <li><a href="values.html">Nuestros Valores</a></li>
+                        <li><a href="privacy.html">Politica de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-grids">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#">Contactenos</a></li>
+                        <li><a href="login.html" onclick="redirigirLogin(event)">Regresar</a></li>
+                        <li><a href="Mapa.html">Restaurantes</a></li>
+                        <li><a href="Mapa.html#Seccion01">Zonas</a></li>
+                        <li><a href="login.html" onclick="redirigirLogin(event)">Estado de orden</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-grids">
+                    <h3>Metodos de pago</h3>
+                    <ul>
+                        <li><i class="fa fa-laptop" aria-hidden="true"></i> Nequi</li>
+                        <li><i class="fa fa-money" aria-hidden="true"></i> En efectivo</li>
+                        <li><i class="fa fa-pie-chart" aria-hidden="true"></i>Daviplata</li>
+                        <li><i class="fa fa-gift" aria-hidden="true"></i> PSE</li>
+                        <li><i class="fa fa-credit-card" aria-hidden="true"></i> Trageta Dedito/Credito</li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+<!-- //footer -->
+<!-- Reajustes -->
+<style>
+    .breadcrumb {
+        background-color: rgb(30 240 41 / 50%);
+    }
+    .container {
+        padding-top: 1.5em;
+    }
+    .Letras ul i.fa-cart-arrow-down,
+    .Letras ul i.fa-cart-arrow-down:hover {
+        cursor: default !important;
+        color: inherit !important;
+        pointer-events: none !important;
+    }
+    .w3ls-add-grids.w3agile-add-products {
+        position: relative;
+        width: 93%;
+        left: 2.3em;
+        bottom: 0.7em;
+        margin: unset;
+        padding: 2em 0 1em;
+        border-radius: 15px;
+        border: 3px solid darkgreen;
+    }
+    @media (max-width: 400px) {
+        .w3ls-add-grids.w3agile-add-products {
+            left: 1.3em;
+        }
+    }
+    /* Footer */
+    .address-left {
+	 right: 2.5vw
+	}
+	.form-control {
+	 display: unset;
+	 width: unset;
+	 height: unset;
+	}
+    .footer {
+        padding-top: 2em;
+        height: 29.2vh;
+    }
+	.footer-info.w3-agileits-info {
+	 overflow: hidden;
+	 max-height: 15em;
+	}
+    p.empty-cart {
+        font-size: xxx-large;
+        text-align: center;
+    }
+	@media (max-width: 400px) {
+		.address-left {
+		 top: -26px;
+		}
+		.footer-grids {
+		 padding: 1em 0 0;
+		}
+	}
+</style>
+<!-- submenus -->
+<script src="../JS/SubMenus.js"></script>
+<script src="../JS/Assest/sessionManager.js"></script>
+<script src="../JS/jquery.menu-aim.js"> </script>
+<script src="../JS/main.js"></script>
+<!-- Importar el Menu /HTML -->
+	<script>
+        function disableCartBtn() {
+            const btnNav = document.querySelector(".w3view-cart");
+            if (!btnNav) return false;
+            btnNav.type = "button";
+            btnNav.disabled = true;
+            btnNav.style.opacity = "0.8";
+            btnNav.style.cursor = "not-allowed";
+            return true;
+        }
+
+		document.addEventListener("DOMContentLoaded", async () => {
+			try {
+				const response = await fetch("/whimcy/Views/Menu.php");
+				if (!response.ok) throw new Error("Error al cargar Menu.php");
+
+				const html = await response.text();
+				document.querySelector(".header").innerHTML = html;
+
+                //Desactivar boton del Menú
+				disableCartBtn();
+				// Activar scripts del menú
+				if (typeof inicializarHeaderNav === "function") inicializarHeaderNav();
+				if (typeof inicializarLogin === "function") inicializarLogin();
+
+			} catch (err) {
+				console.error(err);
+			}
+		});
+	</script>
+	<!-- Enlaces dinamicos/ Movil -->
+	<script>
+		function redirigirLogin(e) { 
+
+        if (window.matchMedia("(max-width: 400px)").matches) {
+			e.preventDefault();
+            window.location.href = "Mobile/Inicio.php";
+        } else {
+            window.location.href = "login.html";
+        }
+    }
+    </script>
+    <!-- Datos del carrito -->
+    <script>
+     document.addEventListener("DOMContentLoaded", () => {
+     const raw = localStorage.getItem("PPsbmincart");
+     const container = document.querySelector("#cartContainer");
+
+     if (!raw) {
+         container.innerHTML = "<p class='empty-cart'>Tu carrito está vacío</p>";
+         return;
+     }
+
+     const data = JSON.parse(unescape(raw));
+     const cart = data.value || {};
+     const items = cart.items || [];
+
+     if (items.length === 0) {
+         container.innerHTML = "<p class='empty-cart'>Tu carrito está vacío</p>";
+         return;
+     }
+
+     let html = `
+         <table class="table table-bordered">
+         <thead>
+             <tr>
+             <th>Producto</th>
+             <th>Cantidad</th>
+             <th>Precio</th>
+             <th>Total</th>
+             </tr>
+         </thead>
+         <tbody>
+     `;
+
+     items.forEach((item, index) => {
+     const cantidad = item.quantity || 1;
+     const precio = parseFloat(item.amount).toFixed(2);
+     const total = (cantidad * precio).toFixed(2);
+
+     html += `
+         <tr data-index="${index}">
+          <td>${item.w3ls_item}</td>
+          <td>
+              <input type="number" class="input-cantidad" min="1" value="${cantidad}" style="width:70px;">
+          </td>
+          <td>${precio}</td>
+          <td class="total">$${total}</td>
+          <td>
+              <button class="btn btn-danger btn-sm btn-remove">×</button>
+          </td>
+         </tr>
+     `;
+     });
+
+
+     html += `
+         </tbody>
+         <tfoot>
+             <tr>
+              <th colspan="3">Subtotal</th>
+              <th>$${items.reduce((s, i) => s + i.amount * i.quantity, 0).toFixed(2)}</th>
+             </tr>
+         </tfoot>
+         </table>
+         <button id="btnProceed" class="btn btn-success">Proceder a la compra</button>
+     `;
+
+     document.querySelector("#cartContainer").innerHTML = html;
+        container.addEventListener("input", e => {
+         if (!e.target.classList.contains("input-cantidad")) return;
+
+         const row = e.target.closest("tr");
+         const index = row.dataset.index;
+         const cantidad = parseFloat(e.target.value) || 1;
+         const precio = parseFloat(items[index].amount);
+         const nuevoTotal = (cantidad * precio).toFixed(2);
+
+         // Actualizar la tabla
+         row.querySelector(".total").textContent = `$${nuevoTotal}`;
+         items[index].quantity = cantidad;
+         actualizarSubtotal();
+         // Guardar cambios en localStorage
+         guardarCarrito();
+        });
+
+        // Eliminar producto
+        container.addEventListener("click", e => {
+        if (e.target.classList.contains("btn-remove")) {
+            const row = e.target.closest("tr");
+            const index = row.dataset.index;
+            items.splice(index, 1);
+            row.remove();
+            actualizarSubtotal();
+            guardarCarrito();
+
+            if (items.length === 0) {
+            container.innerHTML = "<p class='empty-cart'>Tu carrito está vacío</p>";
+            }
+        }
+        });
+
+        function actualizarSubtotal() {
+         const subtotal = items.reduce((s, i) => s + i.amount * i.quantity, 0).toFixed(2);
+         const subtotalCell = container.querySelector("tfoot th:last-child");
+         if (subtotalCell) subtotalCell.textContent = `$${subtotal}`;
+        }
+
+        function guardarCarrito() {
+         const data = JSON.parse(unescape(localStorage.getItem("PPsbmincart")));
+         data.value.items = items;
+         localStorage.setItem("PPsbmincart", escape(JSON.stringify(data)));
+        }
+    });
+    </script>
+
+</body>
+</html>
