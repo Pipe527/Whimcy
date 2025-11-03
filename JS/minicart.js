@@ -1995,6 +1995,10 @@ sbmincart.render = function (userConfig) {
     cartModel.on('change', viewModel.changeItem, viewModel);
     cartModel.on('remove', viewModel.removeItem, viewModel);
     cartModel.on('destroy', viewModel.hide, viewModel);
+    // Cambiar icono
+    cartModel.on('add', updateCartIcon);
+    cartModel.on('remove', updateCartIcon);
+    updateCartIcon();
 };
 
 
@@ -2008,6 +2012,23 @@ sbmincart.reset = function () {
     viewModel.redraw();
 };
 
+function updateCartIcon() {
+    try {
+        const cartData = JSON.parse(unescape(localStorage.getItem("PPsbmincart") || "{}"));
+        const count = cartData?.value?.items?.length || 0;
+        const cartIcon = document.querySelector(".fa-cart-arrow-down");
+
+        if (cartIcon) {
+            if (count > 0) {
+                cartIcon.style.color = "gold";
+            } else {
+                cartIcon.style.color = "";
+            }
+        }
+    } catch (err) {
+        console.error("Error al actualizar el ícono del carrito:", err);
+    }
+}
 
 
 

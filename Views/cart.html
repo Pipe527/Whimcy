@@ -161,6 +161,9 @@
     .breadcrumb {
         background-color: rgb(30 240 41 / 50%);
     }
+    #btnContinue:hover {
+        background-color: cadetblue;
+    }
     .container {
         padding-top: 1.5em;
     }
@@ -172,8 +175,8 @@
     }
     .w3ls-add-grids.w3agile-add-products {
         position: relative;
-        width: 93%;
-        left: 2.3em;
+        width: 87%;
+        left: 6.3em;
         bottom: 0.7em;
         margin: unset;
         padding: 2em 0 1em;
@@ -326,7 +329,11 @@
              </tr>
          </tfoot>
          </table>
-         <button id="btnProceed" class="btn btn-success">Proceder a la compra</button>
+         <div class="cart-actions">
+          <button id="btnProceed" class="btn btn-success">Proceder a la compra</button>
+          <button id="btnContinue" class="btn btn-secondary">Seguir comprando</button>
+          <button id="btnCancel" class="btn btn-danger">Cancelar todo</button>
+         </div>
      `;
 
      document.querySelector("#cartContainer").innerHTML = html;
@@ -362,6 +369,19 @@
             }
         }
         });
+
+     // Eliminar todo
+     document.querySelector("#btnCancel").addEventListener("click", () => {
+     if (confirm("¿Seguro que deseas vaciar el carrito?")) {
+         localStorage.removeItem("PPsbmincart");
+         document.querySelector("#cartContainer").innerHTML = "<p>Tu carrito está vacío</p>";
+         if (typeof w3ls !== "undefined" && w3ls.cart) w3ls.cart.destroy();
+     }
+     });
+     // Seguir comprando
+     document.querySelector("#btnContinue").addEventListener("click", () => {
+         window.location.href = "products.php";
+     });
 
         function actualizarSubtotal() {
          const subtotal = items.reduce((s, i) => s + i.amount * i.quantity, 0).toFixed(2);

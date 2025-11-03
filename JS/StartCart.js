@@ -1,33 +1,45 @@
 function StartCart() {
-    if (typeof w3ls === "undefined") {
-        console.error("⚠️ minicart.js no está cargado");
-        return;
-    }
+  console.log("🛒 Iniciando StartCart...");
 
-    // Clear (si ya existe)
-    const oldCart = document.querySelector(".w3ls-cart");
-    if (oldCart) oldCart.remove();
+  // Esperar a que w3ls esté listo
+  if (typeof w3ls === "undefined") {
+    console.warn("w3ls no disponible todavía");
+    return;
+  }
 
-    // Renderizar de nuevo
+  // Renderizar el minicart si no existe
+  if (!document.querySelector("#PPsbmincart")) {
     w3ls.render();
+    console.log("⚙️ Renderizando minicart...");
+  }
 
-    w3ls.cart.on('w3sb_checkout', function (evt) {
-        if (this.subtotal() > 0) {
-            this.items().forEach(item => {
-                item.set('shipping', 0);
-                item.set('shipping2', 0);
-            });
-        }
+  // Mostrar / ocultar carrito (Clicks)
+  const btnCart = document.querySelector(".w3view-cart");
+  if (btnCart) {
+    btnCart.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      document.body.classList.toggle("sbmincart-showing");
     });
+  }
 
-    document.querySelectorAll('.cart form').forEach(f => {
-        f.addEventListener('submit', e => {
-            e.preventDefault();
-            console.log("Click en carrito -> ");
-            // Forzar apertura manual (por si acaso)
-            if (typeof w3ls.cart.show === "function") {
-                w3ls.cart.show();
-            }
-        });
+  // Cerrar carrito
+  const bindCloseEvents = () => {
+    document.addEventListener("click", (e) => {
+      if (
+        e.target.closest(".sbmincart-closer") ||
+        (!e.target.closest("#PPsbmincart") && !e.target.closest(".w3view-cart"))
+      ) {
+        document.body.classList.remove("sbmincart-showing");
+      }
     });
+  };
+
+  // Esperar a que el carrito exista antes de vincular eventos
+  const waitForCart = setInterval(() => {
+    if (document.querySelector("#PPsbmincart")) {
+      clearInterval(waitForCart);
+      bindCloseEvents();
+    }
+  }, 300);
 }

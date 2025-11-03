@@ -247,23 +247,8 @@
         <span>&copy;  Selmi Abderrahim | All Rights Reserved</span>
     </footer>
     <!-- cart-js -->
-	<script src="../JS/minicart.js"></script>
-	<script>
-        w3ls.render();
-
-        w3ls.cart.on('w3sb_checkout', function (evt) {
-        	var items, len, i;
-
-        	if (this.subtotal() > 0) {
-        		items = this.items();
-
-        		for (i = 0, len = items.length; i < len; i++) {
-        			items[i].set('shipping', 0);
-        			items[i].set('shipping2', 0);
-        		}
-        	}
-        });
-    </script>  
+	<script src="../JS/minicart.js"></script> 
+	<script src="../JS/StartCart.js"></script>
 	<!-- //cart-js -->
      <!-- menu js aim -->
      <script src="../JS/jquery.menu-aim.js"> </script>
@@ -288,7 +273,7 @@
 				if (typeof inicializarLogin === "function") inicializarLogin();
 				setTimeout(() => {
 					if (typeof StartCart === "function") StartCart();
-				}, 200);
+				}, 300);
 
 			} catch (err) {
 				console.error(err);
