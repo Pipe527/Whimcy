@@ -6624,6 +6624,7 @@ button.close {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  margin: 0 6em;
 }
 .cart-actions .btn {
   padding: 10px 20px;
@@ -6631,6 +6632,32 @@ button.close {
   border-radius: 6px;
   transition: all 0.2s ease-in-out;
 }
+
+/* Globo avisos */
+.bubble-message {
+  position: fixed;
+  bottom: 25px;
+  left: 50vw;
+  background-color: #f44336; /* rojo */
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 9999;
+  opacity: 0;
+  max-width: 90%;
+  transform: translateY(-20px);
+  transition: opacity 0.4s, transform 0.4s;
+}
+.bubble-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.bubble-message.success {
+  background-color: #4CAF50; /* verde */
+}
+
 @media (max-width: 400px) {
   .cart-actions {
     flex-direction: column;

@@ -97,7 +97,60 @@
         <div class="title-cart">
             <h1>Mi carrito</h1>
         </div>
+    <!-- Datos del carrito -->
     <div id="cartContainer"> </div>
+    <!-- Metodos -->
+    <form id="form-method" method="POST" action="../Controllers/select-method">
+        <div class="panel panel-default" id="paymentMethods">
+            <div class="panel-heading">
+                <h4 class="panel-title">Método de Pago</h4>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label class="radio-inline">
+                        <input type="radio" name="metodo" value="A"> <i class="fa fa-paypal text-primary"></i> PayPal
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="metodo" value="B"> <i class="fa fa-mobile text-danger"></i> Daviplata
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="metodo" value="C"> <i class="fa fa-credit-card text-success"></i> Tarjeta
+                    </label>
+                </div>
+        
+                <div class="form-group metodo oculto" id="formA">
+                    <label>Correo PayPal</label>
+                    <input type="email" class="form-control" placeholder="usuario@correo.com" id="paypalEmail" name="paypalEmail" required>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="img-pay"
+                    alt="PayPal" width="90" height="30">
+                    <div class="form-group default">
+                        <input type="radio" name="default" id="DefaultPaypal">
+                        <label for="DefaultPaypal">Usar correo por defecto</label>
+                    </div>
+                </div>
+        
+                <div class="form-group metodo oculto" id="formB">
+                    <label>Número Daviplata</label>
+                    <input type="text" class="form-control" placeholder="3xx xxx xxxx" name="daviplataNumber" required>
+                    <img src="https://w7.pngwing.com/pngs/903/869/png-transparent-daviplata-hd-logo.png" width="70" class="img-Dav" alt="Daviplata">
+                </div>
+        
+                <div class="form-group metodo oculto" id="formC">
+                    <label>Número de Tarjeta</label>
+                    <input type="text" class="form-control" placeholder="xxxx xxxx xxxx xxxx" name="cardNumber" required>
+                    <img src="https://e7.pngegg.com/pngimages/166/814/png-clipart-debit-mastercard-visa-credit-card-american-express-mastercard-text-orange-thumbnail.png" width="30" class="img-card" alt="Tarjeta">
+                    <label class="expiry">Fecha de Expiración</label>
+                    <input type="month" name="cardExpDate" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div id="cartButtons" class="cart-actions">
+            <button type="submit" id="btnProceed" class="btn btn-success">Proceder a la compra</button>
+            <button type="button" id="btnContinue" class="btn btn-secondary">Seguir comprando</button>
+            <button type="button" id="btnCancel" class="btn btn-danger">Cancelar todo</button>
+        </div>
+    </form>
+
     <div class="w3ls-add-grids w3agile-add-products">
 		<a href="offers.html"> 
 			<h4>TOP 10 DE MENUS ELEGIDOS CON UN<span>20%</span> DE DESCUENTO</h4>
@@ -179,9 +232,17 @@
         left: 6.3em;
         bottom: 0.7em;
         margin: unset;
+        margin-top: 2em;
         padding: 2em 0 1em;
         border-radius: 15px;
         border: 3px solid darkgreen;
+    }
+    input.form-control {
+        width: 30%;
+        margin-left: 15px;
+    }
+    label.expiry {
+        padding-left: 10px;
     }
     @media (max-width: 400px) {
         .w3ls-add-grids.w3agile-add-products {
@@ -329,11 +390,6 @@
              </tr>
          </tfoot>
          </table>
-         <div class="cart-actions">
-          <button id="btnProceed" class="btn btn-success">Proceder a la compra</button>
-          <button id="btnContinue" class="btn btn-secondary">Seguir comprando</button>
-          <button id="btnCancel" class="btn btn-danger">Cancelar todo</button>
-         </div>
      `;
 
      document.querySelector("#cartContainer").innerHTML = html;
@@ -382,6 +438,8 @@
      document.querySelector("#btnContinue").addEventListener("click", () => {
          window.location.href = "products.php";
      });
+     // Procesar carrito
+
 
         function actualizarSubtotal() {
          const subtotal = items.reduce((s, i) => s + i.amount * i.quantity, 0).toFixed(2);
@@ -395,6 +453,98 @@
          localStorage.setItem("PPsbmincart", escape(JSON.stringify(data)));
         }
     });
+    </script>
+    <!-- Formulario Metodos -->
+    <script>
+        function showBubble(message, type = "error") {
+            const bubble = document.createElement("div");
+            bubble.className = `bubble-message ${type}`;
+            bubble.textContent = message;
+
+            document.body.appendChild(bubble);
+
+            setTimeout(() => bubble.classList.add("show"), 100);
+
+            setTimeout(() => {
+                bubble.classList.remove("show");
+                setTimeout(() => bubble.remove(), 400);
+            }, 3000);
+        }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("form-method");
+        const userEndpoint = "../Controllers/UserMethod.php"; // cambia según backend
+
+     form.addEventListener("change", async (e) => {
+        if (e.target.name === "metodo") {
+            const loggedIn = localStorage.getItem("loggedIn") === "true";
+            // Desde Menu.php - InicializarLogin
+            if (!loggedIn) {
+                showBubble("Debes iniciar sesión para continuar", "error");
+                setTimeout(() => {
+                    window.location.href = "/whimcy/Views/login.html"; // o login
+                }, 2500);
+                return;
+            }
+             const metodo = e.target.value;
+             const targetId = "form" + metodo;
+             const target = document.getElementById(targetId);
+
+             document.querySelectorAll(".metodo").forEach(container => {
+              container.classList.add("oculto");
+              container.querySelectorAll("input, select, textarea").forEach(inp => inp.required = false);
+             });
+
+             if (target) {
+             target.classList.remove("oculto");
+             target.querySelectorAll("input, select, textarea").forEach(inp => {
+                 if (inp.type !== "radio" && inp.type !== "checkbox") {
+                 inp.required = true;
+                 }
+             });
+            }
+        }
+
+        // Correo por defecto
+        if (e.target.id === "DefaultPaypal") {
+        const input = document.getElementById("paypalEmail");
+        const useDefault = e.target.checked;
+
+        if (useDefault) {
+            try {
+                const response = await fetch("../Controllers/UserMethod.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                credentials: "include",
+                body: JSON.stringify({ action: "getDefaultEmail" })
+                });
+
+                if (!response.ok) throw new Error("No se pudo obtener el correo");
+
+                const data = await response.json();
+
+                if (data.success && data.email) {
+                 input.value = data.email;
+                 input.readOnly = true;
+                 input.style.backgroundColor = "#f8f8f8";
+                 showBubble("Correo cargado por defecto", "success");
+                } else {
+                 showBubble(data.message || "No se encontró correo asociado", "error");
+                }
+
+            } catch (err) {
+                console.error(err);
+                showBubble("Error de conexión al cargar correo", "error");
+            }
+            } else {
+            // Si desmarca, limpiar el input
+            input.readOnly = false;
+            input.value = "";
+            input.style.backgroundColor = "";
+            }
+        }
+     });
+    });    
     </script>
 
 </body>

@@ -2351,6 +2351,36 @@ p.sbmincart-empty-text {
     font-size: 1em;
     outline: none;
 }
+/* Metodos */
+#paymentMethods {
+  margin: 25px 6em;
+  border-radius: 10px;
+}
+
+#paymentMethods .panel-heading {
+  background-color: #8df693;
+  color: #333333;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 15px;
+}
+
+#paymentMethods .panel-body {
+  background-color: #f9f9f9;
+  border-radius: 0 0 10px 10px;
+}
+
+.panel-body {
+    background-color: #80c28d10 !important;
+}
+
+img.img-pay,
+img.img-Dav {
+    margin-left: 5em;
+}
+
+.oculto {
+  display: none;
+}
 /*-- //index-modal --*/ 
 /*-- responsive-design --*/
 @media(max-width:1440px){ 

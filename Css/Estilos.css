@@ -405,6 +405,10 @@ p.sbmincart-empty-text {
     text-align: center;
 }
 
+.cart:hover:has(button[disabled]) {
+    background-image: none !important;
+}
+
 .Letras ul li {
     list-style: none;
     position: relative;
