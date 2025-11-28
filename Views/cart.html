@@ -100,7 +100,7 @@
     <!-- Datos del carrito -->
     <div id="cartContainer"> </div>
     <!-- Metodos -->
-    <form id="form-method" method="POST" action="../Controllers/select-method">
+    <form id="form-method" method="POST" action="../Controllers/select-method.php">
         <div class="panel panel-default" id="paymentMethods">
             <div class="panel-heading">
                 <h4 class="panel-title">Método de Pago</h4>
@@ -116,6 +116,7 @@
                     <label class="radio-inline">
                         <input type="radio" name="metodo" value="C"> <i class="fa fa-credit-card text-success"></i> Tarjeta
                     </label>
+                    <input type="hidden" name="cart" id="cartField">
                 </div>
         
                 <div class="form-group metodo oculto" id="formA">
@@ -124,7 +125,7 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="img-pay"
                     alt="PayPal" width="90" height="30">
                     <div class="form-group default">
-                        <input type="radio" name="default" id="DefaultPaypal">
+                        <input type="checkbox" name="d-email" id="DefaultPaypal">
                         <label for="DefaultPaypal">Usar correo por defecto</label>
                     </div>
                 </div>
@@ -438,8 +439,6 @@
      document.querySelector("#btnContinue").addEventListener("click", () => {
          window.location.href = "products.php";
      });
-     // Procesar carrito
-
 
         function actualizarSubtotal() {
          const subtotal = items.reduce((s, i) => s + i.amount * i.quantity, 0).toFixed(2);
@@ -453,6 +452,19 @@
          localStorage.setItem("PPsbmincart", escape(JSON.stringify(data)));
         }
     });
+
+    // Al subir
+    document.getElementById("form-method").addEventListener("submit", function () {
+
+        const raw = localStorage.getItem("PPsbmincart");
+
+        if (raw) {
+            const data = JSON.parse(unescape(raw));
+            const items = data.value.items || [];
+            document.getElementById("cartField").value = JSON.stringify(items);
+        }
+    });
+
     </script>
     <!-- Formulario Metodos -->
     <script>
@@ -473,7 +485,6 @@
 
     document.addEventListener("DOMContentLoaded", () => {
         const form = document.getElementById("form-method");
-        const userEndpoint = "../Controllers/UserMethod.php"; // cambia según backend
 
      form.addEventListener("change", async (e) => {
         if (e.target.name === "metodo") {
@@ -512,7 +523,7 @@
 
         if (useDefault) {
             try {
-                const response = await fetch("../Controllers/UserMethod.php", {
+                const response = await fetch("../Controllers/UserMethod.php", { // cambia para el backend
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",
