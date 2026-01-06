@@ -89,7 +89,7 @@ $items = json_decode($order["items_json"], true);
         <p><strong>Monto:</strong> <?= $monto . " " . $currency ?></p>
         <p><strong>Estado:</strong> <?= $status ?></p>
 
-        <a href="../index.php" class="btn btn-primary btn-main">Volver a la tienda</a>
+        <a href="index.html" class="btn btn-primary btn-main">Volver a la tienda</a>
         <a href="recibo.php?id=<?= $transactionID ?>" class="btn btn-success btn-main">Ver Recibo</a>
     </div>
     <footer>
