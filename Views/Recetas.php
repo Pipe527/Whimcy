@@ -149,7 +149,7 @@ $result = $Con->query($sql);
             <!--Recetas-->
             <div class="head">
                 <div class="authors">Recetas</div>
-                <div class="content">Creador de recetas</div>
+                <div class="content" id="creator">Creador de recetas</div>
             </div>
             <!-- Formulario para crear nueva receta -->
             <div class="body">

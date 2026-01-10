@@ -239,7 +239,7 @@
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <script src="../JS/bootstrap.js"></script>
-	<!-- Importar el Menu /HTML -->
+	<!-- Importar el Menu /PHP -->
 	<script>
 		document.addEventListener("DOMContentLoaded", async () => {
 			try {

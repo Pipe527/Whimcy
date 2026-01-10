@@ -48,6 +48,7 @@ $items = json_decode($order["items_json"], true) ?? [];
     <title>Recibo de compra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
         body {
@@ -75,8 +76,8 @@ $items = json_decode($order["items_json"], true) ?? [];
 </head>
 <body>
 
-<header>
-    <?php include_once("Menu.php"); ?>
+<header class="header">
+    
 </header>
 
 <div class="receipt">
@@ -137,7 +138,63 @@ $items = json_decode($order["items_json"], true) ?? [];
  .agileinfo {
      margin-left: 75vw;
  }
+ .Letras ul i[class="fa fa-cart-arrow-down"]:hover {
+     cursor: unset;
+ }
 </style>
+
+<!-- Abrir Submenus -->
+ <script src="/whimcy/JS/SubMenus.js"></script>
+ <script src="/whimcy/JS/minicart.js"></script>
+ <script src="/whimcy/JS/StartCart.js"></script>
+ <script src="/whimcy/JS/Assest/sessionManager.js"></script>
+ <!-- Importar el Menu /PHP -->
+	<script>
+        function disableCartBtn() {
+            const btnNav = document.querySelector(".w3view-cart");
+            if (!btnNav) return false;
+            btnNav.type = "button";
+            btnNav.disabled = true;
+            btnNav.style.opacity = "0.8";
+            btnNav.style.cursor = "not-allowed";
+            return true;
+        }
+
+		document.addEventListener("DOMContentLoaded", async () => {
+			try {
+				const response = await fetch("/whimcy/Views/Menu.php");
+				if (!response.ok) throw new Error("Error al cargar Menu.php");
+
+				const html = await response.text();
+				document.querySelector(".header").innerHTML = html;
+				
+                //Desactivar boton del Menú
+				disableCartBtn();
+				// Activar scripts del menú
+				if (typeof inicializarHeaderNav === "function") inicializarHeaderNav();
+				if (typeof inicializarLogin === "function") inicializarLogin();
+				setTimeout(() => {
+					if (typeof StartCart === "function") StartCart();
+				}, 200);
+
+			} catch (err) {
+				console.error(err);
+			}
+		});
+	</script>
+
+<!-- Redireccion -->
+<script>
+    function redirigirLogin(e) {
+
+        if (window.matchMedia("(max-width: 400px)").matches) {
+            e.preventDefault(); 
+            window.location.href = "Mobile/Inicio.php";
+        } else {
+            window.location.href = "login.html";
+        }
+    }
+</script>
 
 </body>
 </html>

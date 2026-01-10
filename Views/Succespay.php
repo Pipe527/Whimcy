@@ -118,7 +118,15 @@ $items = json_decode($order["items_json"], true);
             btnNav.style.cursor = "not-allowed";
             return true;
         }
+        function destroyCart() {
+            // Limpiar el carrito (Localstorage - Ya se apgo)
+            localStorage.removeItem("PPsbmincart");
+            if (typeof w3ls !== "undefined" && w3ls.cart) {
+                w3ls.cart.destroy();
+            }
+        }
         disableCartBtn();
+        destroyCart();
     </script>
     <script>
      $(function() {

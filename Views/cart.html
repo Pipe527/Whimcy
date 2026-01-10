@@ -331,6 +331,18 @@
     <!-- Datos del carrito -->
     <script>
      document.addEventListener("DOMContentLoaded", () => {
+     const params = new URLSearchParams(window.location.search);
+     // Cancelación
+     if (params.has("cancel")) {
+         showBubble(
+             "El pago fue cancelado. No se realizó ningún cargo.",
+             "error"
+         );
+ 
+         // Limpieza de URL
+         window.history.replaceState({}, document.title, window.location.pathname);
+     }
+
      const raw = localStorage.getItem("PPsbmincart");
      const container = document.querySelector("#cartContainer");
 
@@ -474,13 +486,14 @@
             bubble.textContent = message;
 
             document.body.appendChild(bubble);
+            const visibleTime = type === "error" ? 7000 : 5000;
 
-            setTimeout(() => bubble.classList.add("show"), 100);
+            setTimeout(() => bubble.classList.add("show"), 200);
 
             setTimeout(() => {
                 bubble.classList.remove("show");
-                setTimeout(() => bubble.remove(), 400);
-            }, 3000);
+                setTimeout(() => bubble.remove(), 500);
+            }, visibleTime);
         }
 
     document.addEventListener("DOMContentLoaded", () => {
